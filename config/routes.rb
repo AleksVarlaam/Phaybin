@@ -5,6 +5,6 @@ Rails.application.routes.draw do
       registrations: 'admins/registrations', sessions: 'admins/sessions'
     }
 
-    root to: 'main#index'
+    root to: 'contents/main#index'
   end
 end

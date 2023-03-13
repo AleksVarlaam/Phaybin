@@ -15,6 +15,8 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 gem 'devise'
 gem 'devise-i18n'
+gem 'view_component', '~> 2.74'
+gem 'rails_heroicon'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

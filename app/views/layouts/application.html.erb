@@ -11,11 +11,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="dark:bg-black">
+  <body class="flex flex-col h-screen w-screen justify-between dark:bg-black">
       <%= yield :navbar%>
       
-      <main class="container mx-auto mt-28 px-5 flex">
-          <%= yield %>
+      <main class="flex w-full grid grid-flow-row auto-rows-max relative">
+          <!-- Modal -->
+          <%= turbo_frame_tag 'modal'%>
+          <!-- Content -->
+          <div class="min-h-screen">
+              <%= yield %>
+          </div>
       </main>
   </body>
 </html>
