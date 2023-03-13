@@ -1,0 +1,29 @@
+# Active Record section
+uk:
+    activerecord:
+        models:
+            admin:        'Адмін'
+        errors:
+              messages:
+                  in:         "%{value} неприпустиме значення, введіть значення в діапазоні %{count}"
+        attributes:
+            admin:
+                login:            'Логін'
+                password:         'Пароль'
+                new_password:     'Новий пароль'
+                current_password: 'Ваш пароль'
+                phone:            'Телефон'
+                password_confirmation: 'Подтвердження пароля'
+                first_name:       'Імʼя'
+                last_name:        'Прізвище'
+                city:             'Місто'
+                gender:           'Стать'
+                male:             'Чоловіча'
+                female:           'Жіноча'
+                birthday:         'День народження'
+                avatar:           'Аватар'
+                password_popover: "%{length} значень мінімум."
+                current_popover:  'Нам потрібен ваш поточний пароль, для того щоб підтвердити внесені зміни.'
+                delete_account:   'Видалити акаунт'
+                created_at:       'Дата реєстрації'
+            

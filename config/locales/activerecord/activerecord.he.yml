@@ -1,0 +1,28 @@
+# Active Record section
+he:
+    activerecord:
+        models:
+            admin:        "מנהל"
+        errors:
+              messages:
+                  in:         "%{count} אינו חוקי, הזן ערך בטווח %{value}"
+        attributes:
+            admin:
+                login:            "Login"
+                password:         "סיסמה"
+                new_password:     "סיסמה חדשה"
+                current_password: "הסיסמה שלך"
+                phone:            "הפלאפון"
+                password_confirmation: "אישור סיסמה"
+                first_name:       "שם"
+                last_name:        "שם משפחה"
+                city:             "עיר"
+                gender:           "הרצפה"
+                male:             "הגברי"
+                female:           "נשי"
+                birthday:         "יום הולדת"
+                avatar:           "אווטר"
+                password_popover: "ערכי %{length} הם מינימליים"
+                current_popover:  "אנו זקוקים לסיסמה הנוכחית שלך כדי לאשר את השינויים שביצעת"
+                delete_account:   "מחק חשבון"
+                created_at:       "תאריך הרישום"
