@@ -1,10 +1,10 @@
 <%= provide :navbar do %>
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-black">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
-          
           <div class="flex items-center">
               <!-- Locales -->
               <%= render 'shared/locales'%>
+              <!-- Admin menu -->
               <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
           </div>
           <!-- Navigations -->
