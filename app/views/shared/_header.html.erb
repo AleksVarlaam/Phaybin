@@ -2,8 +2,11 @@
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-black">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
           
-          <!-- Locales -->
-          <%= render 'shared/locales'%>
+          <div class="flex items-center">
+              <!-- Locales -->
+              <%= render 'shared/locales'%>
+              <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
+          </div>
           <!-- Navigations -->
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-language-select">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
@@ -19,7 +22,6 @@
       <div class="flex justify-center">
           <%=link_to root_path, class: "flex items-center text-center" do %>
               <%= image_tag 'PhaybiN-logo-white.png', class: 'w-auto h-36'%>
-
           <% end %>
       </div>
     </nav>
