@@ -1,12 +1,13 @@
 <%= provide :navbar do %>
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-black">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <div class="flex items-center">
-              <!-- Locales -->
-              <%= render 'shared/locales'%>
-              <!-- Admin menu -->
-              <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
-          </div>
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-black relative">
+      <div class="container flex flex-wrap items-center justify-between mx-auto ">
+          
+            <!-- Mobile menu button -->
+            <button data-collapse-toggle="mobile-menu-language-select" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-language-select" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <%= heroicon 'bars-3', class: 'w-6 h-6'%>
+            </button>
+
           <!-- Navigations -->
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-language-select">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
@@ -23,6 +24,12 @@
           <%=link_to root_path, class: "flex items-center text-center" do %>
               <%= image_tag 'PhaybiN-logo-white.png', class: 'w-auto h-36'%>
           <% end %>
+      </div>
+      
+      <div class="flex items-center absolute right-3 top-3 md:right-12">
+          <!-- Locales -->
+          <%= render 'shared/locales'%>
+          <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
       </div>
     </nav>
 <% end %>
