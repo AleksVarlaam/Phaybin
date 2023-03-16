@@ -1,15 +1,65 @@
-<div class="flex items-center md:order-2 ml-2">
-    <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-      <span class="sr-only">Open user menu</span>
-      <%= image_tag 'avatar/avatar-f', class: "w-8 h-8 rounded-full", alt: "user photo" %>
-    </button>
-    <!-- Dropdown menu -->
-    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-      <div class="px-4 py-3">
-        <span class="block text-sm text-gray-900 dark:text-white">Admin</span>
-        <%= tag.span current_admin.email, class: "block text-sm font-medium text-gray-500 truncate dark:text-gray-400" %>
-      </div>
-      <!-- Links list -->
-      <%= render 'admins/shared/admin_menu_links_list'%>
+
+<div class="flex items-center">
+    <!-- Admin menu dropdown -->
+    <div 
+      class="relative z-50"
+      data-controller="dropdown"
+    >
+    <div>
+      <button 
+        data-action="dropdown#toggle click@window->dropdown#hide"
+        class="flex text-sm rounded-full border-2 border-gray-500 focus:outline-none drop-shadow-2xl hover:drop-shadow-lg items-center" 
+        id="admin-menu-button" 
+        type="button" 
+        aria-expanded="false" 
+        aria-haspopup="true"
+      >
+        <%= heroicon "bars-3", class: "mx-2 hidden sm:block dark:text-gray-500", size: 20%>
+        <!-- Avatar -->
+        <%= image_tag('avatar/avatar-f.png', class: "object-cover h-8 w-8 rounded-full border-2 border-gray-100 m-1", alt: "avatar")%>
+      </button>
+    </div>
+
+    <!--
+      Dropdown menu, show/hide based on menu state.
+
+      Entering: "transition ease-out duration-100"
+        From: "transform opacity-0 scale-95"
+        To: "transform opacity-100 scale-100"
+      Leaving: "transition ease-in duration-75"
+        From: "transform opacity-100 scale-100"
+        To: "transform opacity-0 scale-95"
+    -->
+    <div 
+        data-dropdown-target="menu"
+        class="hidden origin-top-right absolute dark:bg-gray-900 z-50 right-0 mt-2 min-w-[14rem] w-auto rounded-lg shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
+        role="menu" 
+        aria-orientation="vertical" 
+        aria-labelledby="admin-menu-button" 
+        tabindex="-1"
+        data-transition-enter-from="opacity-0 scale-95"
+        data-transition-enter-to="opacity-100 scale-100"
+        data-transition-leave-from="opacity-100 scale-100"
+        data-transition-leave-to="opacity-0 scale-95"
+    >
+        <!-- Admin menu -->
+        <%= link_to root_path, 
+          class: "flex flex-col items-center my-3 mx-2", 
+          data: {action: "dropdown#toggle"}, 
+          role: "menuitem",
+          tabindex:"-1",
+          id:"personalInfoLink" do
+        %>
+          <!-- Avatar -->
+          <%= image_tag('avatar/avatar-f.png', class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
+          <!-- User name -->
+          <%= tag.h4 ('Admin'), class: "px-4 font-medium text-gray-800 dark:text-gray-400 text-center hover:underline"%>
+          <!-- Email -->
+          <%= tag.p current_admin.email, class: "px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-500 text-center hover:underline"%>
+        <% end %>
+        <!-- Links list -->
+        <%= render 'admins/shared/admin_menu_links_list', 
+            link_class: "font-medium flex block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-500  items-center",
+            icon_class: "w-4 h-4 mr-2"%>
     </div>
 </div>

@@ -1,35 +1,40 @@
 <%= provide :navbar do %>
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-black relative">
-      <div class="container flex flex-wrap items-center justify-between mx-auto ">
-          
-            <!-- Mobile menu button -->
-            <button data-collapse-toggle="mobile-menu-language-select" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-language-select" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <%= heroicon 'bars-3', class: 'w-6 h-6'%>
-            </button>
-
-          <!-- Navigations -->
-          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-language-select">
-            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
-              <!-- Pages links -->
-              <li>
+    <header class="bg-white dark:bg-black bg-opacity-90 fixed top-0 z-50 w-full">
+        <div class="relative" data-controller="dropdown">
+          <div class="w-full mx-auto px-4 sm:px-6">
+            <div class="nav-container flex items-center border-b-2 border-gray-600 py-4">
+              <!-- Logotype -->
+              <div class="flex justify-start w-auto flex-auto">
+                  <%= link_to root_path, class: 'flex items-center text-white', data: {turbo_frame: '_top'} do %>
+                      <%= 'Phaybin' %>
+                  <% end %>
+              </div>
+              <!-- Mobile menu button -->
+              <div class="flex justify-center flex-none lg:hidden w-auto">
+                <button data-action="dropdown#toggle click@window->dropdown#hide" type="button" class=" rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                  <span class="sr-only">Open menu</span>
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+              <!-- Navigations -->
+              <nav class="hidden lg:flex space-x-6">
                   <%= nav_tab t('pages.home'), root_path, 
-                      class: "block py-2 pl-3 pr-4 md:bg-transparent md:p-0 hover:text-gray-400", current_page: current_page, 
+                      class: "text-base font-medium hover:text-gray-900", current_page: current_page, 
                       data: {turbo_frame: '_top'} %>
-              </li>
-            </ul>
+              </nav>
+              <!-- Guest/User/Company menu -->
+              <div class="flex items-center justify-end flex-auto w-auto space-x-5">
+                  <!-- Locales -->
+                  <%= render 'shared/locales'%>
+                  <!-- Menu -->
+                  <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
+              </div>
+            </div>
           </div>
-      </div>
-      <div class="flex justify-center">
-          <%=link_to root_path, class: "flex items-center text-center" do %>
-              <%= image_tag 'PhaybiN-logo-white.png', class: 'w-auto h-36'%>
-          <% end %>
-      </div>
-      
-      <div class="flex items-center absolute right-3 top-3 md:right-12">
-          <!-- Locales -->
-          <%= render 'shared/locales'%>
-          <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
-      </div>
-    </nav>
+          <!-- Mobile menu -->
+          <%= render 'shared/mobile_menu', current_page: current_page %>
+        </div>
+    </header>
 <% end %>

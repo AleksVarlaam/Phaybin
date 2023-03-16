@@ -1,38 +1,24 @@
-<ul class="py-2" aria-labelledby="user-menu-button">
-    <!-- Dashboard -->
-    <li>
-        <%= link_to root_path,
-          class: "flex items-center w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white",
-          data: {turbo_frame: '_top'},
-          id:"profilePageLink" do
-        %>
-         <%= heroicon "rectangle-group", class: "w-4 h-4 mr-2" %>
-         <%= t('user_menu.dashboard')%>
-        <% end %>
-    </li>
+<!-- Credential Info -->
+<%= link_to edit_admin_registration_path, 
+  class: link_class, 
+  data: { action: "dropdown#toggle" }, 
+  role: "menuitem",
+  tabindex:"-1",
+  id:"password&SecurityLink" do 
+%>
+  <%= heroicon "lock-closed", class: icon_class %>
+  <%= t('user_menu.credential')%>
+<% end %>
 
-    <!-- Credential -->
-    <li>
-        <%= link_to edit_admin_registration_path, 
-          class: "flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white", 
-          data: { turbo_frame: '_top' }, 
-          id:"password&SecurityLink" do 
-        %>
-          <%= heroicon "lock-closed", class: "w-4 h-4 mr-2" %>
-          <%= t('user_menu.credential')%>
-        <% end %>
-    </li>
-
-    <!-- Sign Out -->
-    <hr class="border-gray-600 my-2">
-    <li>
-        <%= link_to destroy_admin_session_path, 
-          class: "flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white",
-          data: { turbo_method: :delete, turbo_confirm: t('global.are_you_sure')}, 
-          id:"signOutLink" do 
-        %>
-            <%= heroicon "arrow-right-on-rectangle", class: "w-4 h-4 mr-2" %>
-            <%= t('user_menu.sign_out')%>
-        <% end %>
-    </li>
-</ul>
+<hr>
+<!-- Sign Out -->
+<%= link_to destroy_admin_session_path, 
+  class: link_class,
+  data: {action: "dropdown#toggle", turbo_method: :delete, turbo_confirm: t('global.are_you_sure')}, 
+  role: "menuitem", 
+  tabindex:"-1", 
+  id:"signOutLink" do 
+%>
+ <%= heroicon "arrow-right-on-rectangle", class: icon_class %>
+ <%= t('user_menu.sign_out')%>
+<% end %>

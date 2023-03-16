@@ -12,20 +12,22 @@
   </head>
 
   <body class="flex flex-col h-screen w-screen justify-between dark:bg-black">
+      <!-- Header -->
       <%= yield :navbar%>
-      
-      <main class="flex w-full grid grid-flow-row auto-rows-max relative">
+      <!-- Main -->
+      <main class="flex w-full grid grid-flow-row auto-rows-max relative <%= 'mt-20' unless controller_name == 'errors' %>" id="top">
+          <!-- Flash messages -->
+          <% unless ['new', 'create'].include?(action_name) %>
+              <%= tag.div (render 'shared/messages/flash_messages'), class: "absolute right-3 sm:right-6 sm:top-3 z-20 sm:max-w-sm", id: "flash_messages"%>
+          <% end %>
           <!-- Modal -->
-          <%= tag.turbo_frame 'modal'%>
+          <%= turbo_frame_tag 'modal'%>
           <!-- Content -->
           <div class="min-h-screen">
-              <!-- Flash -->
-              <% unless ['new', 'create'].include?(action_name) %>
-                  <%= tag.div (render 'shared/messages/flash_messages'), 
-                      class: "absolute right-3 sm:right-6 sm:top-3 z-20 sm:max-w-sm", id: "flash_messages" %>
-              <% end %>
               <%= yield %>
           </div>
-      </main>
+      </main>      
+      <!-- Footer -->
+      <%# yield :footer %>
   </body>
 </html>
