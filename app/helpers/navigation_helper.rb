@@ -4,7 +4,7 @@ module NavigationHelper
   def nav_tab(title, url, options = {})
     current_page = options.delete :current_page
 
-    css_class = current_page == title ? 'text-gray-300' : 'text-gray-100'
+    css_class = current_page == title ? 'text-gray-300 dark:text-gray-200' : 'text-gray-100 dark:text-gray-400'
 
     options[:class] = if options[:class]
                         "#{options[:class]} #{css_class}"
@@ -17,7 +17,7 @@ module NavigationHelper
 
   def currently_at(current_page = '')
     render partial: 'shared/header', locals: { current_page: }
-    # render partial: 'shared/footer', locals: { current_page: }
+    render partial: 'shared/footer', locals: { current_page: }
   end
 
   def full_title(page_title = '')
