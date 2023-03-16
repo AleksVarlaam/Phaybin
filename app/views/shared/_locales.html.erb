@@ -8,23 +8,23 @@
 
   <div
     data-dropdown-target="menu"
-    class="hidden transition transform origin-top-right absolute right-0 z-50 w-auto mt-2 border shadow-md rounded-lg"
+    class="hidden transition transform origin-top-right absolute right-0 z-50 w-auto mt-2 border border-gray-700 hover:border-gray-600 shadow-md rounded-lg"
     data-transition-enter-from="opacity-0 scale-95"
     data-transition-enter-to="opacity-100 scale-100"
     data-transition-leave-from="opacity-100 scale-100"
     data-transition-leave-to="opacity-0 scale-95"
   >
-    <ul class="py-1 text-sm w-auto text-gray-700 bg-white rounded-lg shadow-lg">
+    <ul class="py-1 text-sm w-auto text-gray-700 bg-white dark:bg-black rounded-lg shadow-lg">
       <% I18n.available_locales.each do |locale| %>
           <li>
             <% if I18n.locale == locale %>
-              <div class="flex items-center w-full mr-4 font-medium block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+              <div class="flex items-center w-full mr-4 font-medium block px-4 py-2 text-sm text-gray-800 dark:text-gray-200 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100">
                   <%= image_tag("locales/icons8-#{locale}-48.png", class: 'w-5 h-5 mr-2')%>
                   <%= t(locale)%>
               </div>
             <% else %>
               <%= link_to url_for(locale: locale),
-                class: 'flex items-center w-full mr-4 font-medium block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100',
+                class: 'flex items-center w-full mr-4 font-medium block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100',
                     data: {action: "dropdown#toggle"} do 
               %>
                   <%= image_tag("locales/icons8-#{locale}-48.png", class: 'w-5 h-5 mr-2')%>

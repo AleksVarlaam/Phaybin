@@ -8,7 +8,7 @@
     <div>
       <button 
         data-action="dropdown#toggle click@window->dropdown#hide"
-        class="flex text-sm rounded-full border-2 border-gray-500 focus:outline-none drop-shadow-2xl hover:drop-shadow-lg items-center" 
+        class="flex text-sm rounded-full border-2 border-gray-600 focus:outline-none drop-shadow-2xl hover:drop-shadow-lg items-center" 
         id="admin-menu-button" 
         type="button" 
         aria-expanded="false" 
@@ -16,7 +16,7 @@
       >
         <%= heroicon "bars-3", class: "mx-2 hidden sm:block dark:text-gray-500", size: 20%>
         <!-- Avatar -->
-        <%= image_tag('avatar/avatar-f.png', class: "object-cover h-8 w-8 rounded-full border-2 border-gray-100 m-1", alt: "avatar")%>
+        <%= image_tag(current_admin.avatar_attachment_path, class: "object-cover h-8 w-8 rounded-full border-2 border-gray-700 m-1", alt: "avatar")%>
       </button>
     </div>
 
@@ -32,7 +32,7 @@
     -->
     <div 
         data-dropdown-target="menu"
-        class="hidden origin-top-right absolute dark:bg-gray-900 z-50 right-0 mt-2 min-w-[14rem] w-auto rounded-lg shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
+        class="hidden origin-top-right absolute dark:bg-black border border-gray-700 hover:border-gray-600 z-50 right-0 mt-2 min-w-[14rem] w-auto rounded-lg shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
         role="menu" 
         aria-orientation="vertical" 
         aria-labelledby="admin-menu-button" 
@@ -51,7 +51,7 @@
           id:"personalInfoLink" do
         %>
           <!-- Avatar -->
-          <%= image_tag('avatar/avatar-f.png', class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
+          <%= image_tag(current_admin.avatar_attachment_path, class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
           <!-- User name -->
           <%= tag.h4 ('Admin'), class: "px-4 font-medium text-gray-800 dark:text-gray-400 text-center hover:underline"%>
           <!-- Email -->
@@ -59,7 +59,7 @@
         <% end %>
         <!-- Links list -->
         <%= render 'admins/shared/admin_menu_links_list', 
-            link_class: "font-medium flex block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-500  items-center",
+            link_class: "font-medium flex block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100 items-center",
             icon_class: "w-4 h-4 mr-2"%>
     </div>
 </div>

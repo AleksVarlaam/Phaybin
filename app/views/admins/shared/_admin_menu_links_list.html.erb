@@ -10,7 +10,7 @@
   <%= t('user_menu.credential')%>
 <% end %>
 
-<hr>
+<hr class="h-px bg-gray-200 border-0 dark:bg-gray-600">
 <!-- Sign Out -->
 <%= link_to destroy_admin_session_path, 
   class: link_class,
@@ -22,3 +22,4 @@
  <%= heroicon "arrow-right-on-rectangle", class: icon_class %>
  <%= t('user_menu.sign_out')%>
 <% end %>
+
