@@ -1,5 +1,8 @@
-<% currently_at t('sign_up.title') %>
-<% provide :page_title, t('sign_up.title') %>
+<% currently_at t('user_menu.credential')%>
+<% provide :page_title, t('user_menu.credential')%>
+<% provide :nav_title, t('user_menu.credential') %>
+<% provide :nav_path, edit_admin_registration_path %>
+<% provide :main_title, t('user_menu.credential') %>
 
 <%= render 'form_edit'%>
 

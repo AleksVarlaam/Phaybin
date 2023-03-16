@@ -1,0 +1,23 @@
+<div class="flex items-center py-5 overflow-y-auto whitespace-nowrap">
+    <!-- Back -->
+    <%= link_to (heroicon "arrow-uturn-left", class: "w-5 h-5 dark:text-gray-400 hover:dark:text-gray-300"), :back %>
+    <%= tag.span '/', class: "mx-5 text-gray-700 dark:text-gray-400" %>
+    
+    <!-- Home path -->
+    <%= link_to (heroicon "home", class: "w-5 h-5 dark:text-gray-400 hover:dark:text-gray-300"), root_path %>
+    <%= tag.span '/', class: "mx-5 text-gray-700 dark:text-gray-400" if admin_signed_in?%>
+
+    <!-- Dashboard path -->
+    <%= link_to t('user_menu.dashboard'), root_path, class: "text-gray-700 dark:text-gray-400 hover:dark:text-gray-300 hover:underline" if admin_signed_in?%>
+
+    <!-- Parent path -->
+    <% if yield(:parent_title).present? && yield(:parent_path).present?%>
+        <%= tag.span '/', class: "mx-5 text-gray-700 dark:text-gray-400"%>
+        <%= link_to yield(:parent_title), yield(:parent_path), class: "text-gray-700 dark:text-gray-400 hover:dark:text-gray-300 capitalize hover:underline" %>
+    <% end %>
+    
+    <!-- Current path -->
+    <%= tag.span '/', class: "mx-5 text-gray-700 dark:text-gray-400"%>
+    <%= link_to yield(:nav_title), yield(:nav_path), class: "text-gray-700 dark:text-gray-400 hover:dark:text-gray-300 capitalize hover:underline" %>
+   
+</div>
