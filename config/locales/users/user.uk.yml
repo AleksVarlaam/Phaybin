@@ -4,7 +4,6 @@ uk:
         sign_up:          'Зареєструватися'
         sign_out:         'Увійти'
         dashboard:        'Панель управління'
-        chats:            'Чати'
         profile:          'Профіль'
         credential:       'Безпека'
     sign_in:

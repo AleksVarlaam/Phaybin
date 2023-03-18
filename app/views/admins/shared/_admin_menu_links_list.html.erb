@@ -1,3 +1,15 @@
+<!-- Categories -->
+<%= link_to categories_path, 
+  class: link_class, 
+  data: { action: "dropdown#toggle" }, 
+  role: "menuitem",
+  tabindex:"-1",
+  id:"password&SecurityLink" do 
+%>
+  <%= heroicon "photo", class: icon_class %>
+  <%= t('gallery.title')%>
+<% end %>
+
 <!-- Credential Info -->
 <%= link_to edit_admin_registration_path, 
   class: link_class, 

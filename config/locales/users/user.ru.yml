@@ -4,7 +4,6 @@ ru:
         sign_up:          'Зарегистрироваться'
         sign_out:         'Выйти'
         dashboard:        'Панель управления'
-        chats:            'Чаты'
         profile:          'Профиль'
         credential:       'Безопасность'
     sign_in:

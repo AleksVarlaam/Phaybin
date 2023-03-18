@@ -4,7 +4,6 @@ en:
         sign_up:          'Sign Up'
         sign_out:         'Sign Out'
         dashboard:        'Dashboard'
-        chats:            'Chats'
         profile:          'Profile'
         credential:       'Credentials'
     sign_in:

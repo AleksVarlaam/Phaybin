@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   
     devise_for :admins, controllers: { 
       registrations: 'admins/registrations', sessions: 'admins/sessions'
-    }
+    } 
+    as :admin do
+      resources :categories, controller: 'admins/categories'
+    end
     get '/admin' => redirect("/admins/sign_in")
 
     root to: 'contents/main#index'

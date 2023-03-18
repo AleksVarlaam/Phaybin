@@ -1,5 +1,5 @@
 <%= provide :footer do %>
-    <footer class="bg-gray-200 dark:bg-black border-t border-gray-700 mt-8 relative">
+    <footer class="bg-gray-200 dark:bg-black border-t dark:border-gray-700 hover:dark:border-gray-600 mt-8 relative">
         <%= link_to '#top', class: 'absolute right-2 bottom-5 z-20', data: {controller: 'scroll-to'} do %>
             <%# image_tag('icons/icons8-up-2-50.png', class: 'w-8 hover:w-10 h-auto')%>
         <% end unless controller_name == 'errors'%>
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <hr class="my-6 border-gray-700 md:my-10" />
+            <hr class="my-6 dark:border-gray-700 md:my-10" />
             <!-- Copyright -->
             <div class="flex flex-col items-center w-full md:relative">
                 <%= link_to 'phaybin@phaybin.com', "mailto:phaybin@phaybin.com", 
