@@ -1,6 +1,6 @@
 <!-- Calculator categories form -->
 <%= turbo_frame_tag dom_id(@category, 'form') do %>
-    <%= form_with model: [:admins, @category], class: "col-span-full mx-auto my-4 w-full relative" do |f| %>
+    <%= form_with model: [:admins, @category], data: {turbo_frame: '_top'}, class: "col-span-full mx-auto my-4 w-full relative" do |f| %>
         <!-- Error messages -->
         <%= tag.div (render 'shared/messages/error_messages', resource: @category), class: 'col-span-full' %>
         <div class="w-full items-center flex grid grid-cols-1 md:grid-cols-4 gap-3">

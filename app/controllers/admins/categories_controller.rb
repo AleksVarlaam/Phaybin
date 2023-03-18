@@ -11,7 +11,7 @@ module Admins
     end
     
     def show
-      
+      @images = @category.images.order(created_at: :desc)
     end
 
     def create
@@ -62,7 +62,7 @@ module Admins
     private
 
     def category_params
-      params.require(:category).permit(:ru, :en, :he, :uk)
+      params.require(:category).permit(:ru, :en, :he, :uk, images: [])
     end
 
     def set_category
