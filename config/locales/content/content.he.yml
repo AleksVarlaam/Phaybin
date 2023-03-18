@@ -3,3 +3,5 @@ he:
       home:         "ראש"
   gallery:
       title:        "גלריה"
+  category:         
+      add_btn:      "הוסף קטגוריה"

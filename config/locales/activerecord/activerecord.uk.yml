@@ -2,7 +2,8 @@
 uk:
     activerecord:
         models:
-            admin:        'Адмін'
+            admin:          'Адмін'
+            category:       'Kатегорія'
         errors:
               messages:
                   in:         "%{value} неприпустиме значення, введіть значення в діапазоні %{count}"

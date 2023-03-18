@@ -3,3 +3,5 @@ uk:
       home:         "Головна"
   gallery:
       title:        "Галерея"
+  category:         
+      add_btn:      "Додати категорію"

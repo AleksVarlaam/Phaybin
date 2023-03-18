@@ -2,7 +2,8 @@
 he:
     activerecord:
         models:
-            admin:        "מנהל"
+            admin:          "מנהל"
+            category:       "קטגוריה"
         errors:
               messages:
                   in:         "%{count} אינו חוקי, הזן ערך בטווח %{value}"

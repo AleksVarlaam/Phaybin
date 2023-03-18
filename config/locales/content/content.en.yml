@@ -3,3 +3,5 @@ en:
       home:         "Main"
   gallery:
       title:        "Gallery"
+  category:         
+      add_btn:      "Add category"

@@ -2,7 +2,8 @@
 ru:
     activerecord:
         models:
-            admin:        'Админ'
+            admin:          'Админ'
+            category:       'Категория'
         errors:
               messages:
                   in:         "%{value} недопустимое значение, введите значение в диапозоне %{count}"

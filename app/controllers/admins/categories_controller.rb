@@ -4,10 +4,14 @@ module Admins
   class CategoriesController < ApplicationController
     layout 'profile_layout'
     before_action :authenticate_admin!
-    before_action :set_category, only: %i[edit update destroy]
+    before_action :set_category, only: %i[show edit update destroy]
 
     def new
       @category = Category.new
+    end
+    
+    def show
+      
     end
 
     def create

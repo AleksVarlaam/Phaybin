@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       registrations: 'admins/registrations', sessions: 'admins/sessions'
     } 
     as :admin do
-      resources :categories, controller: 'admins/categories'
+      namespace :admins do 
+        resources :categories
+      end
     end
     get '/admin' => redirect("/admins/sign_in")
 

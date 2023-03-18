@@ -2,7 +2,8 @@ en:
     # Active Record section
     activerecord:
         models:
-            admin:        'Admin'
+            admin:          'Admin'
+            category:       'Category'
         errors:
               messages:
                   in:         "%{value} is not valid, enter a value in range %{count}"

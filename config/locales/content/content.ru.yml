@@ -2,4 +2,6 @@ ru:
   pages:
       home:         "Главная"
   gallery:
-      title:        "Галерея"
+      title:        "Галерея"      
+  category:         
+      add_btn:      "Добавить категорию"
