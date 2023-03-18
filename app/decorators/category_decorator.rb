@@ -9,5 +9,9 @@ class CategoryDecorator < Draper::Decorator
     when :he then category.he
     end
   end
+  
+  def images_newest
+    category.images.order(created_at: :desc)
+  end
 
 end

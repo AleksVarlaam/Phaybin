@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     } 
     as :admin do
       namespace :admins do 
-        resources :categories
+        resources :categories, module: :gallery do
+          resources :images
+        end
       end
     end
     get '/admin' => redirect("/admins/sign_in")

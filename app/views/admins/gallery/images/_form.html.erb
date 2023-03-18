@@ -1,0 +1,26 @@
+<%= turbo_frame_tag 'images_form' do %>
+    <%= form_with model: @category, url: admins_category_images_path(@category), method: :post,
+        data: {turbo_frame: '_top'}, class: "my-3" do |f| %>
+        <!-- Images -->
+        <div class="flex grid grid-rows-1 text-center items-center justify-center">
+          <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">
+            <div class="space-y-1 text-center">
+              <%= f.label :images, class: "cursor-pointer" do %>
+                  <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700"%>
+                  <div class="text-gray-700 mt-1 mb-2 justify-center text-center text-base" data-controller="image" id="Img">
+                      <%= tag.span 'Upload images', 
+                          class: "relative rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                      %>
+                          <%= f.file_field :images, multiple: true, class: "sr-only", accept: "image/png, image/jpeg, image/jpg", "data-image-target": "input", "data-action": "image#preview" %>
+                  </div>
+                  <%= tag.p 'PNG, JPG, GIF up to 10MB', class: "text-xs text-gray-700" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <!-- Button Save -->
+        <div class="flex justify-start mt-6">
+            <%= f.submit t('global.save_btn'), class: "cursor-pointer px-6 py-2 leading-5 text-white transition-colors duration-200 transform  rounded-md  focus:outline-none bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4"%>
+        </div>
+    <% end %>
+<% end %>

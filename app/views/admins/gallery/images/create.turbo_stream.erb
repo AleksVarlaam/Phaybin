@@ -1,0 +1,6 @@
+<!-- Reload form -->
+<%= turbo_stream.replace 'images_form', render('admins/gallery/images/form')%>
+<!-- Reload images -->
+<%= turbo_stream.replace dom_id(@category, :images), render('admins/gallery/images/all_images')%>
+
+<%= prepend_flash%>
