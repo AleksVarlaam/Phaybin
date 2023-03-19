@@ -1,7 +1,7 @@
 <%= turbo_frame_tag image do %>
     <div class="grid gap-4">
         <div>
-            <%= image_tag image, class: "h-56 w-full object-cover rounded-lg"%>
+            <%= image_tag image.variant(:medium), class: "h-56 w-full object-cover rounded-lg"%>
         </div>
     </div>
 <% end %>
