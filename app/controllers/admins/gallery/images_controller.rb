@@ -4,12 +4,12 @@ module Admins
   module Gallery
     class ImagesController < ApplicationController
       before_action :authenticate_admin!
-      before_action :set_category
+      before_action :set_category_and_images
       before_action :set_attachment, only: %i[show destroy]
 
       def create
         respond_to do |format|
-          if @category.images.attach(category_params[:images])
+          if @category.images.attach(images_params[:images])
             format.turbo_stream do
               flash.now[:success] =
                 t('flash.success.updated', model: "#{@category.model_name.human} #{@category.title.downcase}")
@@ -21,7 +21,7 @@ module Admins
       end
       
       def show
-
+        @sorted_images = @images.select {|image| image.id <= @attachment.id} + @images.select {|image| image.id > @attachment.id}
       end
       
       def destroy
@@ -38,11 +38,11 @@ module Admins
         @attachment = ActiveStorage::Attachment.find(params[:id])
       end
 
-      def category_params
+      def images_params
         params.require(:category).permit(images: [])
       end
 
-      def set_category
+      def set_category_and_images
         @category = Category.find(params[:category_id]).decorate
         @images = @category.images_newest
       end
