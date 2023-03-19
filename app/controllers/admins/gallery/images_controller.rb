@@ -19,11 +19,13 @@ module Admins
           end
         end
       end
-      
+
       def show
-        @sorted_images = @images.select {|image| image.id <= @attachment.id} + @images.select {|image| image.id > @attachment.id}
+        @sorted_images = @images.select { |image| image.id <= @attachment.id } + @images.select do |image|
+                                                                                   image.id > @attachment.id
+                                                                                 end
       end
-      
+
       def destroy
         respond_to do |format|
           if admin_signed_in? && @attachment.purge_later

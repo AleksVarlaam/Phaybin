@@ -2,6 +2,4 @@
 
 class TurboCarouselComponent < ViewComponent::Base
   include Turbo::FramesHelper
-
-  
 end

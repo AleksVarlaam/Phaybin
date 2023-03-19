@@ -10,7 +10,7 @@ module Admins
       def new
         @category = Category.new
       end
-    
+
       def show
         @images = @category.images_newest
       end
