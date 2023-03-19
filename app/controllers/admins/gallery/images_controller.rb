@@ -6,6 +6,7 @@ module Admins
       layout 'profile_layout'
       before_action :authenticate_admin!
       before_action :set_category
+      before_action :set_attachment, only: %i[show destroy]
 
       def create
         respond_to do |format|
@@ -19,8 +20,24 @@ module Admins
           end
         end
       end
+      
+      def show
+        @images = @category.decorate.images_newest
+      end
+      
+      def destroy
+        respond_to do |format|
+          if admin_signed_in? && @attachment.purge_later
+            format.turbo_stream { flash.now[:success] = t('flash.success.destroyed', model: t('global.image')) }
+          end
+        end
+      end
 
       private
+
+      def set_attachment
+        @attachment = ActiveStorage::Attachment.find(params[:id])
+      end
 
       def category_params
         params.require(:category).permit(images: [])
