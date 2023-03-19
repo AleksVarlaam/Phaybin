@@ -3,7 +3,6 @@
 module Admins
   module Gallery
     class ImagesController < ApplicationController
-      layout 'profile_layout'
       before_action :authenticate_admin!
       before_action :set_category
       before_action :set_attachment, only: %i[show destroy]
@@ -22,7 +21,7 @@ module Admins
       end
       
       def show
-        @images = @category.decorate.images_newest
+
       end
       
       def destroy

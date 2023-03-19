@@ -14,11 +14,14 @@
   <body class="flex flex-col h-screen w-screen justify-between dark:bg-black">
       <!-- Header -->
       <%= yield :navbar%>
+      
       <!-- Main -->
       <main class="flex w-full mt-20 grid grid-flow-row auto-rows-max grid grid-cols-4 border-t-2 border-gray-700" id="top">
           <!-- Profile sidebar -->
           <%= tag.div (render 'admins/shared/admin_profile_sidebar'), class: "col-span-1 w-full hover:shadow-lg" if admin_signed_in?%>
           <div class="w-full col-span-full lg:col-span-3 p-4 relative mb-8">
+              <!-- Modal -->
+              <%= turbo_frame_tag 'modal'%>
               <!-- Page Navigation -->
               <%= render 'shared/profile_navigation' %>
               <!-- Flash messages -->

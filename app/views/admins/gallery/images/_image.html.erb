@@ -11,7 +11,7 @@
                 <% end %>
             <% end %>
             
-            <%= link_to admins_category_image_path(@category, image), data: {turbo_frame: '_top'} do %>
+            <%= link_to admins_category_image_path(@category, image), data: {turbo_frame: 'modal'}, remote: true do %>
                 <%= image_tag image.variant(:medium), class: "h-56 w-full object-cover rounded-lg"%>
             <% end %>
         </div>
