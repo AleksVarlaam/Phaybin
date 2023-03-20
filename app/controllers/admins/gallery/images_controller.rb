@@ -21,7 +21,7 @@ module Admins
       end
 
       def show
-        @sorted_images = @images.select { |image| image.id <= @attachment.id } + @images.select do |image|
+        @images = @images.select { |image| image.id <= @attachment.id } + @images.select do |image|
                                                                                    image.id > @attachment.id
                                                                                  end
       end

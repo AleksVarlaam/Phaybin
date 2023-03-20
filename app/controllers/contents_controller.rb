@@ -2,7 +2,8 @@
 
 class ContentsController < ApplicationController
   def index
-    @sorted_images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
+    @images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
+    @categories = Category.all.decorate
   end
   
   def gallery
