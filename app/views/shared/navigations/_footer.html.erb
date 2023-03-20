@@ -14,18 +14,12 @@
                     </div>
                     <!-- Logotype -->
                     <div class="flex justify-center">
-                        <%= image_tag 'PhaybiN-logo-white.png', class: 'h-16 sm:h-20 w-auto'%>
+                        <%= image_tag 'PhaybiN-logo-white.png', class: 'h-16 lg:h-20 w-auto'%>
                     </div>
                     <!-- Locales -->
                     <div class="flex justify-end mr-2">
                         <%= render 'shared/locales'%>
                     </div>
-                </div>
-                <!-- Main navigations -->
-                <div class="flex flex-wrap justify-center mt-5 -mx-4">
-                    <%= render 'shared/navigations/links_list', 
-                        link_class: 'mx-4 text-base font-medium font-serif italic transition-colors duration-300 hover:text-gray-900 hover:dark:text-gray-200',
-                        current_page: current_page %>
                 </div>
             </div>
 
