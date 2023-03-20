@@ -6,3 +6,39 @@
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 
 %>
+
+<%= tag.span '|', class: 'text-gray-700 font-bold'%>
+
+<!-- Gallery -->
+<%= nav_tab t('gallery.title'), root_path, 
+    class: link_class, 
+    data: { action: "dropdown#toggle", turbo_frame: '_top'},
+    current_page: current_page 
+%>
+
+<%= tag.span '|', class: 'text-gray-700 font-bold'%>
+
+<!-- About -->
+<%= nav_tab 'Обо мне', root_path, 
+    class: link_class, 
+    data: { action: "dropdown#toggle", turbo_frame: '_top'},
+    current_page: current_page 
+%>
+
+<%= tag.span '|', class: 'text-gray-700 font-bold'%>
+
+<!-- Price -->
+<%= nav_tab 'Прайс', root_path, 
+    class: link_class, 
+    data: { action: "dropdown#toggle", turbo_frame: '_top'},
+    current_page: current_page 
+%>
+
+<%= tag.span '|', class: 'text-gray-700 font-bold'%>
+
+<!-- Contacts -->
+<%= nav_tab 'Контакты', root_path, 
+    class: link_class, 
+    data: { action: "dropdown#toggle", turbo_frame: '_top'},
+    current_page: current_page 
+%>
