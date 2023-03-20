@@ -3,7 +3,7 @@
 
 <!-- Categories table -->
 <%= turbo_frame_tag 'categories',
-    class: "container mx-auto grid grid-cols-3 gap-4" do 
+    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" do 
 %>
     <%= render partial: 'contents/category', collection: @categories %>
 <% end %>

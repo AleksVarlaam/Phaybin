@@ -3,7 +3,7 @@
     <div id="indicators-carousel" class="relative" data-controller="carousel">
         <!-- Carousel wrapper -->
         <%= tag.div class: "h-[22rem] sm:max-h-screen md:h-[40rem] w-auto m-auto relative overflow-hidden rounded-lg" do %>
-            <% @sorted_images.each do |image| %>
+            <% @sorted_images.each_with_index do |image, index| %>
                 <%= turbo_frame_tag dom_id(image) do %>
                     <div
                         class="duration-700 ease-in-out absolute inset-0 transition-all text-center"
@@ -24,6 +24,7 @@
                                 alt: "Slide #{image.id}")
                             %>
                         </div>
+                        <%= tag.span "#{index + 1} / #{@images.count}", class: 'absolute bottom-0 text-gray-600 text-sm font-medium'%>
                     </div>
                 <% end %>
             <% end %>

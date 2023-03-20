@@ -1,20 +1,19 @@
 <% currently_at "#{@category.model_name.human} #{@category.title.downcase}" %>
 <% provide :page_title, "#{@category.model_name.human} #{@category.title.downcase}" %>
 
-<section class="container mx-auto h-auto mb-20">
-    <%= tag.h5 @category.title, 
-        class: "mb-5 text-center text-3xl font-medium font-serif italic text-gray-500" %>
-    <%= turbo_frame_tag dom_id(@category, :images), class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" do %>
-        <% @images.each do |image| %>
-            <%= turbo_frame_tag image do %>
-                <div class="grid gap-4">
-                    <div class="relative">
-                        <%= link_to image_path(@category, image), data: {turbo_frame: 'modal'}, remote: true do %>
-                            <%= image_tag image.variant(:medium), class: "h-56 w-full object-cover rounded-lg"%>
-                        <% end %>
-                    </div>
+
+<%= tag.h5 @category.title, 
+    class: "mb-5 text-center text-3xl font-medium font-serif italic text-gray-500" %>
+<%= turbo_frame_tag dom_id(@category, :images), class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6" do %>
+    <% @images.each do |image| %>
+        <%= turbo_frame_tag image do %>
+            <div class="relative h-[24rem] md:h-[22rem] w-auto">
+                <div class="flex justify-center">
+                    <%= link_to image_path(@category, image), data: {turbo_frame: 'modal'}, remote: true do %>
+                        <%= image_tag image.variant(:medium), class: "h-[22rem] w-auto object-cover"%>
+                    <% end %>
                 </div>
-            <% end %>
+            </div>
         <% end %>
     <% end %>
-</section>
+<% end %>

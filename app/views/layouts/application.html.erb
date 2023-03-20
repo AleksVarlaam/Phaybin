@@ -12,10 +12,11 @@
   </head>
 
   <body class="flex flex-col h-screen w-screen justify-between dark:bg-black">
+      <%# console %>
       <!-- Header -->
       <%= yield :navbar%>
       <!-- Main -->
-      <main class="flex w-full grid grid-flow-row auto-rows-max relative mt-6" id="top">
+      <main class="flex w-full grid grid-flow-row auto-rows-max relative my-6" id="top">
           <!-- Flash messages -->
           <% unless ['new', 'create'].include?(action_name) %>
               <%= tag.div (render 'shared/messages/flash_messages'), class: "absolute right-3 sm:right-6 sm:top-3 z-20 sm:max-w-sm", id: "flash_messages"%>
