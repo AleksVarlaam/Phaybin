@@ -1,0 +1,38 @@
+<!--
+Mobile menu, show/hide based on mobile menu state.
+
+Entering: "duration-200 ease-out"
+  From: "opacity-0 scale-95"
+  To: "opacity-100 scale-100"
+Leaving: "duration-100 ease-in"
+  From: "opacity-100 scale-100"
+  To: "opacity-0 scale-95"
+-->
+<div 
+  data-dropdown-target="menu"
+  data-transition-enter-from="opacity-0 scale-95"
+  data-transition-enter-to="opacity-100 scale-100"
+  data-transition-leave-from="opacity-100 scale-100"
+  data-transition-leave-to="opacity-0 scale-95"
+  class="hidden absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
+>
+    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-black border border-gray-700 hover:border-gray-600 divide-y-2 divide-gray-700">
+      <!-- Burger button -->
+      <div class="pt-5 pb-6 px-5">
+        <div class="flex items-center justify-center">
+          <div class="-mr-2">
+            <button data-action="dropdown#toggle click@window->dropdown#hide" type="button" class="bg-white dark:bg-black rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <%= heroicon 'bars-3', class: 'h-6 w-6'%>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Links list -->
+      <div class="py-6 px-5 space-y-6 text-center">
+        <div class="grid grid-cols-1 gap-y-3 gap-x-8">
+            <%= render 'shared/navigations/links_list', 
+                link_class: 'text-base font-medium pb-3 border-b border-gray-700 hover:border-b-600', current_page: current_page %>
+        </div>
+      </div>
+    </div>
+</div>

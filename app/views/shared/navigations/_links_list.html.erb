@@ -1,0 +1,8 @@
+<!-- Main navigation links list -->
+
+<!-- Home -->
+<%= nav_tab t('pages.home'), root_path, 
+    class: link_class, 
+    data: { action: "dropdown#toggle", turbo_frame: '_top'},
+    current_page: current_page 
+%>

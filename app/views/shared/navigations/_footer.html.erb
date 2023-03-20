@@ -1,3 +1,4 @@
+<!-- Footer -->
 <%= provide :footer do %>
     <footer class="bg-gray-200 dark:bg-black border-t dark:border-gray-700 hover:dark:border-gray-600 relative">
         <%= link_to '#top', class: 'absolute right-2 bottom-5 z-20', data: {controller: 'scroll-to'} do %>
@@ -12,9 +13,9 @@
                 </div>
                 <!-- Main navigations -->
                 <div class="flex flex-wrap justify-center mt-5 -mx-4">
-                    <%= nav_tab t('pages.home'), root_path, 
-                        class: "mx-4 text-base font-medium transition-colors duration-300 hover:text-gray-900 hover:dark:text-gray-200",
-                        current_page: current_page, data: {turbo_frame: '_top'} %>
+                    <%= render 'shared/navigations/links_list', 
+                        link_class: 'mx-4 text-base font-medium transition-colors duration-300 hover:text-gray-900 hover:dark:text-gray-200',
+                        current_page: current_page %>
                 </div>
             </div>
 
