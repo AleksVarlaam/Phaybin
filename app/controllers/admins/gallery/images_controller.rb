@@ -3,7 +3,7 @@
 module Admins
   module Gallery
     class ImagesController < ApplicationController
-      before_action :authenticate_admin!
+      before_action :authenticate_admin!, except: :show
       before_action :set_category_and_images
       before_action :set_attachment, only: %i[show destroy]
 

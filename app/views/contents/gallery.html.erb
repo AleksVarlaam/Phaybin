@@ -1,0 +1,9 @@
+<% currently_at t('gallery.title') %>
+<% provide :page_title, t('gallery.title') %>
+
+<!-- Categories table -->
+<%= turbo_frame_tag 'categories',
+    class: "container mx-auto grid grid-cols-3 gap-4" do 
+%>
+    <%= render partial: 'contents/category', collection: @categories %>
+<% end %>

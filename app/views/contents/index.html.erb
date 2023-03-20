@@ -4,7 +4,7 @@
 
 <!-- Truck Carousel -->
 <%= turbo_frame_tag "carousel" do %>
-    <div id="indicators-carousel" class="relative -mt-12" data-controller="carousel">
+    <div id="indicators-carousel" class="relative" data-controller="carousel">
         <!-- Carousel wrapper -->
         <%= tag.div class: "h-[22rem] sm:max-h-screen md:h-[32rem] w-auto m-auto relative overflow-hidden rounded-lg" do %>
             <% @sorted_images.each do |image| %>

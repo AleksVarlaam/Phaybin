@@ -13,7 +13,11 @@ Rails.application.routes.draw do
       end
     end
     get '/admin' => redirect('/admins/sign_in')
+    
+    get :gallery,   to: 'contents#gallery', as: 'gallery'
+    get 'category/:id',  to: 'contents#category', as: 'category'
+    get 'category/:category_id/image/:id',  to: 'admins/gallery/images#show', as: 'image'
 
-    root to: 'contents/main#index'
+    root to: 'contents#index'
   end
 end
