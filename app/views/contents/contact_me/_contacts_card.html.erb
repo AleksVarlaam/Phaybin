@@ -1,0 +1,45 @@
+<!-- Contacts info -->
+<div class="lg:flex lg:mt-0 lg:flex-col lg:items-center px-4">
+    <div class="flex justify-center ">
+        <%= image_tag Admin.last.avatar_attachment_path, class: 'h-[12rem] w-[12rem] lg:w-[22rem] lg:h-[22rem] object-cover mx-auto rounded-full lg:block shrink-0 '%>
+    </div>
+    <!-- Contacts -->
+    <div class="mt-6 space-y-8 md:mt-8">
+        <!-- Location -->
+        <p class="flex items-start -mx-2">
+            <%= heroicon 'map-pin', class: 'w-6 h-6 mx-2 text-gray-500 dark:text-gray-400'%>
+            <%= tag.span 'Israel, Bat-Yam', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400"%>
+        </p>
+        <!-- Phone -->
+        <%= link_to '#', class: "flex items-start -mx-2" do %>
+            <%= heroicon 'phone', class: 'w-6 h-6 mx-2 text-gray-500 dark:text-gray-400'%>
+            <%= tag.span '(257) 563-7401', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400 hover:dark:text-gray-200 hover:underline"%>
+        <% end %>
+        <!-- Email -->
+        <%= link_to '#', class: "flex items-start -mx-2" do %>
+            <%= heroicon 'envelope', class: 'w-6 h-6 mx-2 text-gray-500 dark:text-gray-400'%>
+            <%= tag.span 'phaybin@gmail.com', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400 hover:dark:text-gray-200 hover:underline"%>
+        <% end %>
+    </div>
+    <!-- Social links -->
+    <div class="mt-6 w-80 md:mt-8">
+        <h3 class="text-gray-600 dark:text-gray-300 ">Follow me</h3>
+        <div class="flex mt-4 -mx-1.5 ">
+            <!-- Facebook -->
+            <%= link_to '#', 
+                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
+               <%= image_tag 'icons/icons8-facebook-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
+            <% end %>
+            <!-- Instagram -->
+            <%= link_to '#', 
+                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
+                <%= image_tag 'icons/icons8-instagram-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
+             <% end %>
+            <!-- Telegram -->
+            <%= link_to '#', 
+                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
+                <%= image_tag 'icons/icons8-telegram-app-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
+             <% end %>
+        </div>
+    </div>
+</div>
