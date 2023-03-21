@@ -5,6 +5,7 @@ class ContentsController < ApplicationController
     # @images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
 #     @categories = Category.all.decorate
     @images = Category.find_by(en: 'Main').decorate.images_newest
+    @contact = Contact.new
   end
   
   def gallery
