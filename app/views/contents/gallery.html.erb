@@ -3,8 +3,9 @@
 
 <div class="flex items-center justify-center mb-6">
     <!-- Back -->
-    <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"), root_path %>
-
+    <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"),
+        root_path, data: {turbo_frame: '_top'}%>
+    <!-- Title -->
     <%= tag.h5 t('gallery.title'), 
         class: " text-center text-3xl text-gray-500" %>
 </div>
