@@ -1,42 +1,32 @@
 <!-- Header -->
 <%= provide :navbar do %>
-    <header class="bg-white dark:bg-black bg-opacity-90 fixed top-0 z-50 w-full">
+    <header class=" static top-0 z-50 w-full bg-opacity-0">
         <div class="relative" data-controller="dropdown">
           <div class="w-full mx-auto px-4 sm:px-6">
-            <div class="nav-container flex items-center py-4 ">
+            <div class="nav-container flex items-top py-4 ">
               <!-- Social links -->
               <div class="flex justify-start w-auto flex-auto space-x-3">
                   <%= render 'shared/navigations/social_links'%>
               </div>
-              <!-- Mobile menu burger button -->
-              <div class="flex justify-center flex-none lg:hidden w-auto">
-                <button data-action="dropdown#toggle click@window->dropdown#hide" type="button" class="rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                    <%= heroicon 'bars-3', class: 'h-6 w-6'%>
-                </button>
-              </div>
-              
-              <!-- Main Navigations -->
-              <nav class="hidden lg:flex space-x-6">
-                  <%= render 'shared/navigations/links_list', 
-                      link_class: 'text-base font-medium font-serif italic hover:text-gray-900 hover:dark:text-gray-200', 
-                      current_page: current_page %>
+              <!-- Logotype -->
+              <nav class=" lg:flex space-x-6">
+                  <%= link_to root_path, class:"flex justify-center" do %>
+                      <%= image_tag 'PhaybiN-logo-white.png', class: 'h-12 lg:h-24 mb-3 w-auto'%>
+                  <% end%>
               </nav>
               <!-- User menu -->
-              <div class="flex items-center justify-end flex-auto w-auto space-x-5">
-                  <!-- Locales -->
-                  <%= render 'shared/locales'%>
-                  <!-- Menu -->
-                  <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
+              <div class="flex items-top justify-end flex-auto w-auto ">
+                  <div class="flex items-top space-x-5">
+                      <!-- Locales -->
+                      <%= render 'shared/locales'%>
+                      <!-- Menu -->
+                      <%= render 'admins/shared/admin_menu' if admin_signed_in?%>
+                  </div>
               </div>
             </div>
           </div>
           <!-- Mobile menu -->
           <%= render 'shared/navigations/mobile_menu', current_page: current_page %>
         </div>
-        
     </header>
-    <!-- Logotype -->
-    <%= link_to root_path, class:"flex justify-center mt-20" do %>
-        <%= image_tag 'PhaybiN-logo-white.png', class: 'h-20 lg:h-24 mb-3 w-auto'%>
-    <% end if controller_name == 'contents'%>
 <% end %>

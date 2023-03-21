@@ -2,12 +2,14 @@
 
 class ContentsController < ApplicationController
   def index
-    @images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
-    @categories = Category.all.decorate
+    # @images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
+#     @categories = Category.all.decorate
+    @images = Category.find_by(en: 'Main').decorate.images_newest
   end
   
   def gallery
     @categories = Category.all.decorate
+    # @categories = Category.where.not(en: 'Main').decorate
   end
   
   def category

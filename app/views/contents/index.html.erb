@@ -2,7 +2,7 @@
 <% provide :page_title, t('pages.home') %>
 
 
-<div class="px-2 lg:px-0 flex justify-center  mb-20">
+<div class="px-2 lg:px-0 flex justify-center mb-20">
     <div id="gallery" class="relative w-full sm:w-2/3" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative overflow-hidden h-[20rem] lg:h-[32rem]">
@@ -24,6 +24,13 @@
         <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
         </button>
     </div>
+</div>
+
+<!-- Arrow down -->
+<div class="flex justify-center">
+    <%= link_to '#contact_me' do %>
+        <%= heroicon 'chevron-double-down', class: 'w-6 h-6 text-gray-500 hover:text-gray-200'%>
+    <% end %>
 </div>
 
 <%= render 'contents/contact_me/contact_me'%>

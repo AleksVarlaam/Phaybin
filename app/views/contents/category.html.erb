@@ -1,9 +1,13 @@
 <% currently_at "#{@category.model_name.human} #{@category.title.downcase}" %>
 <% provide :page_title, "#{@category.model_name.human} #{@category.title.downcase}" %>
 
+<div class="flex items-center justify-center mb-5">
+    <!-- Back -->
+    <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"), :back %>
 
-<%= tag.h5 @category.title, 
-    class: "mb-5 text-center text-3xl font-medium font-serif italic text-gray-500" %>
+    <%= tag.h5 @category.title, 
+        class: " text-center text-3xl font-medium font-serif italic text-gray-500" %>
+</div>
 <%= turbo_frame_tag dom_id(@category, :images), class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6" do %>
     <% @images.each do |image| %>
         <%= turbo_frame_tag image do %>

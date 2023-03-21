@@ -2,7 +2,7 @@
     <%= link_to admins_category_path(category), data: {turbo_frame: '_top'} do %>
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 hover:dark:border-gray-600 dark:text-gray-500 hover:dark:text-gray-400">
             <% if category.images.present?%>
-                <%= image_tag category.images.last, class: ' h-56 w-full object-cover'%>
+                <%= image_tag category.images.last, class: 'rounded-lg h-56 w-full object-cover'%>
             <% else%>
                 <div class="flex items-center justify-center h-56 w-full object-cover rounded bg-gray-50 dark:bg-gray-800">
                     <p class="text-2xl">+</p>
