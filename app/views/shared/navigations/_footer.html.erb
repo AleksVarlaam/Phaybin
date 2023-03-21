@@ -13,9 +13,9 @@
                         <%= render 'shared/navigations/social_links'%>
                     </div>
                     <!-- Logotype -->
-                    <div class="flex justify-center">
+                    <%= link_to root_path, class: "flex justify-center" do %>
                         <%= image_tag 'PhaybiN-logo-white.png', class: 'h-16 lg:h-20 w-auto'%>
-                    </div>
+                    <% end %>
                     <!-- Locales -->
                     <div class="flex justify-end mr-2">
                         <%= render 'shared/locales'%>
