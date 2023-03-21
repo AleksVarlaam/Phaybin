@@ -1,6 +1,13 @@
 <% currently_at t('gallery.title') %>
 <% provide :page_title, t('gallery.title') %>
 
+<div class="flex items-center justify-center mb-6">
+    <!-- Back -->
+    <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"), root_path %>
+
+    <%= tag.h5 t('gallery.title'), 
+        class: " text-center text-3xl text-gray-500" %>
+</div>
 <!-- Categories table -->
 <%= turbo_frame_tag 'categories',
     class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4" do 
