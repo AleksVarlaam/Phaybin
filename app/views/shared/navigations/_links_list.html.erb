@@ -19,18 +19,16 @@
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- About -->
-<%= nav_tab 'Обо мне', root_path, 
+<%= nav_tab 'Обо мне', root_path(anchor: 'features'), 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 
 %>
 
-
-
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- Contacts -->
-<%= nav_tab 'Контакты', root_path, 
+<%= nav_tab 'Контакты', root_path(anchor: 'contact_me'), 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 
