@@ -4,7 +4,8 @@ class ContentsController < ApplicationController
   def index
     # @images = ActiveStorage::Attachment.where(record_type: "Category").order(created_at: :desc)
 #     @categories = Category.all.decorate
-    @images = Category.find_by(en: 'Main').decorate.images_newest
+    @images_mobile  = Category.find_by(en: 'Main-mobile').decorate.images_newest
+    @images_desktop = Category.find_by(en: 'Main-desktop').decorate.images_newest
     @contact = Contact.new
   end
   

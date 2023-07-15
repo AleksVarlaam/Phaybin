@@ -3,11 +3,15 @@
 
 
 <!-- Main carousel -->
-<section class="h-screen overflow-y-auto">
-    <%= render 'contents/main_carousel'%>
-
+<section class="h-auto">
+    <% if device == "mobile" %>
+      <%= render 'contents/carousel/mobile_carousel'%>
+    <% else %>
+      <%= render 'contents/carousel/desktop_carousel'%>
+    <% end %>
+    
     <!-- Arrow down -->
-    <div class="flex justify-center lg:-mt-12">
+    <div class="flex justify-center -mt-12">
         <%= link_to '#features' do %>
             <%= heroicon 'chevron-double-down', class: 'w-6 h-6 text-gray-500 hover:text-gray-200'%>
         <% end %>
