@@ -19,22 +19,8 @@
     <!-- Social links -->
     <div class="mt-6 w-80 md:mt-8">
         <h3 class="text-gray-600 dark:text-gray-300 ">Follow me</h3>
-        <div class="flex mt-4 -mx-1.5 ">
-            <!-- Facebook -->
-            <%= link_to 'https://web.facebook.com/groups/232161274790150', target: 'blank',
-                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
-               <%= image_tag 'icons/icons8-facebook-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
-            <% end %>
-            <!-- Instagram -->
-            <%= link_to 'https://www.instagram.com/phaybin.photo/', target: 'blank',
-                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
-                <%= image_tag 'icons/icons8-instagram-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
-             <% end %>
-            <!-- Telegram -->
-            <%= link_to 'https://t.me/phaybin', target: 'blank',
-                class: "mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" do %>
-                <%= image_tag 'icons/icons8-telegram-app-50.png', class: 'w-8 h-8 hover:shadow-md hover:shadow-gray-300 rounded-full' %>
-             <% end %>
+        <div class="flex mt-4 space-x-3 rtl:space-x-reverse">
+            <%= render 'shared/navigations/social_links'%>
         </div>
     </div>
 </div>
