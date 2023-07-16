@@ -16,7 +16,7 @@
       >
         <%= heroicon "bars-3", class: "mx-2 hidden sm:block dark:text-gray-500", size: 20%>
         <!-- Avatar -->
-        <%= image_tag(current_admin.avatar_attachment_path, class: "object-cover h-8 w-8 rounded-full border-2 border-gray-700 m-1", alt: "avatar")%>
+        <%= image_tag(current_admin.avatar_thumb, class: "object-cover h-8 w-8 rounded-full border-2 border-gray-700 m-1", alt: "avatar")%>
       </button>
     </div>
 
@@ -51,7 +51,7 @@
           id:"personalInfoLink" do
         %>
           <!-- Avatar -->
-          <%= image_tag(current_admin.avatar_attachment_path, class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
+          <%= image_tag(current_admin.avatar_thumb, class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
           <!-- User name -->
           <%= tag.h4 ('Admin'), class: "px-4 font-medium text-gray-800 dark:text-gray-400 text-center hover:underline"%>
           <!-- Email -->

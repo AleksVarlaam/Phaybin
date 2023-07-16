@@ -8,7 +8,7 @@
       <div class="space-y-1 text-center">
         <%= f.label :avatar, class: "cursor-pointer" do %>
             <% if current_admin.avatar.present?%>
-                <%= image_tag(current_admin.avatar, class: "cursor-pointer object-cover mx-auto h-12 w-12 rounded-full", alt: "avatar") %>
+                <%= image_tag(current_admin.avatar_thumb, class: "cursor-pointer object-cover mx-auto h-12 w-12 rounded-full", alt: "avatar") %>
             <% else %>
                 <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700"%>
             <% end %>

@@ -4,11 +4,10 @@
 class ImagesController < ApplicationController
   before_action :authenticate_admin!, except: :show
   before_action :set_category_and_images
-  before_action :set_attachment, only: %i[show destroy]
 
   def create
     respond_to do |format|
-      if @category.images.attach(images_params[:images])
+      if @category.update(images_params)
         format.turbo_stream do
           flash.now[:success] =
             t('flash.success.updated', model: "#{@category.model_name.human} #{@category.title.downcase}")
@@ -20,23 +19,37 @@ class ImagesController < ApplicationController
   end
 
   def show
-    @images = @images.select { |image| image.id <= @attachment.id } + @images.select do |image|
-                                                                               image.id > @attachment.id
-                                                                             end
+    start_index = params[:id].to_i
+    @images = @images.select.with_index {|img, index| index.to_i >= start_index} + @images.select.with_index {|img, index| index.to_i < start_index}
   end
 
   def destroy
     respond_to do |format|
-      if admin_signed_in? && @attachment.purge_later
-        format.turbo_stream { flash.now[:success] = t('flash.success.destroyed', model: t('global.image')) }
+      if remove_image_at_index(params[:id].to_i) && @category.save!
+        format.turbo_stream do
+          flash[:success] = t('flash.success.destroyed', model: t('global.image'))
+          redirect_to request.referer
+        end
+      else
+        format.turbo_stream do
+          flash[:error] = t('flash.alert')
+          redirect_to request.referer
+        end
       end
     end
   end
 
   private
 
-  def set_attachment
-    @attachment = ActiveStorage::Attachment.find(params[:id])
+  def remove_image_at_index(index)
+    remain_images = @category.images
+    if index.zero? && @category.images.size == 1
+      @category.remove_images!
+    else
+      deleted_image = remain_images.delete_at(index)
+      deleted_image.try(:remove!)
+      @category.images = remain_images
+    end
   end
 
   def images_params
@@ -45,6 +58,6 @@ class ImagesController < ApplicationController
 
   def set_category_and_images
     @category = Category.find(params[:category_id]).decorate
-    @images = @category.images_newest
+    @images = @category.images
   end
 end

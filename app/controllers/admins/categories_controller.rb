@@ -11,7 +11,7 @@ module Admins
     end
 
     def show
-      @images = @category.images_newest
+      @images = @category.images
     end
 
     def create

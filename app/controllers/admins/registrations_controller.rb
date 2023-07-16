@@ -40,7 +40,11 @@ module Admins
     #   super
     # end
 
-    # protected
+    protected
+    
+    def permitted_attributes
+      %i[ avatar remove_avatar ]
+    end
 
     # If you have extra params to permit, append them to the sanitizer.
     # def configure_sign_up_params
@@ -49,7 +53,7 @@ module Admins
 
     # If you have extra params to permit, append them to the sanitizer.
     def configure_account_update_params
-      devise_parameter_sanitizer.permit(:account_update, keys: [:avatar])
+      devise_parameter_sanitizer.permit(:account_update, keys: permitted_attributes)
     end
 
     def after_update_path_for(_resource)

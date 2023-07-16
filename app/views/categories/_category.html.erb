@@ -3,7 +3,7 @@
         <div class="h-[24rem] md:h-[22rem] w-auto bg-opacity-0 dark:text-gray-400 hover:dark:text-gray-300 mb-6">
             <!-- Category image -->
             <%= tag.div class: "flex justify-center" do %>
-                <%= image_tag category.images.last, class: 'h-[22rem] w-auto object-cover'%>
+                <%= image_tag category.images.last.medium.url, class: 'h-[22rem] w-auto object-cover'%>
             <% end if category.images.present? %>
             <!-- Category title -->
             <div class="p-5 text-center">

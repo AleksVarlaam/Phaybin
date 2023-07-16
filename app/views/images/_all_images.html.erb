@@ -1,6 +1,8 @@
 <%= turbo_frame_tag dom_id(@category, :images), class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" do %>
     <% if @images.count.positive?%>
-        <%= render partial: 'images/image', collection: @images%>
+        <% @images.each_with_index do |image, index| %>
+            <%= render 'images/image', image: image, index: index%>
+        <% end %>
     <% else %>
         <%= tag.p 'Нету фото', class: 'text-center text-gray-500 col-span-full'%>
     <% end%>

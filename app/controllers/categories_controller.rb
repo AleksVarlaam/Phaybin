@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find(params[:id]).decorate
-    @images = @category.images_newest
+    @images = @category.images
   end
 end
 
