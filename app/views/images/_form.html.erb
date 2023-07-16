@@ -1,5 +1,5 @@
 <%= turbo_frame_tag 'images_form' do %>
-    <%= form_with model: @category, url: admins_category_images_path(@category), method: :post,
+    <%= form_with model: @category, url: category_images_path(@category), method: :post,
         data: {turbo_frame: '_top'}, class: "my-5" do |f| %>
         <!-- Images -->
         <div class="flex grid grid-rows-1 text-center items-center justify-center">

@@ -36,7 +36,9 @@
         </div>
     </header>
     <!-- Logotype -->
-    <%= link_to root_path, class:"flex justify-center #{admin_signed_in? ? 'pt-20' : 'pt-16'}" do %>
-        <%= image_tag 'PhaybiN-logo-white.png', class: 'h-14 lg:h-24 mb-3 w-auto'%>
-    <% end%>
+    <%= tag.div class: "flex justify-center #{admin_signed_in? ? 'pt-20' : 'pt-16'}" do %>
+        <%= link_to root_path, class:"" do %>
+            <%= image_tag 'PhaybiN-logo-white.png', class: 'h-14 lg:h-24 mb-3 w-auto'%>
+        <% end unless request.original_url.include?('admins')%>
+    <% end  %>
 <% end %>

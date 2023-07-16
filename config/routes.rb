@@ -9,21 +9,18 @@ Rails.application.routes.draw do
     }
     as :admin do
       namespace :admins do
-        resources :categories, module: :gallery do
-          resources :images
-        end
+        resources :categories
       end
     end
     
     # Content
-    get :gallery,   to: 'contents#gallery', as: 'gallery'
-    get 'category/:id',  to: 'contents#category', as: 'category'
-    get 'category/:category_id/image/:id',  to: 'admins/gallery/images#show', as: 'image'
-    
+    resources :categories, only: %i[ index show ] do 
+      resources :images
+    end
     # Contact form
     resources :contacts, only: [ :create ]
 
     # Root 
-    root to: 'contents#index'
+    root to: 'main#index'
   end
 end

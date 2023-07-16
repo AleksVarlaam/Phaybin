@@ -2,14 +2,10 @@
 <% provide :page_title, t('pages.home') %>
 
 
-<!-- Main carousel -->
+<!-- Main header -->
 <section class="h-auto">
-    <% if device == "mobile" %>
-      <%= render 'contents/carousel/mobile_carousel'%>
-    <% else %>
-      <%= render 'contents/carousel/desktop_carousel'%>
-    <% end %>
-    
+    <!-- Carousel -->
+    <%= render 'carousel'%>
     <!-- Arrow down -->
     <div class="flex justify-center -mt-12">
         <%= link_to '#features' do %>
@@ -17,9 +13,8 @@
         <% end %>
     </div>
 </section>
-
-<!-- Featurese -->
-<%= render 'contents/features'%>
-
+<!-- Features -->
+<%= render 'features'%>
+<!-- Contac me -->
 <%= render 'contacts/contact_me'%>
 
