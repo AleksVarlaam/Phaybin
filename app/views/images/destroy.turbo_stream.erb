@@ -1,4 +1,3 @@
 <!-- Reload images -->
-<%= turbo_stream.remove @attachment%>
-
+<%= turbo_stream.replace dom_id(@category, :images), render('images/all_images')%>
 <%= prepend_flash%>

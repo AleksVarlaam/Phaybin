@@ -4,6 +4,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  
+  # Remove previously stored files
+  configure do |config|
+    config.remove_previously_stored_files_after_update = false
+  end
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?

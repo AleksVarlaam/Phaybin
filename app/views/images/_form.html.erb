@@ -1,6 +1,10 @@
 <%= turbo_frame_tag 'images_form' do %>
     <%= form_with model: @category, url: category_images_path(@category), method: :post,
         data: {turbo_frame: '_top'}, class: "my-5" do |f| %>
+        <!-- Exists Images -->
+        <% @images.each do |image| %>
+          <%= f.hidden_field :images, multiple: true, value: image.identifier, id: image.identifier %>
+        <% end %>
         <!-- Images -->
         <div class="flex grid grid-rows-1 text-center items-center justify-center">
           <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">

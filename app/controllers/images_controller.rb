@@ -9,8 +9,8 @@ class ImagesController < ApplicationController
     respond_to do |format|
       if @category.update(images_params)
         format.turbo_stream do
-          flash.now[:success] =
-            t('flash.success.updated', model: "#{@category.model_name.human} #{@category.title.downcase}")
+          flash[:success] = t('flash.success.updated', model: "#{@category.model_name.human} #{@category.title.downcase}")
+          redirect_to request.referer
         end
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -25,13 +25,13 @@ class ImagesController < ApplicationController
 
   def destroy
     respond_to do |format|
-      if remove_image_at_index(params[:id].to_i) && @category.save!
-        format.turbo_stream do
+      if remove_image_at_index(params[:id].to_i) && @category.save
+        format.html do
           flash[:success] = t('flash.success.destroyed', model: t('global.image'))
           redirect_to request.referer
         end
       else
-        format.turbo_stream do
+        format.html do
           flash[:error] = t('flash.alert')
           redirect_to request.referer
         end
@@ -42,18 +42,15 @@ class ImagesController < ApplicationController
   private
 
   def remove_image_at_index(index)
-    remain_images = @category.images
-    if index.zero? && @category.images.size == 1
-      @category.remove_images!
-    else
-      deleted_image = remain_images.delete_at(index)
-      deleted_image.try(:remove!)
-      @category.images = remain_images
-    end
+     remain_images = @category.images
+    
+     deleted_image = remain_images.delete_at(index) 
+     deleted_image.try(:remove!)
+     @category.images = remain_images
   end
 
   def images_params
-    params.require(:category).permit(images: [])
+    params.require(:category).permit({images: []})
   end
 
   def set_category_and_images
