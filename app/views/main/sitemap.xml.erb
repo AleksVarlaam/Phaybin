@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Root -->
+    <%= render 'sitemap_url', url: root_url, date: nil, priority: 1.0 %>
+    
+    <% @locales.each do |locale| %>
+        <!-- Root with locale -->
+        <%= render 'sitemap_url', url: root_url(locale: locale), date: nil, priority: 1.0 %>
+        <%= render 'sitemap_url', url: galleries_url(locale: locale), date: nil, priority: 1.0 %>
+        
+        <% @galleries.each do |gallery| %>
+            <%= render 'sitemap_url', url: gallery_url(gallery, locale: locale), date: nil, priority: 1.0 %>
+        <% end %>
+    <% end %>
+</urlset>

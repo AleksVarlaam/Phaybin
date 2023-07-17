@@ -6,13 +6,13 @@
     <!-- Contacts -->
     <div class="mt-6 space-y-8 md:mt-8">
         <!-- Location -->
-        <p class="flex items-start -mx-2">
-            <%= heroicon 'map-pin', class: 'w-6 h-6 mx-2 text-gray-500 dark:text-gray-400'%>
+        <p class="flex items-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-location-dot fa-lg text-gray-500 dark:text-gray-400"></i>
             <%= tag.span 'Israel, Bat-Yam', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400"%>
         </p>
         <!-- Phone -->
-        <%= link_to 'tel:+972 52-779-6556', class: "flex items-start -mx-2" do %>
-            <%= heroicon 'phone', class: 'w-6 h-6 mx-2 text-gray-500 dark:text-gray-400'%>
+        <%= link_to 'https://wa.me/972527796556', target: '_blank', class: "flex items-center" do %>
+            <i class="fa-brands fa-whatsapp fa-lg text-gray-500 dark:text-gray-400"></i>
             <%= tag.span '+972 52-779-6556', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400 hover:dark:text-gray-200 hover:underline"%>
         <% end %>
     </div>
