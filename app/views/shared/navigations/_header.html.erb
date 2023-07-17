@@ -5,7 +5,7 @@
           <div class="w-full mx-auto px-4 sm:px-6">
             <div class="nav-container flex items-center py-4 justify-between">
               <!-- Social links -->
-              <div class="flex justify-start w-auto flex-auto space-x-3 <%= admin_signed_in? ? 'ml-2' : '-mr-10'%>">
+              <div class="flex justify-start w-auto flex-auto space-x-3 rtl:space-x-reverse <%= admin_signed_in? ? 'ml-2' : '-mr-10'%>">
                   <%= render 'shared/navigations/social_links'%>
               </div>
               <!-- Mobile menu burger button -->
@@ -15,14 +15,14 @@
                   </button>
                 </div>
                 <!-- Main Navigations -->
-                <nav class="hidden lg:flex space-x-6">
+                <nav class="hidden lg:flex space-x-6 rtl:space-x-reverse">
                     <%= render 'shared/navigations/links_list', 
                         link_class: 'text-base font-medium font-serif italic hover:text-gray-900 hover:dark:text-gray-200', 
                         current_page: current_page %>
                 </nav>
               <!-- User menu -->
               <div class="flex items-top justify-end flex-auto w-auto ">
-                  <div class="flex items-center space-x-5">
+                  <div class="flex items-center space-x-5 rtl:space-x-reverse">
                       <!-- Locales -->
                       <%= render 'shared/locales'%>
                       <!-- Menu -->

@@ -1,0 +1,14 @@
+en:
+    activerecord:
+        models:
+            contact:    "Contact"
+    contact_me:
+        title:          "Always in touch with you"
+        desc:           "If you want to know the shooting conditions, availability of your date or you have any other question, - write me and I will answer you within 24 hours."
+        follow_me:      "Follow me"
+        message_place:  "Your message here"
+        send_message:   "Send message"
+        first_name:     "First name"
+        last_name:      "Last name"
+        message:        "Message"
+            

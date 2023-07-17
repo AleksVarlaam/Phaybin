@@ -1,6 +1,5 @@
 uk:
-  pages:
-      home:         "Головна"
+  watch_portfolio:  "Переглянути портфоліо"
   gallery:
       title:        "Портфоліо"  
       add_btn:      "Додати категорію"

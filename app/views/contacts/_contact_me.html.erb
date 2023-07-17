@@ -1,9 +1,11 @@
 <section class="h-auto overflow-y-auto pt-16 pb-6" id="contact_me">
     <div class="container px-6 mx-auto">
         <div class="flex-auto justify-center text-center">
-            <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-gray-300">Всегда на связи с вами</h1>
+            <!-- Title -->
+            <%= tag.h1 t('contact_me.title'), class: "mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-gray-300" %>
+            <!-- Description -->
             <div class="flex justify-center">
-                <p class="mt-3 text-gray-400 dark:text-gray-400 max-w-2xl text-lg">Если вы хотите узнать условия съемки, доступность вашей даты или у вас есть любой другой вопрос , - напишите мне, и я отвечу вам в течение 24 часов.</p>
+                <%= tag.p t('contact_me.desc'), class: "mt-3 text-gray-400 dark:text-gray-400 max-w-2xl text-lg" %>
             </div>
         </div>
 

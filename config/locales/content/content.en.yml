@@ -1,6 +1,5 @@
 en:
-  pages:
-      home:         "Main"
+  watch_portfolio:  "Watch portfolio"
   gallery:
       title:        "Portfolio"      
       add_btn:      "Add gallery"

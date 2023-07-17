@@ -10,7 +10,7 @@
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- Gallery -->
-<%= nav_tab t('gallery.title'), galleries_path, 
+<%= nav_tab t('pages.portfolio'), galleries_path, 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 
@@ -19,7 +19,7 @@
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- About -->
-<%= nav_tab 'Обо мне', root_path(anchor: 'about_me'), 
+<%= nav_tab t('pages.about_me'), root_path(anchor: 'about_me'), 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 
@@ -28,7 +28,7 @@
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- Contacts -->
-<%= nav_tab 'Контакты', root_path(anchor: 'contact_me'), 
+<%= nav_tab t('pages.contacts'), root_path(anchor: 'contact_me'), 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 

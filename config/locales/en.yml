@@ -3,6 +3,12 @@ en:
   he: 'עברית'
   ru: 'Русский'
   uk: 'Українська'
+  # Pages
+  pages:
+      home:         "Main"
+      portfolio:    "Portfolio"
+      about_me:     "About me"
+      contacts:     "Contact me"
   # Global
   global:
       save_btn:         'Save'

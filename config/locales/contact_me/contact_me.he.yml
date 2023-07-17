@@ -1,0 +1,14 @@
+he:
+    activerecord:
+        models:
+            contact:    "קשר"
+    contact_me:
+        title:          "תמיד בקשר איתך"
+        desc:           "אם אתה רוצה לדעת את תנאי הירי, הזמינות של התאריך שלך או שיש לך כל שאלה אחרת, לכתוב לי ואני אענה לך בתוך 24 שעות."
+        follow_me:      "בוא איתי"
+        message_place:  "ההודעה שלך כאן"
+        send_message:   "לשלוח מסר"
+        first_name:     "שם"
+        last_name:      "שם משפחה"
+        message:        "מסר"
+            

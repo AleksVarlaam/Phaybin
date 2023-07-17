@@ -32,7 +32,7 @@
     -->
     <div 
         data-dropdown-target="menu"
-        class="hidden origin-top-right absolute dark:bg-black border border-gray-700 hover:border-gray-600 z-50 right-0 mt-2 min-w-[14rem] w-auto rounded-lg shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
+        class="hidden ltr:origin-top-right ltr:origin-top-left absolute dark:bg-black border border-gray-700 hover:border-gray-600 z-50 ltr:right-0 rtl:left-0 mt-2 min-w-[14rem] w-auto rounded-lg shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
         role="menu" 
         aria-orientation="vertical" 
         aria-labelledby="admin-menu-button" 
@@ -60,6 +60,6 @@
         <!-- Links list -->
         <%= render 'admins/shared/admin_menu_links_list', 
             link_class: "font-medium flex block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100 items-center",
-            icon_class: "w-4 h-4 mr-2"%>
+            icon_class: "w-4 h-4 ltr:mr-2 rtl:ml-2"%>
     </div>
 </div>

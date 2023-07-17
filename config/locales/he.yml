@@ -3,6 +3,12 @@ he:
   he: 'עברית'
   ru: 'Русский'
   uk: 'Українська'
+  # Pages
+  pages:
+      home:         "ראש"
+      portfolio:    "פורטל"
+      about_me:     "עלי"
+      contacts:     "קשרי"
   # Global
   global:
       save_btn:         'לשמור'

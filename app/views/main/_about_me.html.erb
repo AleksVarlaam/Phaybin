@@ -1,29 +1,13 @@
-<section class="h-auto overflow-y-auto flex items-center py-12 sm:py-24 lg:py-0" id="about_me">
+<div class="h-auto overflow-y-auto flex items-center py-12 sm:py-24 lg:py-0" id="about_me">
     <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center text-base">
-        <h1 class="max-w-2xl mx-auto text-2xl font-semibold tracking-tight xl:text-3xl dark:text-gray-300">
-            Добро пожаловать в мир искусства фотографии! Меня зовут Натали, и я рада приветствовать вас на своем сайте.
-        </h2>
-
-        <p class="max-w-4xl mt-6 text-center text-lg text-gray-400">
-            Фотография - это не просто снимок, это способ запечатлеть мгновение, эмоцию, историю. Я стремлюсь создавать уникальные и неповторимые кадры, которые будут оставаться с вами на всю жизнь.<br>
-
-            Моя цель - передать вашу индивидуальность и эмоции через каждую фотографию. Я люблю работать с разными жанрами: портретами, свадебной фотографией, семейными съемками, модельными портфолио и другими. Каждый проект для меня - это возможность выразить себя и помочь вам сохранить самые важные моменты в вашей жизни.<br>
-
-            Я использую только профессиональное оборудование и стараюсь создать комфортную и расслабленную атмосферу на съемке. Ваше удовлетворение - моя главная цель, поэтому я готова внимательно выслушать ваши пожелания и предложить свои идеи для создания неповторимых снимков.<br>
-
-            На моем сайте вы можете ознакомиться с моим портфолио, чтобы увидеть мою работу и стиль. Я готова обсудить любые детали вашего проекта и ответить на все ваши вопросы.<br>
-
-            Если вы ищете талантливого фотографа, который поможет вам запечатлеть самые важные моменты вашей жизни, то вы пришли по адресу. Свяжитесь со мной сегодня, и давайте создадим вместе что-то по-настоящему особенное.<br>
-
-            Спасибо за внимание, и я надеюсь увидеть вас скоро!<br>
-
-            Натали Рабинович
-            
-        </p>
+        <!-- Title -->
+        <%= tag.h1 t('about_me.title'), class: "max-w-2xl mx-auto text-2xl font-semibold tracking-tight xl:text-3xl dark:text-gray-300" %>
+        <!-- Description -->
+        <%= tag.p t('about_me.desc_html'), class: "max-w-4xl mt-6 text-center text-lg text-gray-400" %>
 
         <div class="inline-flex w-full mt-6 sm:w-auto">
-            <%= link_to 'Записаться на фотосессию', "#contact_me", data: { controller: "scroll-to", 'scroll-to-offset-value': 10}, 
+            <%= link_to t('about_me.link'), "#contact_me", data: { controller: "scroll-to", 'scroll-to-offset-value': 10}, 
                 class: "inline-flex items-center justify-center w-full px-6 py-2 text-white transition-colors duration-200 transform rounded-lg focus:outline-none bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br focus:ring-opacity-50" %>
         </div>
     </div>
-</section>
+</div>
