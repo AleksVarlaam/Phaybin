@@ -1,20 +1,20 @@
-<% currently_at "#{@category.model_name.human} #{@category.title.downcase}" %>
-<% provide :page_title, "#{@category.model_name.human} #{@category.title.downcase}" %>
+<% currently_at "#{@gallery.model_name.human} #{@gallery.title.downcase}" %>
+<% provide :page_title, "#{@gallery.model_name.human} #{@gallery.title.downcase}" %>
 
 <div class="flex items-center justify-center mb-6">
     <!-- Back -->
     <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"),
         categories_path , data: {turbo_frame: '_top'} %>
     <!-- Title -->
-    <%= tag.h1 @category.title, 
+    <%= tag.h1 @gallery.title, 
         class: " text-center text-3xl text-gray-300" %>
 </div>
-<%= turbo_frame_tag dom_id(@category, :images), class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6" do %>
+<%= turbo_frame_tag dom_id(@gallery, :images), class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6" do %>
     <% @images.each_with_index do |image, index| %>
         <%= turbo_frame_tag image.identifier do %>
             <div class="relative h-[24rem] md:h-[22rem] w-auto">
                 <div class="flex justify-center">
-                    <%= link_to category_image_path(@category, index), data: {turbo_frame: 'modal'}, remote: true do %>
+                    <%= link_to gallery_image_path(@gallery, index), data: {turbo_frame: 'modal'}, remote: true do %>
                         <%= image_tag image.medium.url, class: "h-[22rem] w-auto object-cover"%>
                     <% end %>
                 </div>

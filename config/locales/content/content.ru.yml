@@ -2,6 +2,5 @@ ru:
   pages:
       home:         "Главная"
   gallery:
-      title:        "Портфолио"      
-  category:         
+      title:        "Портфолио"         
       add_btn:      "Добавить категорию"

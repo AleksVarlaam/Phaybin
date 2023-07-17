@@ -1,26 +1,26 @@
 # frozen_string_literal: true
 
 module Admins
-  class CategoriesController < ApplicationController
+  class GalleriesController < ApplicationController
     layout 'profile_layout'
     before_action :authenticate_admin!
-    before_action :set_category, only: %i[show edit update destroy]
+    before_action :set_gallery, only: %i[show edit update destroy]
 
     def new
-      @category = Category.new
+      @gallery = Gallery.new
     end
 
     def show
-      @images = @category.images
+      @images = @gallery.images
     end
 
     def create
-      @category = Category.new(category_params).decorate
+      @gallery = Gallery.new(gallery_params).decorate
       respond_to do |format|
-        if @category.save
+        if @gallery.save
           format.turbo_stream do
             flash.now[:success] =
-              t('flash.success.created', model: "#{@category.model_name.human} #{@category.title.downcase}")
+              t('flash.success.created', model: "#{@gallery.model_name.human} #{@gallery.title.downcase}")
           end
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -29,17 +29,17 @@ module Admins
     end
 
     def index
-      @categories = Category.all.decorate
+      @galleries = Gallery.all.decorate
     end
 
     def edit; end
 
     def update
       respond_to do |format|
-        if @category.update(category_params)
+        if @gallery.update(gallery_params)
           format.turbo_stream do
             flash.now[:success] =
-              t('flash.success.updated', model: "#{@category.model_name.human} #{@category.title.downcase}")
+              t('flash.success.updated', model: "#{@gallery.model_name.human} #{@gallery.title.downcase}")
           end
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -49,9 +49,9 @@ module Admins
 
     def destroy
       respond_to do |format|
-        if @category.destroy
+        if @gallery.destroy
           format.turbo_stream do
-            flash.now[:success] = t('flash.success.destroyed', model: @category.model_name.human)
+            flash.now[:success] = t('flash.success.destroyed', model: @gallery.model_name.human)
           end
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -61,12 +61,12 @@ module Admins
 
     private
 
-    def category_params
-      params.require(:category).permit(:ru, :en, :he, :uk, images: [])
+    def gallery_params
+      params.require(:gallery).permit(:ru, :en, :he, :uk, images: [])
     end
 
-    def set_category
-      @category = Category.find_by_id(params[:id]).decorate
+    def set_gallery
+      @gallery = Gallery.find_by_id(params[:id]).decorate
     end
   end
 end

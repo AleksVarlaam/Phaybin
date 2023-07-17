@@ -3,7 +3,7 @@ en:
     activerecord:
         models:
             admin:          'Admin'
-            category:       'Category'
+            gallery:        'Gallery'
         errors:
               messages:
                   in:         "%{value} is not valid, enter a value in range %{count}"

@@ -1,16 +1,16 @@
 <% currently_at t('gallery.title') %>
 <% provide :page_title, t('gallery.title') %>
 <% provide :nav_title, t('gallery.title') %>
-<% provide :nav_path, admins_categories_path %>
+<% provide :nav_path, admins_galleries_path %>
 <% provide :main_title, t('gallery.title') %>
 
 <!-- Categories table -->
-<%= turbo_frame_tag 'categories',
+<%= turbo_frame_tag 'galleries',
     class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" do 
 %>
-    <%= render @categories %>
+    <%= render @galleries %>
 <% end %>
 
 <div class="mt-6">
-    <%= render 'shared/buttons/add', id: dom_id(Category.new, 'form'), title: t('category.add_btn'), path: new_admins_category_path%>
+    <%= render 'shared/buttons/add', id: dom_id(Gallery.new, 'form'), title: t('gallery.add_btn'), path: new_admins_gallery_path%>
 </div>

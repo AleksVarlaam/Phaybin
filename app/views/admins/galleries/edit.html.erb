@@ -1,0 +1,7 @@
+<% currently_at t('admin.edit_gallery') %>
+<% provide :page_title, t('admin.edit_gallery') %>
+<% provide :nav_title, t('admin.edit_gallery') %>
+<% provide :nav_path, '#' %>
+<% provide :main_title, t('admin.edit_gallery') %>
+
+<%= render 'form', path: admins_gallery_path, method: :put%>

@@ -9,12 +9,12 @@ Rails.application.routes.draw do
     }
     as :admin do
       namespace :admins do
-        resources :categories
+        resources :galleries
       end
     end
     
     # Content
-    resources :categories, only: %i[ index show ] do 
+    resources :galleries, only: %i[ index show ] do 
       resources :images
     end
     # Contact form

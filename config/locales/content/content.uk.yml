@@ -2,6 +2,5 @@ uk:
   pages:
       home:         "Головна"
   gallery:
-      title:        "Портфоліо"
-  category:         
+      title:        "Портфоліо"  
       add_btn:      "Додати категорію"

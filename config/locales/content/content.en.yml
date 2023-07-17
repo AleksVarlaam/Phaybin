@@ -2,6 +2,5 @@ en:
   pages:
       home:         "Main"
   gallery:
-      title:        "Portfolio"
-  category:         
-      add_btn:      "Add category"
+      title:        "Portfolio"      
+      add_btn:      "Add gallery"

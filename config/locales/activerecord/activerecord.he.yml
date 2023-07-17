@@ -3,7 +3,7 @@ he:
     activerecord:
         models:
             admin:          "מנהל"
-            category:       "קטגוריה"
+            gallery:        "קטגוריה"
         errors:
               messages:
                   in:         "%{count} אינו חוקי, הזן ערך בטווח %{value}"

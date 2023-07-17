@@ -1,7 +1,7 @@
 <!-- Contacts info -->
 <div class="lg:flex lg:mt-0 lg:flex-col lg:items-center px-4">
     <div class="flex justify-center ">
-        <%= image_tag Admin.last.avatar_large, class: 'h-[12rem] w-[12rem] lg:w-[22rem] lg:h-[22rem] object-cover mx-auto rounded-full lg:block shrink-0 '%>
+        <%= image_tag Admin.first.avatar_large, class: 'h-[12rem] w-[12rem] lg:w-[22rem] lg:h-[22rem] object-cover mx-auto rounded-full lg:block shrink-0' if Admin.first.present?%>
     </div>
     <!-- Contacts -->
     <div class="mt-6 space-y-8 md:mt-8">

@@ -1,8 +1,8 @@
 <!-- Gallery categories form -->
-<%= turbo_frame_tag dom_id(@category, 'form') do %>
-    <%= form_with model: [:admins, @category], data: {turbo_frame: '_top'}, class: "col-span-full mx-auto mt-4 w-full relative" do |f| %>
+<%= turbo_frame_tag dom_id(@gallery, 'form') do %>
+    <%= form_with model: [:admins, @gallery], data: {turbo_frame: '_top'}, class: "col-span-full mx-auto mt-4 w-full relative" do |f| %>
         <!-- Error messages -->
-        <%= tag.div (render 'shared/messages/error_messages', resource: @category), class: 'col-span-full' %>
+        <%= tag.div (render 'shared/messages/error_messages', resource: @gallery), class: 'col-span-full' %>
         <div class="w-full items-center flex grid grid-cols-1 md:grid-cols-4 gap-3">
           <!-- Ru -->
           <div class="flex items-center text-gray-600 dark:text-gray-300 justify-center">
@@ -40,7 +40,7 @@
           </div>
           <!-- Button delete -->
           <div class="flex justify-start pb-2 ml-3">
-              <%= link_to t('global.destroy_btn'), admins_category_path(@category), data: {turbo_method: :delete, turbo_confirm: t('global.are_you_sure')},
+              <%= link_to t('global.destroy_btn'), admins_gallery_path(@gallery), data: {turbo_method: :delete, turbo_confirm: t('global.are_you_sure')},
                   class: "cursor-pointer px-6 py-2 leading-5 text-white transition-colors duration-200 transform  rounded-md  focus:outline-none bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4" if action_name == 'edit'%>
           </div>
         </div>

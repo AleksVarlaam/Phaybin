@@ -3,7 +3,7 @@ ru:
     activerecord:
         models:
             admin:          'Админ'
-            category:       'Категория'
+            gallery:        'Категория'
         errors:
               messages:
                   in:         "%{value} недопустимое значение, введите значение в диапозоне %{count}"

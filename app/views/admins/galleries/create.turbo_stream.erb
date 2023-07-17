@@ -1,0 +1,6 @@
+<%= turbo_stream.replace dom_id(Gallery.new, 'form') do %>
+    <%= render 'shared/buttons/add', id: dom_id(Gallery.new, 'form'), title: t('admin.add_gallery'), path: new_admins_gallery_path%>
+<% end %>
+
+<%= turbo_stream.append 'galleries', render(@gallery)%>
+<%= prepend_flash%>
