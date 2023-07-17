@@ -11,13 +11,12 @@ class Admin < ApplicationRecord
   def avatar_thumb
     avatar.present? ? avatar.thumb.url : 'avatar/avatar-f.png'
   end
-  
+
   def avatar_medium
     avatar.present? ? avatar.medium.url : 'avatar/avatar-f.png'
   end
-  
+
   def avatar_large
     avatar.present? ? avatar.large.url : 'avatar/avatar-f.png'
   end
-  
 end

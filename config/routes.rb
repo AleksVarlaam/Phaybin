@@ -12,15 +12,15 @@ Rails.application.routes.draw do
         resources :galleries
       end
     end
-    
+
     # Content
-    resources :galleries, only: %i[ index show ] do 
+    resources :galleries, only: %i[index show] do
       resources :images
     end
     # Contact form
-    resources :contacts, only: [ :create ]
+    resources :contacts, only: [:create]
 
-    # Root 
+    # Root
     root to: 'main#index'
   end
 end

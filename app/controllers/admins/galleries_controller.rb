@@ -70,4 +70,3 @@ module Admins
     end
   end
 end
-

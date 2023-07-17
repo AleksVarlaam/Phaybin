@@ -41,9 +41,9 @@ module Admins
     # end
 
     protected
-    
+
     def permitted_attributes
-      %i[ avatar remove_avatar ]
+      %i[avatar remove_avatar]
     end
 
     # If you have extra params to permit, append them to the sanitizer.
