@@ -62,7 +62,7 @@ module Admins
     private
 
     def gallery_params
-      params.require(:gallery).permit(:ru, :en, :he, :uk, images: [])
+      params.require(:gallery).permit(:ru, :en, :he, :uk, :cover_mobile, :cover_desktop, images: [])
     end
 
     def set_gallery

@@ -33,6 +33,52 @@
               <%= f.text_field :he, class: "w-full mr-1 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"%>
           </div>
         </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 mt-4">
+            <!-- Avatar -->
+            <div class="flex grid grid-rows-1 text-center items-center justify-center">
+              <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">
+                <div class="space-y-1 text-center">
+                  <%= f.label :cover_mobile, class: "cursor-pointer" do %>
+                      <% if @gallery.cover_mobile.present?%>
+                          <%= image_tag(@gallery.cover_mobile.webp.url, alt: "cover-mobile", 
+                              class: "cursor-pointer object-cover mx-auto h-12 w-12 rounded-md",) %>
+                      <% else %>
+                          <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700"%>
+                      <% end %>
+                      <div class="text-gray-700 mt-1 mb-2 justify-center text-center text-base" data-controller="image" id="CoverMobile">
+                          <%= tag.span 'Обложка для мобильных', 
+                              class: "relative rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                          %>
+                              <%= f.file_field :cover_mobile, multiple: false, class: "sr-only", accept: "image/png, image/jpeg, image/jpg, image/webp", "data-image-target": "input", "data-action": "image#cover_mobile_preview" %>
+                      </div>
+                      <%= tag.p 'PNG, JPG, GIF up to 10MB', class: "text-xs text-gray-700" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <!-- Avatar -->
+            <div class="flex grid grid-rows-1 text-center items-center justify-center">
+              <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">
+                <div class="space-y-1 text-center">
+                  <%= f.label :cover_desktop, class: "cursor-pointer" do %>
+                      <% if @gallery.cover_desktop.present?%>
+                          <%= image_tag(@gallery.cover_desktop.webp.url, alt: "cover-desktop", 
+                              class: "cursor-pointer object-cover mx-auto h-12 w-12 rounded-md") %>
+                      <% else %>
+                          <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700"%>
+                      <% end %>
+                      <div class="text-gray-700 mt-1 mb-2 justify-center text-center text-base" data-controller="image" id="CoverDesktop">
+                          <%= tag.span 'Обложка для компьютеров', 
+                              class: "relative rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                          %>
+                              <%= f.file_field :cover_desktop, multiple: false, class: "sr-only", accept: "image/png, image/jpeg, image/jpg, image/webp", "data-image-target": "input", "data-action": "image#cover_desktop_preview" %>
+                      </div>
+                      <%= tag.p 'PNG, JPG, GIF up to 10MB', class: "text-xs text-gray-700" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+        </div>
         <div class="flex items-center justify-start mt-4">
           <!-- Button Save -->
           <div class="flex justify-start col-span-3 mb-2">

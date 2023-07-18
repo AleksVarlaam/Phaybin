@@ -1,9 +1,9 @@
 <!-- Header -->
 <%= provide :navbar do %>
-    <header class="fixed top-0 z-50 w-full bg-black">
+    <header class="fixed top-0 z-50 w-full bg-black border-b border-gray-700">
         <div class="relative" data-controller="dropdown">
           <div class="w-full mx-auto px-4 sm:px-6">
-            <div class="nav-container flex items-center py-4 justify-between">
+            <div class="nav-container flex items-center py-2 sm:py-4 justify-between">
               <!-- Social links -->
               <div class="flex justify-start w-auto flex-auto space-x-3 rtl:space-x-reverse <%= admin_signed_in? ? 'ml-2' : '-mr-10'%>">
                   <%= render 'shared/navigations/social_links'%>
@@ -44,7 +44,7 @@
     <%= tag.div class: "flex justify-center #{admin_signed_in? ? 'pt-20' : 'pt-16'}" do %>
         <%= link_to root_path, class:"", title: 'Phaybin-photographer-Israel' do %>
             <%= image_tag 'PhaybiN-logo-white.webp', alt: 'Phaybin-photographer-Israel',
-                class: 'h-[63px] lg:h-[95px] mb-3 w-40 lg:w-64'%>
-        <% end unless request.original_url.include?('admins')%>
+                class: 'h-[63px] lg:h-[95px] mb-3 mt-1 w-40 lg:w-64'%>
+        <% end if current_page?(root_url)%>
     <% end  %>
 <% end %>
