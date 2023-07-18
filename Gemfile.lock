@@ -99,6 +99,8 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.11.0)
       devise (>= 4.9.0)
+    dockerfile-rails (1.5.1)
+      rails
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -176,6 +178,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.15.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.3)
@@ -260,6 +264,8 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.30-x86_64-darwin)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.30-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.2)
     tilt (2.2.0)
     timeout (0.4.0)
@@ -287,6 +293,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -294,6 +301,7 @@ DEPENDENCIES
   debug
   devise
   devise-i18n
+  dockerfile-rails (>= 1.5)
   draper
   file_validators
   fog-aws

@@ -1,10 +1,11 @@
 <% currently_at t('gallery.title') %>
 <% provide :page_title, t('gallery.title') %>
 
-<div class="flex items-center justify-center mb-6">
+<div class="flex items-center justify-center mb-6 space-x-3 rtl:space-x-reverse">
     <!-- Back -->
-    <%= link_to (heroicon "arrow-uturn-left", class: "mr-3 w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"),
-        root_path, data: {turbo_frame: '_top'}%>
+    <%= link_to (heroicon I18n.locale == :he ? "arrow-uturn-right" : "arrow-uturn-left", 
+        class: "w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"),
+        root_path , data: {turbo_frame: '_top'} %>
     <!-- Title -->
     <%= tag.h1 t('gallery.title'), 
         class: "text-center text-3xl text-gray-300" %>
