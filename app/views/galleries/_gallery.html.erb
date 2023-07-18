@@ -1,9 +1,9 @@
 <%= turbo_frame_tag gallery do %>
     <%= link_to gallery_path(gallery), data: {turbo_frame: '_top'}, title: gallery.title do %>
-        <div class="flex items-end overflow-hidden bg-cover rounded-lg h-96" 
+        <div class="flex items-end overflow-hidden bg-cover rounded-lg h-96 text-gray-800 dark:text-gray-300 hover:dark:text-white" 
             style="background-image:url('<%= gallery.cover %>')">
             <div class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-800/60">
-                <%= tag.h2 gallery.title, class: " text-xl font-semibold text-gray-800 capitalize dark:text-white" %>
+                <%= tag.h2 gallery.title, class: " text-xl font-semibold" %>
             </div>
         </div>
     <% end if gallery.images.count.positive?%>
