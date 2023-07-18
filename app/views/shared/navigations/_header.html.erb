@@ -10,7 +10,12 @@
               </div>
               <!-- Mobile menu burger button -->
                 <div class="flex justify-center flex-none lg:hidden w-auto">
-                  <button data-action="dropdown#toggle click@window->dropdown#hide" type="button" class="rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                  <button 
+                      data-action="dropdown#toggle click@window->dropdown#hide" 
+                      type="button" 
+                      class="rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" 
+                      aria-expanded="false" 
+                      aria-labelledby="mobile-menu-button" >
                       <%= heroicon 'bars-3', class: 'h-5 w-5'%>
                   </button>
                 </div>
@@ -37,8 +42,9 @@
     </header>
     <!-- Logotype -->
     <%= tag.div class: "flex justify-center #{admin_signed_in? ? 'pt-20' : 'pt-16'}" do %>
-        <%= link_to root_path, class:"" do %>
-            <%= image_tag 'PhaybiN-logo-white.png', class: 'h-14 lg:h-24 mb-3 w-auto'%>
+        <%= link_to root_path, class:"", title: 'Phaybin-photographer-Israel' do %>
+            <%= image_tag 'PhaybiN-logo-white.webp', alt: 'Phaybin-photographer-Israel',
+                class: 'h-[63px] lg:h-[95px] mb-3 w-40 lg:w-64'%>
         <% end unless request.original_url.include?('admins')%>
     <% end  %>
 <% end %>

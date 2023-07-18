@@ -1,9 +1,10 @@
 <div class="h-auto overflow-y-auto flex items-center py-12 sm:py-24 lg:py-0" id="about_me">
     <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center text-base">
         <!-- Title -->
-        <%= tag.h1 t('about_me.title'), class: "max-w-2xl mx-auto text-2xl font-semibold tracking-tight xl:text-3xl dark:text-gray-300" %>
+        <%= tag.h1 t('about_me.title'), 
+            class: "max-w-2xl mx-auto text-2xl font-semibold tracking-tight xl:text-3xl text-gray-800 dark:text-gray-300" %>
         <!-- Description -->
-        <%= tag.p t('about_me.desc_html'), class: "max-w-4xl mt-6 text-center text-lg text-gray-400" %>
+        <%= tag.p t('about_me.desc_html'), class: "max-w-4xl mt-6 text-center text-lg text-gray-600 dark:text-gray-400" %>
 
         <div class="inline-flex w-full mt-6 sm:w-auto">
             <%= link_to t('about_me.link'), "#contact_me", data: { controller: "scroll-to", 'scroll-to-offset-value': 10}, 

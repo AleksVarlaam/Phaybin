@@ -1,18 +1,19 @@
 <!-- Contacts info -->
 <div class="lg:flex lg:mt-0 lg:flex-col lg:items-center px-4">
     <div class="flex justify-center ">
-        <%= image_tag Admin.first.avatar_large, class: 'h-[12rem] w-[12rem] lg:w-[22rem] lg:h-[22rem] object-cover mx-auto rounded-full lg:block shrink-0' if Admin.first.present?%>
+        <%= image_tag Admin.first.avatar_large, alt: 'Natali Rabinovych - photographer',
+        class: 'h-[12rem] w-[12rem] lg:w-[22rem] lg:h-[22rem] object-cover mx-auto rounded-full lg:block shrink-0' if Admin.first.present?%>
     </div>
     <!-- Contacts -->
     <div class="mt-6 space-y-8 md:mt-8">
         <!-- Location -->
         <p class="flex items-center space-x-2 rtl:space-x-reverse">
-            <i class="fa-solid fa-location-dot fa-lg text-gray-500 dark:text-gray-400"></i>
+            <i class="fa-solid fa-location-dot fa-lg text-gray-600 dark:text-gray-400"></i>
             <%= tag.span 'Israel, Bat-Yam', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400"%>
         </p>
         <!-- Phone -->
         <%= link_to 'https://wa.me/972527796556', target: '_blank', class: "flex items-center" do %>
-            <i class="fa-brands fa-whatsapp fa-lg text-gray-500 dark:text-gray-400"></i>
+            <i class="fa-brands fa-whatsapp fa-lg text-gray-600 dark:text-gray-400"></i>
             <%= tag.span '+972 52-779-6556', class: "mx-2 text-gray-700 truncate w-72 dark:text-gray-400 hover:dark:text-gray-200 hover:underline"%>
         <% end %>
     </div>

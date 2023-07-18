@@ -6,9 +6,9 @@
         <div class="relative overflow-hidden h-[28rem] sm:h-[32rem] xl:h-[32rem]">
             <% @images.each_with_index do |image, index| %>
                 <div class="hidden duration-900 ease-in-out" data-carousel-item>
-                    <%= image_tag image.large.url, data: {'carousel-item' => true},
+                    <%= image_tag image.large.url, data: {'carousel-item' => true}, alt: image.identifier,
                         class: "ltr:-translate-x-1/2 rtl:translate-x-1/2 ltr:left-1/2 rtl:right-1/2 -translate-y-1/2 top-1/2
-                            h-[28rem] sm:h-[32rem] xl:h-auto hidden duration-900 ease-in-out absolute block max-w-full object-cover " %>
+                            h-[28rem] sm:h-[32rem] xl:h-auto hidden duration-900 ease-in-out absolute block max-w-full object-cover" %>
                 </div>
             <% end if @images.present?%>
             <div class="flex justify-center">
@@ -17,9 +17,9 @@
                 <% end %>
             </div>
             <!-- Slider controls -->
-            <button type="button" class="absolute top-0 left-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <button type="button" class="absolute top-0 left-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev title="preview-item">
             </button>
-            <button type="button" class="absolute top-0 right-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <button type="button" class="absolute top-0 right-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next title="next-item">
             </button>
         </div>
         

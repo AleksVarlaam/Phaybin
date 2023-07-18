@@ -1,9 +1,6 @@
 <!-- Footer -->
 <%= provide :footer do %>
     <footer class="bg-gray-200 dark:bg-black border-t dark:border-gray-700 hover:dark:border-gray-600 mt-12">
-        <%= link_to '#top', class: 'absolute right-2 bottom-5 z-20', data: {controller: 'scroll-to'} do %>
-            <%# image_tag('icons/icons8-up-2-50.png', class: 'w-8 hover:w-10 h-auto')%>
-        <% end unless controller_name == 'errors'%>
         <div class="container px-6 py-8 mx-auto">
             <div class="text-center">
                 <!-- Header -->
@@ -13,8 +10,9 @@
                         <%= render 'shared/navigations/social_links'%>
                     </div>
                     <!-- Logotype -->
-                    <%= link_to root_path, class: "flex justify-center" do %>
-                        <%= image_tag 'PhaybiN-logo-white.png', class: 'h-16 lg:h-20 w-auto'%>
+                    <%= link_to root_path, title: 'Phaybin-photographer-Israel', class: "flex justify-center" do %>
+                        <%= image_tag 'PhaybiN-logo-white.webp', alt: 'Phaybin-photographer-Israel',
+                            class: 'h-14 lg:h-[80px] mb-3 w-36 lg:w-52'%>
                     <% end %>
                     <!-- Locales -->
                     <div class="flex justify-end mr-2">
@@ -27,8 +25,8 @@
             <!-- Copyright -->
             <div class="flex flex-col items-center w-full md:relative">
                 <%= link_to 'phaybin@phaybin.com', "mailto:phaybin@phaybin.com", data: { turbo_frame: '_top'},
-                    class:"text-gray-500 dark:text-gray-500 hover:dark:text-gray-200 md:absolute md:right-0 hover:underline mb-4 md:mb-0"%>
-                <p class="text-gray-500 text-center">© Copyright <%= Time.now.strftime('%Y')%>. All Rights Reserved.</p>
+                    class:"text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 md:absolute md:right-0 hover:underline mb-4 md:mb-0"%>
+                <p class="text-gray-700 dark:text-gray-400 text-center">© Copyright <%= Time.now.strftime('%Y')%>. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
