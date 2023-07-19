@@ -1,36 +1,37 @@
-<div class="h-screen sm:py-20 relative">
-    <span class="h-8 w-8 z-20 fixed top-24 sm:top-28 left-4 sm:left-10 border-t-2 border-t-gray-200 border-l-2 border-l-gray-200"></span>
-    <span class="h-8 w-8 z-20 fixed top-24 sm:top-28 right-4 sm:right-10 border-t-2 border-t-gray-200 border-r-2 border-r-gray-200"></span>
-    <span class="h-8 w-8 z-20 fixed bottom-8 sm:bottom-10 left-4 sm:left-10 border-b-2 border-b-gray-200 border-l-2 border-l-gray-200"></span>
-    <span class="h-8 w-8 z-20 fixed bottom-8 sm:bottom-10 right-4 sm:right-10 border-b-2 border-b-gray-200 border-r-2 border-r-gray-200"></span>
+<div class="h-screen sm:py-20 -mt-20 relative bg-cover bg-center" style="background-image:url('<%= Gallery.find(2).cover_desktop.webp %>')">
+    <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 left-4 sm:left-10 border-t-2 border-t-gray-200 border-l-2 border-l-gray-200"></span>
+    <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 right-4 sm:right-10 border-t-2 border-t-gray-200 border-r-2 border-r-gray-200"></span>
+    <span class="h-8 w-8 z-20 fixed bottom-5 sm:bottom-10 left-4 sm:left-10 border-b-2 border-b-gray-200 border-l-2 border-l-gray-200"></span>
+    <span class="h-8 w-8 z-20 fixed bottom-5 sm:bottom-10 right-4 sm:right-10 border-b-2 border-b-gray-200 border-r-2 border-r-gray-200"></span>
     
     
+    <!-- Logotype -->
+    <%= tag.div class: "flex justify-center pt-20 sm:pt-0" do %>
+        <%= link_to root_path, class:"", title: 'Phaybin-photographer-Israel' do %>
+            <%= image_tag 'PhaybiN-logo-white.webp', alt: 'Phaybin-photographer-Israel',
+                class: 'h-[63px] lg:h-[95px] my-3 w-40 lg:w-64'%>
+        <% end if current_page?(root_url)%>
+    <% end %>
    
-    <div class="container flex flex-col px-6 py-8 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+    <div class="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         <!-- Photo -->
-        <div class="flex items-center justify-center w-full h-[16rem] sm:h-[32rem] sm:pt-12 lg:w-1/2 
-            transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-            <%= image_tag(asset_path('phaybin-bg.png'), class: 'object-cover w-auto h-full sm:max-w-[20rem] rounded-md') %>
-        </div>
+        
         <!-- Title --> 
         <div class="flex items-center justify-center w-full sm:px-6 pb-2 lg:h-[32rem] lg:w-1/2 relative">
             <div class="max-w-xl lg:-mt-32">
-                <h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Профессиональный <span class="text-blue-600 dark:text-blue-400">Фотограф</span></h2>
+                <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Профессиональный <span class="text-blue-600 dark:text-blue-400">Фотограф</span></h2>
 
-                <p class="mt-4 text-lg text-gray-500 dark:text-gray-300 lg:text-xl">Натали Рабинович</p>
+                <h2 class="mt-4 text-lg text-gray-500 dark:text-gray-300 lg:text-xl">Натали Рабинович</h2>
 
-                <div class="flex items-center mt-6 space-x-3">
-                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Портфолио</a>
-                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-gray-700 transition-colors duration-300 transform bg-gray-200 rounded-md lg:mx-4 hover:bg-gray-300">Контакты</a>
+                <div class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
+                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                          Связаться со мной
+                      </span>
+                    </button>
                 </div>
             </div>
-            <!-- Logotype -->
-            <%= tag.div class: "absolute -bottom-20 -right-2 sm:bottom-0 sm:right-0" do %>
-                <%= link_to root_path, class:"", title: 'Phaybin-photographer-Israel' do %>
-                    <%= image_tag 'PhaybiN-logo-white.webp', alt: 'Phaybin-photographer-Israel',
-                        class: 'h-[63px] lg:h-[95px] my-3 w-40 lg:w-64 '%>
-                <% end %>
-            <% end %>
+            
         </div>
     </div>
 </div>
