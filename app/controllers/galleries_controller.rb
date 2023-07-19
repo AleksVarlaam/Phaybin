@@ -2,7 +2,7 @@
 
 class GalleriesController < ApplicationController
   def index
-    @galleries = Gallery.all.decorate
+    @galleries = Gallery.all.latest.decorate
   end
 
   def show

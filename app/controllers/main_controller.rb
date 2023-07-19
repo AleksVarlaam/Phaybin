@@ -2,7 +2,7 @@
 
 class MainController < ApplicationController
   def index
-    @galleries = Gallery.decorate.take(4)
+    @galleries = Gallery.latest.decorate.take(4)
     @contact  = Contact.new
   end
   

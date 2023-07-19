@@ -29,7 +29,7 @@ module Admins
     end
 
     def index
-      @galleries = Gallery.all.decorate
+      @galleries = Gallery.all.latest.decorate
     end
 
     def edit; end
@@ -51,7 +51,8 @@ module Admins
       respond_to do |format|
         if @gallery.destroy
           format.turbo_stream do
-            flash.now[:success] = t('flash.success.destroyed', model: @gallery.model_name.human)
+            flash[:success] = t('flash.success.destroyed', model: @gallery.model_name.human)
+            redirect_to admins_galleries_path
           end
         else
           format.html { render :new, status: :unprocessable_entity }
