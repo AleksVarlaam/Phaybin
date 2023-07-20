@@ -3,3 +3,6 @@ en:
   gallery:
       title:        "Portfolio"      
       add_btn:      "Add gallery"
+  main_page:    
+      h1_html:   "Professinal <span class='text-blue-600 dark:text-blue-400'>photographer</span>"
+      h2:        "Natalie Rabinovych"

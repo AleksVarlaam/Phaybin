@@ -3,9 +3,11 @@
 class MainController < ApplicationController
   def index
     @galleries = Gallery.latest.decorate.take(4)
-    @main_bg  = helpers.asset_path('background/carousel5.jpg')
+    @main_bg  = helpers.asset_path('background/7.jpg')
     @contact  = Contact.new
   end
+  
+  def about_me; end
   
   def sitemap
     @locales   = I18n.available_locales

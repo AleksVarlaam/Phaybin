@@ -19,7 +19,7 @@
 <%= tag.span '|', class: 'text-gray-700 font-bold hidden lg:block'%>
 
 <!-- About -->
-<%= nav_tab t('pages.about_me'), root_path(anchor: 'about_me'), 
+<%= nav_tab t('pages.about_me'), about_me_path, 
     class: link_class, 
     data: { action: "dropdown#toggle", turbo_frame: '_top'},
     current_page: current_page 

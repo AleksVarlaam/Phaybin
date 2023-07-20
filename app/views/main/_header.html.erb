@@ -13,18 +13,17 @@
         <% end if current_page?(root_url)%>
     <% end %>
    
-    <div class="absolute bottom-0 lg:left-10 container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-        <!-- Photo -->
-        
+    <div class="absolute bottom-0 lg:bottom-0 lg:left-10 container flex flex-col px-6 py-4 mx-auto space-y-6 lg:flex-row lg:items-center">
         <!-- Title --> 
         <div class="flex items-center justify-center w-full sm:px-6 pb-2 lg:h-[32rem] lg:w-1/2 relative">
-            <div class="max-w-xl lg:-mt-32">
-                <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Профессиональный <span class="text-blue-600 dark:text-blue-400">Фотограф</span></h2>
-
-                <h2 class="mt-4 text-lg text-gray-500 dark:text-gray-300 lg:text-xl">Натали Рабинович</h2>
-
+            <div class="max-w-xl space-y-3">
+                <!-- H1 -->
+                <%= tag.h1 t('main_page.h1_html'), class: "text-4xl font-semibold text-gray-800 dark:text-white lg:text-6xl" %>
+                <!-- H2 -->
+                <%= tag.h2 t('main_page.h2'), class: "text-xl text-gray-500 dark:text-gray-300 lg:text-3xl" %>
+                <!-- Contact me button -->
                 <div class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
-                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                       <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                           Связаться со мной
                       </span>

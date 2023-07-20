@@ -3,3 +3,6 @@ ru:
   gallery:
       title:        "Портфолио"         
       add_btn:      "Добавить категорию"
+  main_page:    
+      h1_html:   "Профессиональный <span class='text-blue-600 dark:text-blue-400'>фотограф</span>"
+      h2:        "Натали Рабинович"

@@ -1,6 +1,6 @@
 <!-- Header -->
 <%= provide :navbar do %>
-    <header class="fixed top-0 z-50 w-full backdrop-blur-sm bg-white/60 dark:bg-gray-900/30 border-b border-gray-700">
+    <header class="fixed top-0 z-50 w-full backdrop-blur-sm bg-white/60 dark:bg-gray-900/10 border-b border-gray-700">
         <div class="relative" data-controller="dropdown">
           <div class="w-full mx-auto px-4 sm:px-6">
             <div class="nav-container flex items-center py-2 sm:py-4 justify-between">
@@ -22,7 +22,7 @@
                 <!-- Main Navigations -->
                 <nav class="hidden lg:flex space-x-6 rtl:space-x-reverse">
                     <%= render 'shared/navigations/links_list', 
-                        link_class: 'text-base font-medium font-serif italic hover:text-gray-900 hover:dark:text-gray-200', 
+                        link_class: 'text-base hover:text-gray-900 hover:dark:text-gray-200', 
                         current_page: current_page %>
                 </nav>
               <!-- User menu -->

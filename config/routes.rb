@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     resources :galleries, only: %i[index show] do
       resources :images, only: %i[create show destroy]
     end
+    get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form
     resources :contacts, only: [:create]
   end
