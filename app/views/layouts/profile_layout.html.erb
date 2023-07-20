@@ -19,7 +19,7 @@
       <%= yield :navbar%>
       
       <!-- Main -->
-      <main class="flex w-full grid grid-flow-row auto-rows-max grid grid-cols-4 border-t-2 border-gray-700" id="top">
+      <main class="mt-20 flex w-full grid grid-flow-row auto-rows-max grid grid-cols-4 border-t-2 border-gray-700" id="top">
           <!-- Profile sidebar -->
           <%= tag.div (render 'admins/shared/admin_profile_sidebar'), class: "col-span-1 w-full hover:shadow-lg" if admin_signed_in?%>
           <div class="w-full col-span-full lg:col-span-3 p-4 relative mb-8">

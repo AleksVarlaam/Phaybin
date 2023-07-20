@@ -3,6 +3,7 @@
 class MainController < ApplicationController
   def index
     @galleries = Gallery.latest.decorate.take(4)
+    @main_bg  = helpers.asset_path('background/carousel5.jpg')
     @contact  = Contact.new
   end
   

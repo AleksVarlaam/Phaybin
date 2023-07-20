@@ -1,4 +1,4 @@
-<div class="h-screen sm:py-20 -mt-20 relative bg-cover bg-center" style="background-image:url('<%= Gallery.find(2).cover_desktop.webp %>')">
+<div class="h-screen sm:py-20 -mt-20 relative bg-cover bg-center" style="background-image:url('<%= @main_bg %>')">
     <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 left-4 sm:left-10 border-t-2 border-t-gray-200 border-l-2 border-l-gray-200"></span>
     <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 right-4 sm:right-10 border-t-2 border-t-gray-200 border-r-2 border-r-gray-200"></span>
     <span class="h-8 w-8 z-20 fixed bottom-5 sm:bottom-10 left-4 sm:left-10 border-b-2 border-b-gray-200 border-l-2 border-l-gray-200"></span>
@@ -13,7 +13,7 @@
         <% end if current_page?(root_url)%>
     <% end %>
    
-    <div class="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+    <div class="absolute bottom-0 lg:left-10 container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         <!-- Photo -->
         
         <!-- Title --> 
