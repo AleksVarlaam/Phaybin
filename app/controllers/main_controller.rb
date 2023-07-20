@@ -3,7 +3,7 @@
 class MainController < ApplicationController
   def index
     @galleries = Gallery.latest.decorate.take(4)
-    @main_bg  = helpers.asset_path('background/7.jpg')
+    @main_bg  = helpers.asset_path(helpers.device == 'mobile' ? 'background/phaybin-photo.png' : 'background/7.jpg')
     @contact  = Contact.new
   end
   

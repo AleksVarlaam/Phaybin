@@ -1,8 +1,10 @@
 he:
   watch_portfolio:  "ארנק זה"
   gallery:
-      title:        "פורטל"       
-      add_btn:      "הוסף קטגוריה"
+      all_galleries: "כל הקטגוריות"
+      title:         "פורטל"       
+      add_btn:       "הוסף קטגוריה"
   main_page:    
-      h1_html:   "Professinal <span class='text-blue-600 dark:text-blue-400'>photographer</span>"
-      h2:        "Natalie Rabinovych"
+      h1/1:   "מקצוע "
+      h1/2:   "צלם"
+      h2:        "'נטלי רבינוביץ"

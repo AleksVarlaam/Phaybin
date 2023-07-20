@@ -1,8 +1,11 @@
 uk:
   watch_portfolio:  "Переглянути портфоліо"
   gallery:
-      title:        "Портфоліо"  
-      add_btn:      "Додати категорію"
+      all_galleries: "Всі категорії"
+      title:         "Портфоліо"  
+      add_btn:       "Додати категорію"
   main_page:    
-      h1_html:   "Профессиональный <span class='text-blue-600 dark:text-blue-400'>фотограф</span>"
-      h2:        "Натали Рабинович"
+      h1/1:      "Проффесійний "
+      h1/2:      "фотограф"
+      h2:           "Натали Рабинович"
+      contact_me:   "Зв'яжіться зі мною"

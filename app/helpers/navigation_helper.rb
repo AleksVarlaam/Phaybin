@@ -4,7 +4,7 @@ module NavigationHelper
   def nav_tab(title, url, options = {})
     current_page = options.delete :current_page
 
-    css_class = current_page == title ? 'text-gray-300 dark:text-white' : 'text-gray-100 dark:text-gray-300'
+    css_class = current_page == title ? 'text-gray-300 dark:text-white' : 'text-gray-100 dark:text-gray-400'
 
     options[:class] = if options[:class]
                         "#{options[:class]} #{css_class}"

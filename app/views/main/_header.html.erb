@@ -1,6 +1,6 @@
 <div class="h-screen sm:py-20 -mt-20 relative bg-cover bg-center" style="background-image:url('<%= @main_bg %>')">
-    <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 left-4 sm:left-10 border-t-2 border-t-gray-200 border-l-2 border-l-gray-200"></span>
-    <span class="h-8 w-8 z-20 fixed top-20 sm:top-28 right-4 sm:right-10 border-t-2 border-t-gray-200 border-r-2 border-r-gray-200"></span>
+    <span class="h-8 w-8 z-20 fixed top-20 sm:top-22 left-4 sm:left-10 border-t-2 border-t-gray-200 border-l-2 border-l-gray-200"></span>
+    <span class="h-8 w-8 z-20 fixed top-20 sm:top-22 right-4 sm:right-10 border-t-2 border-t-gray-200 border-r-2 border-r-gray-200"></span>
     <span class="h-8 w-8 z-20 fixed bottom-5 sm:bottom-10 left-4 sm:left-10 border-b-2 border-b-gray-200 border-l-2 border-l-gray-200"></span>
     <span class="h-8 w-8 z-20 fixed bottom-5 sm:bottom-10 right-4 sm:right-10 border-b-2 border-b-gray-200 border-r-2 border-r-gray-200"></span>
     
@@ -13,21 +13,32 @@
         <% end if current_page?(root_url)%>
     <% end %>
    
-    <div class="absolute bottom-0 lg:bottom-0 lg:left-10 container flex flex-col px-6 py-4 mx-auto space-y-6 lg:flex-row lg:items-center">
+    <div class="absolute bottom-4 lg:bottom-0 lg:left-10 container flex flex-col px-6 py-4 mx-auto space-y-6 lg:flex-row lg:items-center">
         <!-- Title --> 
         <div class="flex items-center justify-center w-full sm:px-6 pb-2 lg:h-[32rem] lg:w-1/2 relative">
             <div class="max-w-xl space-y-3">
                 <!-- H1 -->
-                <%= tag.h1 t('main_page.h1_html'), class: "text-4xl font-semibold text-gray-800 dark:text-white lg:text-6xl" %>
+                <%= tag.h1 class: "text-4xl font-semibold text-gray-800 dark:text-white lg:text-6xl" do %>
+                    <%= t('main_page.h1/1')%>
+                    <%= tag.span t('main_page.h1/2'), class: 'text-blue-600 dark:text-blue-400'%>
+                <% end %>
                 <!-- H2 -->
-                <%= tag.h2 t('main_page.h2'), class: "text-xl text-gray-500 dark:text-gray-300 lg:text-3xl" %>
-                <!-- Contact me button -->
-                <div class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
-                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                          Связаться со мной
-                      </span>
-                    </button>
+                <%= tag.h2 t('main_page.h2'), class: "text-xl text-gray-500 dark:text-gray-200 lg:text-3xl" %>
+                <div class="flex justify-start space-x-2 rtl:space-x-reverse">
+                    <!-- Portfolio button -->
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <%= link_to galleries_path, 
+                            class: "relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" do %>
+                          <%= tag.span t('pages.portfolio'), class: "relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" %>
+                        <% end %>
+                    </div>
+                    <!-- Contact me button -->
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <%= link_to '#contact_me', data: {controller: 'scroll-to'},
+                            class: "relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" do %>
+                          <%= tag.span t('pages.contacts'), class: "relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" %>
+                        <% end %>
+                    </div>
                 </div>
             </div>
             

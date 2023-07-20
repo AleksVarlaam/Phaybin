@@ -1,8 +1,11 @@
 en:
   watch_portfolio:  "Watch portfolio"
   gallery:
+      all_galleries: "All categories"
       title:        "Portfolio"      
       add_btn:      "Add gallery"
   main_page:    
-      h1_html:   "Professinal <span class='text-blue-600 dark:text-blue-400'>photographer</span>"
+      h1/1:      "Professional "
+      h1/2:      "photographer"
       h2:        "Natalie Rabinovych"
+      contact_me:   "Contact me"

@@ -1,6 +1,6 @@
 <!-- Header -->
 <%= provide :navbar do %>
-    <header class="fixed top-0 z-50 w-full backdrop-blur-sm bg-white/60 dark:bg-gray-900/10 border-b border-gray-700">
+    <header class="fixed top-0 z-50 w-full  bg-white/60 dark:bg-gray-900/0 ">
         <div class="relative" data-controller="dropdown">
           <div class="w-full mx-auto px-4 sm:px-6">
             <div class="nav-container flex items-center py-2 sm:py-4 justify-between">
@@ -9,18 +9,18 @@
                   <%= render 'shared/navigations/social_links'%>
               </div>
               <!-- Mobile menu burger button -->
-                <div class="flex justify-center flex-none lg:hidden w-auto">
+                <div class="flex justify-center flex-none w-auto backdrop-blur-sm bg-white/60 dark:bg-gray-900/60 rounded-lg">
                   <button 
                       data-action="dropdown#toggle click@window->dropdown#hide" 
                       type="button" 
-                      class="rounded-lg p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" 
+                      class="rounded-lg p-2 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" 
                       aria-expanded="false" 
                       aria-labelledby="mobile-menu-button" >
-                      <%= heroicon 'bars-3', class: 'h-5 w-5'%>
+                      <%= heroicon 'bars-3', class: 'h-6 w-6'%>
                   </button>
                 </div>
                 <!-- Main Navigations -->
-                <nav class="hidden lg:flex space-x-6 rtl:space-x-reverse">
+                <nav class="hidden  space-x-6 rtl:space-x-reverse">
                     <%= render 'shared/navigations/links_list', 
                         link_class: 'text-base hover:text-gray-900 hover:dark:text-gray-200', 
                         current_page: current_page %>
