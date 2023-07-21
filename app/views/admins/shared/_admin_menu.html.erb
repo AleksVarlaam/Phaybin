@@ -8,15 +8,15 @@
     <div>
       <button 
         data-action="dropdown#toggle click@window->dropdown#hide"
-        class="flex text-sm rounded-full border-2 border-gray-500 hover:border-gray-400 focus:outline-none drop-shadow-2xl hover:drop-shadow-lg items-center" 
+        class="flex text-sm rounded-full border-2 border-gray-500 hover:border-gray-400 focus:outline-none drop-shadow-2xl hover:drop-shadow-lg items-center dark:text-gray-400 hover:dark:text-gray-300" 
         id="admin-menu-button" 
         type="button" 
         aria-expanded="false" 
         aria-haspopup="true"
       >
-        <%= heroicon "bars-3", class: "mx-2 hidden sm:block dark:text-gray-500", size: 20%>
+        <%= heroicon "bars-3", class: "mx-2 hidden sm:block", size: 20%>
         <!-- Avatar -->
-        <%= image_tag(current_admin.avatar_thumb, class: "object-cover h-8 w-8 rounded-full border-2 border-gray-700 m-1", alt: "avatar")%>
+        <%= image_tag(current_admin.avatar_thumb, class: "object-cover h-8 w-8 rounded-full border border-gray-400 m-1", alt: "avatar")%>
       </button>
     </div>
 

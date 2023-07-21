@@ -1,8 +1,8 @@
-<!-- Truck Carousel -->
+<!-- Images full screen Carousel -->
 <%= turbo_frame_tag "carousel" do %>
     <div id="indicators-carousel" class="relative" data-controller="carousel">
         <!-- Carousel wrapper -->
-        <%= tag.div class: "h-[22rem] sm:max-h-screen md:h-[40rem] w-auto m-auto relative overflow-hidden rounded-lg" do %>
+        <%= tag.div class: "h-screen w-auto m-auto relative overflow-hidden rounded-lg" do %>
             <% @images.each_with_index do |image, index| %>
                 <%= turbo_frame_tag image.identifier do %>
                     <div
@@ -10,12 +10,17 @@
                         data-carousel-target="slide"
                     >
                         <div class="flex justify-center">
-                            <%= image_tag(image.url, 
-                                class: "absolute block max-w-full max-h-screen md:h-[40rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2", 
-                                alt: "Slide #{image.identifier}")
-                            %>
+                            <%= button_tag "Close", 
+                                data: { action: "turbo-modal#hideModal" }, 
+                                type: "button", 
+                                class:"cursor-zoom-out" do %>
+                                <%= image_tag(image.url, 
+                                    class: "absolute block max-w-full max-h-screen py-8 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2", 
+                                    alt: "Slide #{image.identifier}")
+                                %>
+                            <% end %>
                         </div>
-                        <%= tag.span "#{index + 1} / #{@images.count}", class: 'absolute bottom-0 text-gray-600 text-sm font-medium'%>
+                        <%= tag.span "#{index + 1} / #{@images.count}", class: 'absolute bottom-2 text-gray-600 text-sm font-medium'%>
                     </div>
                 <% end %>
             <% end %>
