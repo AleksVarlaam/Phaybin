@@ -9,9 +9,20 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-12 mt-6 lg:mt-10 lg:grid-cols-2">
-            <!-- Contacts card -->
-            <%= render 'contacts/contacts_card'%>
+        <div class="flex justify-center space-y-3 flex-col mt-6">
+            <!-- Contacts -->
+            <div class="flex justify-center text-center">
+                <div class="space-y-3">
+                    <!-- Phone -->
+                    <%= link_to 'https://wa.me/972527796556', target: '_blank', class: "flex items-center" do %>
+                        <i class="fa-brands fa-whatsapp fa-lg text-gray-600 dark:text-gray-400"></i>
+                        <%= tag.span '+972 52-779-6556', class: "mx-2 text-lg text-gray-700 truncate w-auto dark:text-gray-400 hover:dark:text-gray-200 hover:underline"%>
+                    <% end %>
+                    <div class="flex justify-center space-x-3 rtl:space-x-reverse">
+                        <%= render 'shared/navigations/social_links'%>
+                    </div>
+                </div>
+            </div>
             <!-- Email form -->
             <%= render 'contacts/email_form'%>
         </div>
