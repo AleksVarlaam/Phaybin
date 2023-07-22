@@ -11,6 +11,6 @@
     <%= render @galleries %>
 <% end %>
 
-<div class="mt-6">
+<div class="mt-6 mb-2">
     <%= render 'shared/buttons/add', id: dom_id(Gallery.new, 'form'), title: t('gallery.add_btn'), path: new_admins_gallery_path%>
 </div>

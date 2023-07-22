@@ -6,6 +6,7 @@
     <% @locales.each do |locale| %>
         <!-- Root with locale -->
         <%= render 'sitemap_url', url: root_url(locale: locale), date: nil, priority: 1.0 %>
+        <%= render 'sitemap_url', url: about_me_url(locale: locale), date: nil, priority: 1.0 %>
         <%= render 'sitemap_url', url: galleries_url(locale: locale), date: nil, priority: 1.0 %>
         
         <% @galleries.each do |gallery| %>

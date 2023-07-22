@@ -44,7 +44,7 @@
     >
         <!-- Admin menu -->
         <%= link_to root_path, 
-          class: "flex flex-col items-center my-3 mx-2", 
+          class: "flex flex-col items-center mt-3 mx-2", 
           data: {action: "dropdown#toggle"}, 
           role: "menuitem",
           tabindex:"-1",
@@ -53,13 +53,13 @@
           <!-- Avatar -->
           <%= image_tag(current_admin.avatar_thumb, class: "object-cover w-16 h-16 mx-2 mb-3 rounded-full", alt: "avatar")%>
           <!-- User name -->
-          <%= tag.h4 ('Admin'), class: "px-4 font-medium text-gray-800 dark:text-gray-400 text-center hover:underline"%>
+          <%= tag.h4 ('Admin'), class: "px-4 text-lg text-gray-800 dark:text-gray-400 text-center hover:underline"%>
           <!-- Email -->
-          <%= tag.p current_admin.email, class: "px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-500 text-center hover:underline"%>
+          <%= tag.p current_admin.email, class: "px-4 py-2 text-base text-gray-600 dark:text-gray-400 text-center hover:underline"%>
         <% end %>
         <!-- Links list -->
         <%= render 'admins/shared/admin_menu_links_list', 
-            link_class: "font-medium flex block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100 items-center",
-            icon_class: "w-4 h-4 ltr:mr-2 rtl:ml-2"%>
+            link_class: "font-medium flex block px-4 py-2 text-base text-gray-700 dark:text-gray-400 hover:dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 hover:bg-gray-100 items-center",
+            icon_class: "w-5 h-5 ltr:mr-2 rtl:ml-2"%>
     </div>
 </div>
