@@ -40,6 +40,6 @@ Rails.application.routes.draw do
     end
     get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form
-    resources :contacts, only: [:create]
+    resources :contact_forms, only: [:create]
   end
 end

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class ContactsController < ApplicationController
+class ContactFormsController < ApplicationController
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = ContactForm.new(contact_form_params)
     @contact.request = request
 
     respond_to do |format|
@@ -15,5 +15,11 @@ class ContactsController < ApplicationController
         format.turbo_stream { flash.now[:alert] = 'Could not send message' }
       end
     end
+  end
+  
+  private
+  
+  def contact_form_params
+    params.require(:contact_form).permit(:first_name, :last_name, :email, :message)
   end
 end

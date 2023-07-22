@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Contact < MailForm::Base
+class ContactForm < MailForm::Base
   attribute :first_name,  validate: true
   attribute :last_name,   validate: true
   attribute :email,       validate: /\A([\w.%+-]+)@([\w-]+\.)+(\w{2,})\z/i
@@ -9,9 +9,9 @@ class Contact < MailForm::Base
 
   def headers
     {
-      to: 'you@email.com', # change this to be the email you want sent to
-      subject: 'Railscoder Contact Form',
-      from: 'admin@yourdomain.com', # change this to be the email it is coming from
+      to: 'canek51rus@mail.ru', # change this to be the email you want sent to
+      subject: 'Phaybin Contact Form',
+      from: 'info@chick-chuck.com', # change this to be the email it is coming from
       reply_to: %("#{first_name} #{last_name}" <#{email}>)
     }
   end

@@ -4,7 +4,7 @@ class MainController < ApplicationController
   def index
     @galleries = Gallery.latest.decorate.take(4)
     @main_bg  = helpers.asset_path('background/main-page-bg.jpg')
-    @contact  = Contact.new
+    @contact  = ContactForm.new
   end
 
   def about_me; end
