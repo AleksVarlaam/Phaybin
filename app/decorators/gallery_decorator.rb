@@ -11,7 +11,7 @@ class GalleryDecorator < Draper::Decorator
     when :he then gallery.he
     end
   end
-  
+
   def cover
     helpers.device == 'mobile' ? gallery.cover_mobile.webp.url : gallery.cover_desktop.webp.url
   end

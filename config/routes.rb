@@ -1,14 +1,16 @@
 # frozen_string_literal: true
+
 require 'sidekiq/web'
 
-Rails.application.routes.default_url_options[:host] = Rails.env.production? ? 'http://phaybin.fly.dev' : 'localhost:3000'
+Rails.application.routes.default_url_options[:host] =
+  Rails.env.production? ? 'http://phaybin.fly.dev' : 'localhost:3000'
 Rails.application.routes.draw do
   # WWW redirect
   match '(*any)',
         to: redirect(subdomain: ''),
         via: :all,
         constraints: { subdomain: 'www' }
-        
+
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
     # Root path
     root to: 'main#index'
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
     get 'robots.txt',  to: 'main#robots',  format: 'txt', as: :robots
     # Favicon
     get 'favicon.png', to: 'main#favicon', format: 'png', as: :favicon
-  
+
     # Admin
     get '/admin' => redirect('/admins/sign_in')
     devise_for :admins, controllers: {

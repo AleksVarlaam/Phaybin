@@ -6,9 +6,9 @@ class MainController < ApplicationController
     @main_bg  = helpers.asset_path(helpers.device == 'mobile' ? 'background/phaybin-photo.png' : 'background/7.jpg')
     @contact  = Contact.new
   end
-  
+
   def about_me; end
-  
+
   def sitemap
     @locales   = I18n.available_locales
     @galleries = Gallery.all
