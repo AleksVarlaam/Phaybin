@@ -77,4 +77,13 @@
 			</div>
 		</div>
 	</div>
+    <!-- Contacts -->
+    <div class="flex justify-center mt-8 space-x-3 rtl:space-x-reverse">
+        <!-- Phone -->
+        <%= link_to 'https://wa.me/972527796556', target: '_blank', 
+            class: "hover:shadow-md text-gray-700 dark:text-gray-300 hover:text-white hover:shadow-gray-300 rounded-full" do %>
+            <i class="fa-brands fa-whatsapp fa-xl"></i>
+        <% end %>
+        <%= render 'shared/navigations/social_links'%>
+    </div>
 </section>
