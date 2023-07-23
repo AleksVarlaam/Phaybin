@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="<%= response.header['Content-Language']%>" dir="ltr">
+<html lang="<%= response.header['Content-Language']%>" 
+      dir="<%= response.header['Content-Language'] == 'he' ? 'rtl' : 'ltr' %>">
   <head>
     <title><%= full_title(yield(:page_title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">

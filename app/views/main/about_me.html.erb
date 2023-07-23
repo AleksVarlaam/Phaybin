@@ -5,33 +5,30 @@
 <section class="dark:bg-black dark:text-gray-100">
 	<div class="container max-w-xl p-6 mx-auto space-y-12 lg:px-8 lg:max-w-7xl">
 		<div>
-			<h2 class="text-3xl font-bold tracki text-center sm:text-4xl dark:text-gray-50">Добро пожаловать в мир искусства фотографии! </h2>
-			<p class="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">Меня зовут Наталия Рабинович, и я рада приветствовать вас на своем сайте.</p>
+			<%= tag.h1 t('about_me.h1'), class: "text-3xl font-bold tracki text-center sm:text-4xl dark:text-gray-50" %>
+			<%= tag.p t('about_me.h1_desc'), class: "max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400" %>
 		</div>
 		<div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
-				<h3 class="font-bold tracki text-3xl dark:text-gray-50">Подробнее обо мне</h3>
-				<p class="mt-3 text-lg dark:text-gray-400">Многие могут меня знать под псевдонимом PhaybiN в значении котором прячется - фото, фея, часть моей фамилии и Имя.</p>
+				<%= tag.h2 t('about_me.h2/1'), class: "font-bold tracki text-3xl dark:text-gray-50" %>
+				<%= tag.p t('about_me.h2/1_desc'), class: "mt-3 text-lg dark:text-gray-400" %>
 				<div class="mt-12 space-y-12">
 					<div class="flex">
-						
 						<div class="">
-							<h4 class="text-2xl font-medium leadi dark:text-gray-50">Что для меня фотография?</h4>
-							<p class="mt-2 dark:text-gray-400 text-lg">Фотография для меня - это вечность в моменте, искусство и целая жизнь. Это целый огромный процесс в одном изображении. Это история, эмоция и мгновение, которое остается с нами на всю жизнь. </p>
+							<%= tag.h3 t('about_me.h3/1'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+							<%= tag.p t('about_me.h3/1_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 						</div>
 					</div>
 					<div class="flex">
-						
 						<div class="">
-							<h4 class="text-2xl font-medium leadi dark:text-gray-50">Моя миссия</h4>
-							<p class="mt-2 dark:text-gray-400 text-lg">Моя миссия - показать то, что в моем видении нет границ и правил, есть полная свобода воображения и абсолютно авторский подход к каждой съемке. </p>
+							<%= tag.h3 t('about_me.h3/2'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+							<%= tag.p t('about_me.h3/2_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 						</div>
 					</div>
 					<div class="flex">
-						
 						<div class="">
-							<h4 class="text-2xl font-medium leadi dark:text-gray-50">Профессионализм</h4>
-							<p class="mt-2 dark:text-gray-400 text-lg">Я стараюсь создать комфортную и расслабленную атмосферу на съемке и  стремлюсь показать людям то, насколько они красивы и разнообразны. Фотография открывает абсолютно новый взгляд на себя и на мир, а моя задача воплотить все её безграничные возможности. Я останавливаю время, в котором ты и есть искусство.</p>
+							<%= tag.h3 t('about_me.h3/3'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+							<%= tag.p t('about_me.h3/3_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 						</div>
 					</div>
 				</div>
@@ -44,28 +41,25 @@
 		<div>
 			<div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 				<div class="lg:col-start-2">
-					<h3 class="text-2xl font-bold tracki sm:text-3xl dark:text-gray-50">Мои достижения</h3>
-					<p class="mt-3 text-lg dark:text-gray-400">Более трех лет я занимаюсь профессионально портретной фотографией. Готовые фотографии я вижу при первых минутах общения с клиентом и то, насколько каждый из вас красивый и особенный.</p>
+					<%= tag.h2 t('about_me.h2/2'), class: "text-2xl font-bold tracki sm:text-3xl dark:text-gray-50" %>
+					<%= tag.p t('about_me.h2/2_desc'), class: "mt-3 text-lg dark:text-gray-400" %>
 					<div class="mt-12 space-y-12">
 						<div class="flex">
-							
 							<div class="">
-								<h4 class="text-2xl font-medium leadi dark:text-gray-50">Обложка всемирноизвестного романа</h4>
-								<p class="mt-2 dark:text-gray-400 text-lg">Одна из моих работ стала обложкой книги «Клинический случай» знаменитого писателя, профессора и режиссера Грэма Макре Бернета. Этот роман вошел в топ 50 Романов по версии ELLE, был разрекламирован известными журналами по всему миру и стал настоящим бестселлером, в котором моя работа стала неотъемлемой частью.</p>
+    							<%= tag.h3 t('about_me.h3/4'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+    							<%= tag.p t('about_me.h3/4_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 							</div>
 						</div>
 						<div class="flex">
-							
 							<div class="">
-								<h4 class="text-2xl font-medium leadi dark:text-gray-50">Публикации в журналах</h4>
-								<p class="mt-2 dark:text-gray-400 text-lg">За 3 года мои работы были опубликованы по всему миру в таких модных журналах как: Vogue, Selin, Intra, Poza, Vigour, DAPPY, Mob, Gmaro и Top Posters.</p>
+    							<%= tag.h3 t('about_me.h3/5'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+    							<%= tag.p t('about_me.h3/5_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 							</div>
 						</div>
 						<div class="flex">
-							
 							<div class="">
-								<h4 class="text-2xl font-medium leadi dark:text-gray-50">Просмотры</h4>
-								<p class="mt-2 dark:text-gray-400 text-lg">Более 10 моих работ были выбраны в топ лучших на онлайн платформе <a href="https://unsplash.com/@phaybin" class="hover:underline" target="blank">UNSPLASH</a> где у них суммарно более 8млн. просмотров.</p>
+    							<%= tag.h3 t('about_me.h3/6'), class: "text-2xl font-medium leadi dark:text-gray-50" %>
+    							<%= tag.p t('about_me.h3/6_desc'), class: "mt-2 dark:text-gray-400 text-lg" %>
 							</div>
 						</div>
 					</div>

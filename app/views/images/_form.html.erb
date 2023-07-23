@@ -8,16 +8,16 @@
         <!-- Images -->
         <div class="flex grid grid-rows-1 text-center items-center justify-center">
           <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">
-            <div class="space-y-1 text-center">
+            <div class="space-y-1 text-center text-gray-700 hover:text-gray-400">
               <%= f.label :images, class: "cursor-pointer" do %>
                   <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700 hover:text-gray-600"%>
                   <div class="text-gray-700 mt-1 mb-2 justify-center text-center text-base" data-controller="image" id="Img">
-                      <%= tag.span 'Upload images', 
+                      <%= tag.span t('images.upload'), 
                           class: "relative rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                       %>
                           <%= f.file_field :images, multiple: true, class: "sr-only", accept: "image/png, image/jpeg, image/jpg", "data-image-target": "input", "data-action": "image#preview" %>
                   </div>
-                  <%= tag.p 'PNG, JPG, GIF up to 10MB', class: "text-xs text-gray-700" %>
+                  <%= tag.p 'PNG, JPG, WEBP up to 10MB', class: "text-xs" %>
               <% end %>
             </div>
           </div>

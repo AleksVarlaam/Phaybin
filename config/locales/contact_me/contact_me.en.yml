@@ -11,4 +11,8 @@ en:
         first_name:     "First name"
         last_name:      "Last name"
         message:        "Message"
+        flash:
+            success:    "Your message is poisoned successfully! I will answer you within 24 hours. If you do not receive a response from me, please send a message again or contact me via the social. networks listed above."
+            alert:      "Failed to send message, check the data you provided"
+        
             

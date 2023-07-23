@@ -1,0 +1,12 @@
+en:
+  watch_portfolio:  "Watch portfolio"
+  gallery:
+      all_galleries: "All categories"
+      title:         "Portfolio"      
+      add_btn:       "Add gallery"
+  images:
+      upload:        "Upload images"
+  cover:
+      mobile:   "Cover for mobile"
+      desktop:  "Cover for desktop"
+  

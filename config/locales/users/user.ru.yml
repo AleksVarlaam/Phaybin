@@ -1,31 +1,34 @@
 ru:
     user_menu:   
-        sign_in:          'Войти'
-        sign_up:          'Зарегистрироваться'
-        sign_out:         'Выйти'
-        dashboard:        'Панель управления'
-        profile:          'Профиль'
-        credential:       'Безопасность'
+        sign_in:          "Войти"
+        sign_up:          "Зарегистрироваться"
+        sign_out:         "Выйти"
+        dashboard:        "Панель управления"
+        profile:          "Профиль"
+        credential:       "Безопасность"
     sign_in:
-        title:            'Вход'
-        title_as_company: 'Вход для компании'
-        as_company:       'Чтобы войти как компания'
-        click_here:       'Нажми здесь'
-        login_place:      'Введите email или номер телефона'
-        password_place:   'Введите пароль'
-        remember_me:      'Запомнить меня'
-        forgot:           'Забыли пароль?'
-        or:               'Или'
-        facebook:         'С помощью Facebook'
-        google:           'С помощью Google'
-        btn:              'Войти'
-        account:          'У вас нет аккаунта'
-        register:         'Создать аккаунт'
+        title:            "Вход"
+        title_as_company: "Вход для компании"
+        as_company:       "Чтобы войти как компания"
+        click_here:       "Нажми здесь"
+        login_place:      "Введите email или номер телефона"
+        password_place:   "Введите пароль"
+        remember_me:      "Запомнить меня"
+        forgot:           "Забыли пароль?"
+        or:               "Или"
+        facebook:         "С помощью Facebook"
+        google:           "С помощью Google"
+        btn:              "Войти"
+        account:          "У вас нет аккаунта"
+        register:         "Создать аккаунт"
     reset_password:
-        title:            'Восстановление пароля'
-        email_place:      'Введите ваш email'
-        send_btn:         'Отправить мне инструкции по сбросу пароля'
+        title:            "Восстановление пароля"
+        email_place:      "Введите ваш email"
+        send_btn:         "Отправить мне инструкции по сбросу пароля"
     sign_up:
-        title:            'Регистрация'
-        btn:              'Создать аккаунт'
+        title:            "Регистрация"
+        btn:              "Создать аккаунт"
+    avatar:
+        change:           "Поменять аватар"
+        upload:           "Загрузить аватар"
         

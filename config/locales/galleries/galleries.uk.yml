@@ -1,0 +1,11 @@
+uk:
+  watch_portfolio:  "Переглянути портфоліо"
+  gallery:
+      all_galleries: "Всі категорії"
+      title:         "Портфоліо"  
+      add_btn:       "Додати категорію"
+  images:
+      upload: "Завантажити фото"
+  cover:
+      mobile:   "Мобільна обкладинка"
+      desktop:  "Обкладинка комп'ютера"

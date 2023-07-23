@@ -1,31 +1,34 @@
 uk:
     user_menu:   
-        sign_in:          'Увійти'
-        sign_up:          'Зареєструватися'
-        sign_out:         'Увійти'
-        dashboard:        'Панель управління'
-        profile:          'Профіль'
-        credential:       'Безпека'
+        sign_in:          "Увійти"
+        sign_up:          "Зареєструватися"
+        sign_out:         "Увійти"
+        dashboard:        "Панель управління"
+        profile:          "Профіль"
+        credential:       "Безпека"
     sign_in:
-        title:            'Вхід'
-        title_as_company: 'Вхід для компанії'
-        as_company:       'Для того щоб увійти як компанія'
-        click_here:       'Натисни тут'
-        login_place:      'Введіть email або номер телефону'
-        password_place:   'Введіть пароль'
-        remember_me:      'Запамʼятати мене'
-        forgot:           'Забули пароль?'
-        or:               'Або'
-        facebook:         'За допомогою Facebook'
-        google:           'За допомогою Google'
-        btn:              'Увійти'
-        account:          'У вас немає акаунту'
-        register:         'Створити акаунт'
+        title:            "Вхід"
+        title_as_company: "Вхід для компанії"
+        as_company:       "Для того щоб увійти як компанія"
+        click_here:       "Натисни тут"
+        login_place:      "Введіть email або номер телефону"
+        password_place:   "Введіть пароль"
+        remember_me:      "Запамʼятати мене"
+        forgot:           "Забули пароль?"
+        or:               "Або"
+        facebook:         "За допомогою Facebook"
+        google:           "За допомогою Google"
+        btn:              "Увійти"
+        account:          "У вас немає акаунту"
+        register:         "Створити акаунт"
     reset_password:
-        title:            'Відновлення пароля'
-        email_place:      'Введіть ваш email'
-        send_btn:         'Надіслати мені інструкції зі скидання пароля'
+        title:            "Відновлення пароля"
+        email_place:      "Введіть ваш email"
+        send_btn:         "Надіслати мені інструкції зі скидання пароля"
     sign_up:
-        title:            'Реєстрація'
-        btn:              'Створити акаунт'
+        title:            "Реєстрація"
+        btn:              "Створити акаунт"
+    avatar:
+        change:           "Змінити аватар"
+        upload:           "Завантажити аватар"
    

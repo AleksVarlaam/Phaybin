@@ -1,0 +1,11 @@
+he:
+  watch_portfolio:  "ארנק זה"
+  gallery:
+      all_galleries: "כל הקטגוריות"
+      title:         "פורטל"       
+      add_btn:       "הוסף קטגוריה"
+  images:
+      upload:        "העלה תמונה"
+  cover:
+      mobile:   "כיסוי נייד"
+      desktop:  "כיסוי מחשב"

@@ -28,4 +28,7 @@ he:
     sign_up:
         title:            "הרשמה"
         btn:              "יוצרים פרופיל"
+    avatar:
+        change:           "שנה אווטאר"
+        upload:           "העלה אווטר"
     

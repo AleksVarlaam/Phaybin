@@ -5,7 +5,7 @@
   <!-- Avatar -->
   <div class="flex grid grid-rows-1 text-center items-center justify-center">
     <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-700 hover:dark:border-gray-600 border-dashed rounded-md">
-      <div class="space-y-1 text-center">
+      <div class="space-y-1 text-center text-gray-700 hover:text-gray-400">
         <%= f.label :avatar, class: "cursor-pointer" do %>
             <% if current_admin.avatar.present?%>
                 <%= image_tag(current_admin.avatar_thumb, class: "cursor-pointer object-cover mx-auto h-12 w-12 rounded-full", alt: "avatar") %>
@@ -13,12 +13,12 @@
                 <%= heroicon 'photo', class: "mx-auto h-12 w-12 text-gray-700"%>
             <% end %>
             <div class="text-gray-700 mt-1 mb-2 justify-center text-center text-base" data-controller="image" id="Img">
-                <%= tag.span current_admin.avatar.present? ? 'Change avatar' : 'Upload avatar', 
+                <%= tag.span current_admin.avatar.present? ? t('avatar.change') : t('avatar.upload'), 
                     class: "relative rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                 %>
                     <%= f.file_field :avatar, multiple: false, class: "sr-only", accept: "image/png, image/jpeg, image/jpg", "data-image-target": "input", "data-action": "image#preview" %>
             </div>
-            <%= tag.p 'PNG, JPG, GIF up to 10MB', class: "text-xs text-gray-700" %>
+            <%= tag.p 'PNG, JPG, WEBP up to 10MB', class: "text-xs" %>
         <% end %>
       </div>
     </div>
@@ -38,11 +38,11 @@
 
   <!-- Password input -->
   <div class="mb-6">
-    <div class="flex items-center">
-        <%= f.label :password, Admin.human_attribute_name('new_password') , class: "text-lg dark:text-gray-300 mr-1" %>
+    <div class="flex items-center space-x-2 rtl:space-x-reverse">
+        <%= f.label :password, Admin.human_attribute_name('new_password') , class: "text-lg dark:text-gray-300" %>
        <% if @minimum_password_length %>
            <!-- Popover button-->
-           <%= render 'shared/buttons/popover', icon: (heroicon 'exclamation-circle', class: "text-gray-500 ml-2"), 
+           <%= render 'shared/buttons/popover', icon: (heroicon 'exclamation-circle', class: "text-gray-500"), 
                text: "#{Admin.human_attribute_name('password_popover', length: @minimum_password_length)}", popover_id: 'new_password'%>
        <% end %>
     </div>
@@ -67,11 +67,11 @@
   
   <!-- Current password -->
   <div class="mb-6">
-     <div class="flex items-center">
-         <span class="text-red-500 mr-1">&nbsp;*</span>
+     <div class="flex items-center space-x-2 rtl:space-x-reverse">
+         <span class="text-red-500">&nbsp;*</span>
          <%= f.label :current_password, Admin.human_attribute_name('current_password') , class: "text-lg dark:text-gray-300 mr-1" %>
          <!-- Popover button-->
-         <%= render 'shared/buttons/popover', icon: (heroicon 'exclamation-circle', class: "text-gray-500 ml-2"), 
+         <%= render 'shared/buttons/popover', icon: (heroicon 'exclamation-circle', class: "text-gray-500"), 
              text: Admin.human_attribute_name('current_popover'), popover_id: 'current_password'%>
      </div>
      <%= f.password_field :current_password, autocomplete: "current_password",

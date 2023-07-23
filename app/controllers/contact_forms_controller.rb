@@ -7,12 +7,9 @@ class ContactFormsController < ApplicationController
 
     respond_to do |format|
       if @contact.deliver
-        format.turbo_stream do
-          flash.now[:success] =
-            'Nice job! You successfully sent me a message. If needed, I will get back to you as soon as possible. In the meantime, check out all my latest articles above.'
-        end
+        format.turbo_stream { flash.now[:success] = t('contact_me.flash.success') }
       else
-        format.turbo_stream { flash.now[:alert] = 'Could not send message' }
+        format.turbo_stream { flash.now[:alert] = t('contact_me.flash.alert') }
       end
     end
   end

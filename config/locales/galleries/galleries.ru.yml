@@ -1,0 +1,11 @@
+ru:
+  watch_portfolio:  "Посмотреть портфолио"
+  gallery:
+      all_galleries: "Все категории"
+      title:         "Портфолио"         
+      add_btn:       "Добавить категорию"
+  images:
+      upload:        "Загрузить фото"
+  cover:
+      mobile:   "Обложка для мобильных"
+      desktop:  "Обложка для компьютеров"

@@ -1,17 +1,21 @@
 en:
-    about_me:
-        title:  "Welcome to the world of photography art! My name is Natalie, and I am pleased to welcome you to my website."
-        desc_html:  "Photography is not just a snapshot, it is a way to capture the moment, emotion, history. I strive to create unique and unique shots that will stay with you for life. <br>
+    about_me: 
+        h1:         "Welcome to the world of photography art!"
+        h1_desc:    "My name is Natalia Rabinovich, and I am pleased to welcome you to my website."
+        h2/1:       "More about me"
+        h2/1_desc:  "Many may know me under the pseudonym PhaybiN in the meaning which hides - photo, fairy, part of my last name and First name."
+        h3/1:       "What is photography to me?"
+        h3/1_desc:  "Photography for me is an eternity in a moment, an art and a lifetime. It is a huge process in one image. It’s a story, an emotion and an instant that stays with us for life."
+        h3/2:       "My mission"
+        h3/2_desc:  "My mission is to show that in my vision there are no boundaries and no rules, there is a complete freedom of imagination and a completely author’s approach to every shooting."
+        h3/3:       "Professionalism"
+        h3/3_desc:  "I try to create a comfortable and relaxed atmosphere in the shooting and strive to show people how beautiful and diverse they are. Photography opens up a whole new way of looking at myself and the world, and my job is to realize all of its infinite possibilities. I stop a time in which you are the art."
 
-            My goal is to convey your individuality and emotions through each photograph. I love working with different genres: portraits, wedding photography, family shooting, model portfolio and others. Every project for me is an opportunity to express myself and help you save the most important moments in your life. <br>
-
-            I use only professional equipment and try to create a comfortable and relaxed atmosphere on the shoot. Your satisfaction is my main goal, so I am ready to listen carefully to your wishes and offer my ideas for creating unique shots. <br>
-
-            On my site you can browse my portfolio to see my work and style. I am ready to discuss any details of your project and answer all your questions. <br>
-
-            If you are looking for a talented photographer to help you capture the most important moments of your life, then you have come to the address. Contact me today and let’s create together something truly special. <br>
-
-            Thank you for your attention and I hope to see you soon! <br>
-
-            Natalie Rabinovich"
-        link:   "Contact me"
+        h2/2:       "My Achievements"
+        h2/2_desc:  "For more than three years I have been engaged in professional portrait photography. I can see the finished photos at the first minutes of communication with the client and how each of you is beautiful and special."
+        h3/4:       "Cover of the world-famous novel"
+        h3/4_desc:  "One of my works has become the cover of the book «Clinical Case» by the famous writer, professor and director Graham McRae Burnett. This novel entered the top 50 Romans by ELLE, was advertised by renowned magazines around the world and became a real bestseller in which my work became an integral part."
+        h3/5:       "Publications in journals"
+        h3/5_desc:  "In three years my work has been published worldwide in fashion magazines such as: Vogue, Selin, Intra, Poza, Vigour, DAPPY, Mob, Gmaro and Top Posters."
+        h3/6:       "Views"
+        h3/6_desc:  "More than 10 of my works were selected to the top on the online platform UNSPLASH where they have a total of more than 8mn. views."
