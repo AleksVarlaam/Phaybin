@@ -9,6 +9,7 @@ ru:
       portfolio:    "Портфолио"
       about_me:     "Обо мне"
       contacts:     "Контакты"
+      reviews:      "Отзывы"
   # Global
   global:
       save_btn:         'Сохранить'

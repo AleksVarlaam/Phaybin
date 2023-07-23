@@ -4,6 +4,7 @@ ru:
         models:
             admin:          'Админ'
             gallery:        'Категория'
+            review:         "Отзыв"
         errors:
               messages:
                   in:         "%{value} недопустимое значение, введите значение в диапозоне %{count}"

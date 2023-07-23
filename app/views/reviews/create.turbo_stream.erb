@@ -1,0 +1,2 @@
+<%= turbo_stream.append 'reviews', render('reviews/review', review: @review.decorate)%>
+<%= prepend_flash %>

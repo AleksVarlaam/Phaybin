@@ -9,6 +9,7 @@ uk:
       portfolio:    "Портфоліо"
       about_me:     "Про мене"
       contacts:     "Контакти"
+      reviews:      "Огляд"
   # Global
   global:
       save_btn:         'Зберегти'

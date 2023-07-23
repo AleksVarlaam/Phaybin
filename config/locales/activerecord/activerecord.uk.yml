@@ -4,6 +4,7 @@ uk:
         models:
             admin:          'Адмін'
             gallery:        'Kатегорія'
+            review:         "Відгук"
         errors:
               messages:
                   in:         "%{value} неприпустиме значення, введіть значення в діапазоні %{count}"

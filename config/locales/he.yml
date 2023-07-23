@@ -9,6 +9,7 @@ he:
       portfolio:    "פורטל"
       about_me:     "עלי"
       contacts:     "קשרי"
+      reviews:      "תגובות"
   # Global
   global:
       save_btn:         'לשמור'

@@ -4,6 +4,7 @@ he:
         models:
             admin:          "מנהל"
             gallery:        "קטגוריה"
+            review:         "תגובה"
         errors:
               messages:
                   in:         "%{count} אינו חוקי, הזן ערך בטווח %{value}"

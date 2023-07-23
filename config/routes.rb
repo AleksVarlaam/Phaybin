@@ -41,5 +41,7 @@ Rails.application.routes.draw do
     get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form
     resources :contact_forms, only: [:create]
+    # Reviews
+    resources :reviews, only: %i[index create destroy]
   end
 end

@@ -4,6 +4,7 @@ en:
         models:
             admin:          'Admin'
             gallery:        'Gallery'
+            review:         "Review"
         errors:
               messages:
                   in:         "%{value} is not valid, enter a value in range %{count}"

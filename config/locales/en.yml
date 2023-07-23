@@ -9,6 +9,7 @@ en:
       portfolio:    "Portfolio"
       about_me:     "About me"
       contacts:     "Contact me"
+      reviews:      "Reviews"
   # Global
   global:
       save_btn:         'Save'

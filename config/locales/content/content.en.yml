@@ -9,3 +9,5 @@ en:
       h1/2:      "photographer"
       h2:        "Natalie Rabinovych"
       contact_me:   "Contact me"
+  review:
+      email_popover:    "Your email will be visible only to the administrator"
