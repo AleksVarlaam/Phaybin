@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  require 'meta_tags_helper'
+  
   def prepend_flash
     turbo_stream.prepend 'flash_messages', partial: 'shared/messages/flash_messages'
   end
