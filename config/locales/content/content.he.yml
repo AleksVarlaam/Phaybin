@@ -1,12 +1,8 @@
 he:
-  watch_portfolio:  "ארנק זה"
-  gallery:
-      all_galleries: "כל הקטגוריות"
-      title:         "פורטל"       
-      add_btn:       "הוסף קטגוריה"
   main_page:    
-      h1/1:   "מקצוע "
-      h1/2:   "צלם"
+      h1:        "מקצוע צלם"
       h2:        "'נטלי רבינוביץ"
+      contact_me:   "לפנות אלי"
   review:
+      title:            "מה הלקוחות שלי אומרים עליי"
       email_popover:    "הדואר האלקטרוני שלך יהיה גלוי רק למנהל המערכת"

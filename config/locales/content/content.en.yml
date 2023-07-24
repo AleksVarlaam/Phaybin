@@ -1,13 +1,8 @@
 en:
-  watch_portfolio:  "Watch portfolio"
-  gallery:
-      all_galleries: "All categories"
-      title:        "Portfolio"      
-      add_btn:      "Add gallery"
   main_page:    
-      h1/1:      "Professional "
-      h1/2:      "photographer"
-      h2:        "Natalie Rabinovych"
+      h1:           "Professional photographer"
+      h2:           "Natalie Rabinovych"
       contact_me:   "Contact me"
   review:
+      title:            "What my clients are saying about me"
       email_popover:    "Your email will be visible only to the administrator"

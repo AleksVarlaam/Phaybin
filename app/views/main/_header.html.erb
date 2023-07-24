@@ -16,10 +16,7 @@
         <div class="flex items-center justify-center w-full sm:px-6 pb-2 lg:h-[32rem] lg:w-1/2 relative">
             <div class="max-w-xl space-y-6">
                 <!-- H1 -->
-                <%= tag.h1 class: "text-4xl font-semibold text-gray-800 dark:text-white lg:text-6xl" do %>
-                    <%= t('main_page.h1/1')%>
-                    <%= tag.span t('main_page.h1/2'), class: ''%>
-                <% end %>
+                <%= tag.h1 t('main_page.h1'), class: "text-4xl font-semibold text-gray-800 dark:text-white lg:text-6xl" %>
                 <!-- H2 -->
                 <%= tag.h2 t('main_page.h2'), class: "text-2xl text-gray-500 dark:text-gray-200 lg:text-3xl" %>
                 <div class="flex justify-start space-x-2 rtl:space-x-reverse">
