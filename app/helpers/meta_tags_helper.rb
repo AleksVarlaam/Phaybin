@@ -10,7 +10,7 @@ module MetaTagsHelper
       keywords: "",
       canonical: request.original_url,
       noindex: !Rails.env.production?,
-      manifest: '/manifest.webmanifest',
+      # manifest: '/manifest.webmanifest',
       og: {
         title: :title,
         site_name: 'Phaybin.com',

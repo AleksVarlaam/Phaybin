@@ -15,12 +15,12 @@ namespace :admin do
 
       admins_array.each { |admin| Admin.create(admin) }
 
-      galleries_array = [
-        { ru: 'Главная-mobile', en: 'Main-mobile', uk: 'Головна-mobile', he: 'mobile-ראשי' },
-        { ru: 'Главная-desktop', en: 'Main-desktop', uk: 'Головна-desktop', he: 'desktop-ראשי' }
-      ]
-
-      galleries_array.each { |gallery| Gallery.create(gallery) }
+      # galleries_array = [
+#         { ru: 'Главная-mobile', en: 'Main-mobile', uk: 'Головна-mobile', he: 'mobile-ראשי' },
+#         { ru: 'Главная-desktop', en: 'Main-desktop', uk: 'Головна-desktop', he: 'desktop-ראשי' }
+#       ]
+#
+#       galleries_array.each { |gallery| Gallery.create(gallery) }
 
       p "Created #{Admin.count} admins and #{Gallery.count} galleries"
     end
