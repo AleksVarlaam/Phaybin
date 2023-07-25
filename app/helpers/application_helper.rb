@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  include Pagy::Frontend
   require 'meta_tags_helper'
   
   def prepend_flash
