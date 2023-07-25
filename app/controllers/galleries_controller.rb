@@ -22,11 +22,6 @@ class GalleriesController < ApplicationController
     @images_count = @images.count
     @pagy_a, @images = pagy_array(@images, items: 10)
     
-    respond_to do |format|
-      format.html # GET
-      format.turbo_stream # POST
-    end
-    
     set_meta_tags(
       title: [t('meta.gallery.title', category: @gallery.title.capitalize)],
       description: t('meta.gallery.desc', category: @gallery.title.downcase),

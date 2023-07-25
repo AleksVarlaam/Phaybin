@@ -17,7 +17,7 @@ module MetaTagsHelper
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: image_url('PhaybiN-logo-white.png')
+        image: [image_url('og-phaybin-xl.png'), image_url('og-phaybin-sm.png')]
       },
       author: 'Natalie Rabinovych',
       'geo.position' => '31.4117257;35.0818155',
