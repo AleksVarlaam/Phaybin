@@ -20,7 +20,6 @@ module MetaTagsHelper
         image: image_url('PhaybiN-logo-white.png')
       },
       author: 'Natalie Rabinovych',
-      'google-site-verification' => 'google-site-verification=toUojvLJpY342LZjZXWqyfs2Mw4ne0xuoljh2V1QgHw',
       'geo.position' => '31.4117257;35.0818155',
       'geo.region' => 'IL',
       'geo.placename' => 'Israel'

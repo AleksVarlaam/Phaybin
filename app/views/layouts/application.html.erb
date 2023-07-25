@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= display_meta_tags(default_meta_tags) %>
     <%= render 'shared/meta/favicon'%>
-    
     <!-- CSRF & stylesheets -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <!-- Google tag manager -->
@@ -23,9 +21,9 @@
 
   <body class="flex flex-col h-screen w-screen justify-between dark:bg-black dark:text-gray-500">
       <!-- Google Tag Manager (noscript) -->
-      <%# render 'shared/meta/google_tag_body' %>
+      <%= render 'shared/meta/google_tag_body' %>
       <!-- Schema json -->
-      <%# render 'shared/meta/breadcrumbs_navbar_json'%>
+      <%= render 'shared/meta/breadcrumbs_navbar_json'%>
       <%# yield :schema_json %>
       
       <!-- Header -->
