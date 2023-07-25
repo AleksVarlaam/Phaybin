@@ -1,0 +1,17 @@
+en:
+    meta:
+        main_page:
+            title:  "Photographer | Tel Aviv | Israel"
+            desc:   "Site of professional photographer in Israel. If you are looking for a talented photographer to help you capture the most important moments of your life, then you have come to the address. Contact me today, and let’s build something really special together."
+        about_me:
+            title:  "About me | Natalia Rabinovich | Photographer | Israel"
+            desc:   "Read more about me. For more than three years I have been engaged in professional portrait photography. I can see the finished photos at the first minutes of communication with the client and how beautiful and special each of you."
+        portfolio:
+            title:  "Portfolio | Photographer | Israel"
+            desc:   "On my site you can browse my portfolio to see my work and style. I’m willing to discuss any details of your project and answer any questions you may have."
+        gallery:
+            title:  "%{category} | Photographer | Israel"
+            desc:   "Here you can see all my works category %{category}"
+        reviews:
+            title:  "Reviews from my customers | Photographer | Israel"
+            desc:   "Here you can leave your own feedback and read reviews from my customers."
