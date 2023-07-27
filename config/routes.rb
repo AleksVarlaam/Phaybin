@@ -31,12 +31,13 @@ Rails.application.routes.draw do
       put 'admins',       to: 'admins/registrations#update',  as: 'admin_registration'
       namespace :admins do
         resources :galleries
+        patch 'gallery/:id/upload_images', to: 'galleries#upload_images', as: 'upload_images'
       end
     end
 
     # Content
     resources :galleries, only: %i[index show] do
-      resources :images, only: %i[create show destroy]
+      resources :images, only: %i[show destroy]
     end
     get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form

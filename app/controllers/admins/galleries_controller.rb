@@ -4,7 +4,7 @@ module Admins
   class GalleriesController < ApplicationController
     layout 'profile_layout'
     before_action :authenticate_admin!
-    before_action :set_gallery, only: %i[show edit update destroy]
+    before_action :set_gallery, only: %i[show edit update upload_images destroy]
 
     def new
       @gallery = Gallery.new
@@ -47,6 +47,20 @@ module Admins
         end
       end
     end
+    
+    def upload_images
+      return unless params[:images].present?
+      @images = []
+      params[:images]['file'].each do |image|
+        @images << @gallery.images.create!(file: image, gallery_id: @gallery.id) if image.present?
+      end
+      respond_to do |format|
+        format.turbo_stream do
+          flash.now[:success] =
+            t('flash.success.updated', model: "#{@gallery.model_name.human} #{@gallery.title.downcase}")
+        end
+      end
+    end
 
     def destroy
       respond_to do |format|
@@ -64,7 +78,8 @@ module Admins
     private
 
     def gallery_params
-      params.require(:gallery).permit(:ru, :en, :he, :uk, :cover_mobile, :cover_desktop, images: [])
+      params.require(:gallery).permit(:ru, :en, :he, :uk, :cover_mobile, :cover_desktop, images_attributes: 
+  [:id, :gallery_id, :file])
     end
 
     def set_gallery

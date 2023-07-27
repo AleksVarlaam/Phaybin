@@ -5,4 +5,5 @@ class Gallery < ApplicationRecord
   mount_uploader  :cover_desktop, CoverDesktopUploader
   
   has_many :images, dependent: :destroy
+  accepts_nested_attributes_for :images
 end
