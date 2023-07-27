@@ -11,7 +11,8 @@ module Admins
     end
 
     def show
-      @images = @gallery.images
+      @images = @gallery.images.where.not(id: nil)
+      @image = @gallery.images.new
     end
 
     def create
