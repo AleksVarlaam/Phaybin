@@ -22,5 +22,11 @@
 <!-- Images form -->
 <%= render 'images/form'%>
 
-<!-- Images index -->
-<%= render 'images/all_images'%>
+<!-- Images list -->
+<%= turbo_frame_tag dom_id(@gallery, :images), class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" do %>
+    <% if @images.count.positive?%>
+        <%= render partial: 'images/image', collection: @images%>
+    <% else %>
+        <%= tag.p 'Нету фото', class: 'text-center text-gray-500 col-span-full'%>
+    <% end%>
+<% end %>

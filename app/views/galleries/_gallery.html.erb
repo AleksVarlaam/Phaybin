@@ -10,7 +10,7 @@
                 <% end%>
             </div>
         </div>
-    <% end if gallery.images.count.positive?%>
+    <% end if gallery.images.count.positive? || admins_signed_in?%>
 <% end %>
 
 
