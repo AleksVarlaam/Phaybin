@@ -1,7 +1,7 @@
 <%= turbo_frame_tag image do %>
     <div class="relative max-h-[32rem] sm:max-h-[36rem] w-auto">
         <div class="flex justify-center">
-            <%= link_to gallery_image_path(@gallery, index), data: {turbo_frame: 'modal'}, remote: true do %>
+            <%= link_to gallery_image_path(@gallery, image), data: {turbo_frame: 'modal'}, remote: true do %>
                 <%= image_tag image.file.medium.url, class: "max-h-[32rem] sm:max-h-[36rem] w-auto object-cover cursor-zoom-in"%>
             <% end %>
         </div>
