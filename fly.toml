@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for phaybin on 2023-07-27T14:03:04+05:00
+# fly.toml app configuration file generated for phaybin on 2023-07-28T11:44:42+05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = "phaybin"
-primary_region = "waw"
+primary_region = "mad"
 console_command = "/rails/bin/rails console"
 
 [processes]

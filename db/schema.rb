@@ -60,10 +60,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_123255) do
     t.string "uk", null: false
     t.string "en", null: false
     t.string "he", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "cover_mobile"
     t.string "cover_desktop"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade do |t|
