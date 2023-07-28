@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
     # Content
     resources :galleries, only: %i[index show] do
-      resources :images, only: %i[show destroy]
+      resources :images, only: %i[show update destroy]
     end
     get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form

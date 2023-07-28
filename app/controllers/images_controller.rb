@@ -12,6 +12,22 @@ class ImagesController < ApplicationController
       img.id < start_index
     end
   end
+  
+  def update
+    @image = Image.find(params[:id])
+  
+    respond_to do |format|
+      if @image.update(images_params)
+        format.turbo_stream do
+          flash[:success] =
+            t('flash.success.updated', model: "#{@gallery.model_name.human} #{@gallery.title.downcase}")
+            redirect_to admins_gallery_path(@gallery)
+        end
+      else
+        format.html {redirect_to admins_gallery_path(@gallery), status: :unprocessable_entity }
+      end
+    end
+  end
 
   def destroy
     @image = Image.find(params[:id])

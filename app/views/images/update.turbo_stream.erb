@@ -1,0 +1,4 @@
+<!-- Reload images -->
+<%= turbo_stream.replace dom_id(@image), render('images/image', image: @image)%>
+
+<%= prepend_flash%>
