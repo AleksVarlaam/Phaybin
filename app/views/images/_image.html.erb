@@ -4,10 +4,12 @@
             <% if admin_signed_in? %>
                 <!-- Update -->
                 <%= form_for([@gallery, image], data: {turbo_frame: '_top'}, format: :turbo_stream) do |f| %>
-                    <%= f.label :file, class: "absolute z-20 bg-gray-100 left-0 rounded-md text-red-700 p-1 m-1 hover:bg-gray-300 cursor-pointer" do %>
+                    <%= f.label "#{image.id}_file", 
+                        class: "absolute z-20 bg-gray-100 left-0 rounded-md text-red-700 p-1 m-1 hover:bg-gray-300 cursor-pointer" do %>
                         <%= heroicon 'pencil-square', class: 'w-6 h-6'%>
                     <% end %>
-                    <%= f.file_field :file, class: "sr-only", onchange: 'this.form.submit()' %>
+                    <%= f.file_field :file, id: "image_#{image.id}_file",
+                        class: "sr-only", onchange: 'this.form.submit()' %>
                 <% end %>
                 <!-- Delete -->
                 <%= link_to gallery_image_path(@gallery, image),
