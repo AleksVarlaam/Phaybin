@@ -37,7 +37,7 @@ class CoverMobileUploader < CarrierWave::Uploader::Base
 
   version :webp do
     process convert: 'webp'
-    process resize_to_fit: [350, 400]
+    process resize_to_fit: [600, 450]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.

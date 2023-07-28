@@ -36,7 +36,7 @@ class CoverDesktopUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :webp do
     process convert: 'webp'
-    process resize_to_fit: [600, 400]
+    process resize_to_fit: [800, 600]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
