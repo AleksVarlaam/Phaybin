@@ -8,5 +8,5 @@ class Gallery < ApplicationRecord
   accepts_nested_attributes_for :images
   
   acts_as_list
-  default_scope { order(position: :asc) }
+  scope :sortable,->  { order(position: :asc) }
 end

@@ -13,7 +13,7 @@ class GalleriesController < ApplicationController
         'ru' => root_url(locale: :ru)
       }
     )
-    @galleries = Gallery.all.decorate
+    @galleries = Gallery.sortable.decorate
   end
 
   def show

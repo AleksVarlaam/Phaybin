@@ -30,7 +30,7 @@ module Admins
     end
 
     def index
-      @galleries = Gallery.all.decorate
+      @galleries = Gallery.sortable.decorate
     end
 
     def edit; end
