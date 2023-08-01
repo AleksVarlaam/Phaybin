@@ -30,7 +30,7 @@ module Admins
     end
 
     def index
-      @galleries = Gallery.all.latest.decorate
+      @galleries = Gallery.all.decorate
     end
 
     def edit; end
@@ -52,7 +52,7 @@ module Admins
       return unless params[:images].present?
       @images = []
       params[:images]['file'].each do |image|
-        @images << @gallery.images.create!(file: image, gallery_id: @gallery.id, position: @gallery.images.count + 1) if image.present?
+        @images << @gallery.images.create!(file: image, gallery_id: @gallery.id) if image.present?
       end
       respond_to do |format|
         format.turbo_stream do

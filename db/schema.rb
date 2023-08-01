@@ -72,8 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_105337) do
     t.string "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position", default: 1, null: false
-    t.index ["gallery_id", "position"], name: "unique_gallery_id_position", unique: true
+    t.integer "position"
     t.index ["gallery_id"], name: "index_images_on_gallery_id"
   end
 
