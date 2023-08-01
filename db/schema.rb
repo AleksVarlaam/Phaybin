@@ -64,7 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_105337) do
     t.string "cover_desktop"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position", default: 1, null: false
+    t.integer "position"
   end
 
   create_table "images", force: :cascade do |t|
