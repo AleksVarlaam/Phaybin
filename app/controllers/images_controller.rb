@@ -5,11 +5,11 @@ class ImagesController < ApplicationController
   before_action :set_gallery_and_images
 
   def show
-    start_index = params[:id].to_i
+    start_index = Image.find(params[:id]).position
     @images = @images.select { |img|
-      img.id >= start_index
+      img.position >= start_index
     } + @images.select do |img|
-      img.id < start_index
+      img.position < start_index
     end
   end
   
