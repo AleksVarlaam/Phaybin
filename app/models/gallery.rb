@@ -4,6 +4,6 @@ class Gallery < ApplicationRecord
   mount_uploader  :cover_mobile,  CoverMobileUploader
   mount_uploader  :cover_desktop, CoverDesktopUploader
   
-  has_many :images, dependent: :destroy
+  has_many :images, -> { order(position: :asc) }, dependent: :destroy
   accepts_nested_attributes_for :images
 end

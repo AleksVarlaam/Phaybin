@@ -37,7 +37,11 @@ Rails.application.routes.draw do
 
     # Content
     resources :galleries, only: %i[index show] do
-      resources :images, only: %i[show update destroy]
+      resources :images, only: %i[show update destroy] do
+        collection do 
+          patch 'reorder'
+        end
+      end
     end
     get 'about_me', to: 'main#about_me', as: 'about_me'
     # Contact form

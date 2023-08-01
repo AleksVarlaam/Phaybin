@@ -23,7 +23,8 @@
 <%= render 'images/form'%>
 
 <!-- Images list -->
-<%= turbo_frame_tag dom_id(@gallery, :images), class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" do %>
+<%= turbo_frame_tag dom_id(@gallery, :images), data: { controller: 'sortable' },
+    class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" do %>
     <% if @images.count.positive?%>
         <%= render partial: 'images/image', collection: @images%>
     <% else %>

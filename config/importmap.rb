@@ -15,3 +15,5 @@ pin 'stimulus-use', to: 'https://ga.jspm.io/npm:stimulus-use@0.51.3/dist/index.j
 pin 'stimulus-popover', to: 'https://ga.jspm.io/npm:stimulus-popover@6.2.0/dist/stimulus-popover.mjs', preload: true
 pin 'stimulus-scroll-to', to: 'https://ga.jspm.io/npm:stimulus-scroll-to@4.1.0/dist/stimulus-scroll-to.mjs',
                           preload: true
+pin "@rails/request.js", to: "https://ga.jspm.io/npm:@rails/request.js@0.0.8/src/index.js"
+pin "sortablejs", to: "https://ga.jspm.io/npm:sortablejs@1.15.0/modular/sortable.esm.js"

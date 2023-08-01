@@ -13,6 +13,13 @@ class ImagesController < ApplicationController
     end
   end
   
+  def reorder
+    @image = @gallery.images.find_by position: params[:old_position]
+    @image.insert_at params[:new_position]
+    
+    head :ok
+  end
+  
   def update
     @image = Image.find(params[:id])
   
@@ -49,7 +56,7 @@ class ImagesController < ApplicationController
   private
 
   def images_params
-    params.require(:image).permit( :gallery_id, :file )
+    params.require(:image).permit( :gallery_id, :file, :position )
   end
 
   def set_gallery_and_images
