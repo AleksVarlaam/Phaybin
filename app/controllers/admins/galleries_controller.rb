@@ -61,6 +61,13 @@ module Admins
         end
       end
     end
+    
+    def reorder
+      @gallery = Gallery.find_by position: params[:old_position]
+      @gallery.insert_at params[:new_position]
+    
+      head :ok
+    end
 
     def destroy
       respond_to do |format|
@@ -78,7 +85,7 @@ module Admins
     private
 
     def gallery_params
-      params.require(:gallery).permit(:ru, :en, :he, :uk, :cover_mobile, :cover_desktop, images_attributes: 
+      params.require(:gallery).permit(:ru, :en, :he, :uk, :cover_mobile, :cover_desktop, :position, images_attributes: 
   [:id, :gallery_id, :file])
     end
 

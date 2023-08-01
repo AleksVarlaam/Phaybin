@@ -9,7 +9,6 @@ export default class extends Controller {
                 try {
                     this.disable()
                     
-                    const galleryId = e.from.id.split('_').pop()
                     const resp = await patch(this.reorderPath(e), {
                         body: JSON.stringify({
                             "new_position": e.newIndex + 1,
@@ -34,7 +33,7 @@ export default class extends Controller {
         
         const path = e.from.id.includes("images") 
             ? "/galleries/" + galleryId + "/images/reorder" 
-            : "/galleries/reorder"
+            : "/admins/galleries/reorder"
         return path
     }
     

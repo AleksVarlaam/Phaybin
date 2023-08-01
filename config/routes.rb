@@ -30,7 +30,11 @@ Rails.application.routes.draw do
       get 'admins/edit',  to: 'admins/registrations#edit',    as: 'edit_admin_registration'
       put 'admins',       to: 'admins/registrations#update',  as: 'admin_registration'
       namespace :admins do
-        resources :galleries
+        resources :galleries do 
+          collection do 
+            patch 'reorder'
+          end
+        end
         patch 'gallery/:id/upload_images', to: 'galleries#upload_images', as: 'upload_images'
       end
     end

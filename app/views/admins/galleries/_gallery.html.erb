@@ -1,4 +1,4 @@
-<%= turbo_frame_tag gallery do %>
+<%= turbo_frame_tag gallery, class: "item" do %>
     <%= link_to admins_gallery_path(gallery), data: {turbo_frame: '_top'} do %>
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 hover:dark:border-gray-600 dark:text-gray-500 hover:dark:text-gray-400">
             <% if gallery.images.present?%>
