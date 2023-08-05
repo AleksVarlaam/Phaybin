@@ -40,13 +40,11 @@ class FileUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :large do
-    process convert: 'webp'
-    process resize_to_fit: [1200, 800]
+    process resize_to_fit: [1400, 1000]
   end
 
   version :medium do
-    process convert: 'webp'
-    process resize_to_fit: [600, 450]
+    process resize_to_fit: [800, 650]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
