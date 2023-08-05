@@ -40,7 +40,7 @@ Rails.application.routes.draw do
     end
 
     # Content
-    resources :galleries, only: %i[index show] do
+    resources :galleries, only: %i[index show], path: "portfolio" do
       resources :images, only: %i[show update destroy] do
         collection do 
           patch 'reorder'
