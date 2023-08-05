@@ -19,8 +19,12 @@ class GalleriesController < ApplicationController
   def show
     @gallery = Gallery.find(params[:id]).decorate
     @images = @gallery.images
-    @images_count = @images.count
-    @pagy_a, @images = pagy_array(@images, items: 10)
+    @pagy, @images = pagy_countless(@images, items: 5)
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
     
     set_meta_tags(
       title: [t('meta.gallery.title', category: @gallery.title.capitalize)],

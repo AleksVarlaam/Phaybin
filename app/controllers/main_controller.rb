@@ -13,7 +13,7 @@ class MainController < ApplicationController
         'ru' => root_url(locale: :ru)
       }
     )
-    @galleries = Gallery.latest.decorate.take(4)
+    @galleries = Gallery.latest.decorate.take(2)
     @main_bg  = helpers.asset_path('background/main-page-bg.jpg')
     @contact  = ContactForm.new
   end

@@ -10,12 +10,7 @@
     <%= tag.h1 @gallery.title, 
         class: " text-center text-3xl text-gray-300" %>
 </div>
-<%= turbo_frame_tag dom_id(@gallery, :images), 
-    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6" do %>
-    <% @images.each_with_index do |image, index| %>
-        <%= render 'image', image: image, index: index%>
-    <% end %>
-<% end %>
-
-<!-- Pagy -->
-<%== pagy_nav(@pagy_a) if @images_count > @images.count %>
+<!-- Images list -->
+<%= tag.div id: :images,  data: { controller: admin_signed_in? ? 'sortable' : ''},
+    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6"%>
+<%= turbo_frame_tag "pagination", src: gallery_path(@gallery, format: :turbo_stream), loading: :lazy %>

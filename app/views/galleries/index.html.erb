@@ -11,7 +11,7 @@
         class: "text-center text-3xl text-gray-300" %>
 </div>
 <!-- Categories table -->
-<%= turbo_frame_tag 'galleries',
+<%= turbo_frame_tag 'galleries', data: { controller: admin_signed_in? ? 'sortable' : ''},
     class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4" do 
 %>
     <%= render partial: @galleries %>
