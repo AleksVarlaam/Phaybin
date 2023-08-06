@@ -22,7 +22,8 @@
             <% end %>
             
             <%= link_to gallery_image_path(@gallery, image), data: {turbo_frame: 'modal'}, remote: true do %>
-                <%= image_tag image.file.medium.url, alt: "#{image.gallery.decorate.title}-#{image.position}",
+                <%= image_tag image.file.medium.url, oncontextmenu: "return false;", 
+                    alt: "#{image.gallery.decorate.title}-#{image.position}",
                     class: "h-56 w-full object-cover rounded-lg"%>
             <% end %>
         </div>

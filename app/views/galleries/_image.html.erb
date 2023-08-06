@@ -3,7 +3,7 @@
         <div class="flex justify-center">
             <%= link_to gallery_image_path(@gallery, image), title: "#{image.gallery.decorate.title}-#{image.position}",
                 data: {turbo_frame: 'modal'}, remote: true do %>
-                <%= image_tag image.file.medium.url, 
+                <%= image_tag image.file.medium.url, oncontextmenu: "return false;", 
                     alt: "#{image.gallery.decorate.title}-#{image.position}",
                     class: "max-h-[32rem] sm:max-h-[36rem] w-auto object-cover cursor-zoom-in"%>
             <% end %>
