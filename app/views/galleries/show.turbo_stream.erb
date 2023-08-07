@@ -1,4 +1,4 @@
-<%= turbo_stream.append "images" do %>
+<%= turbo_stream.append dom_id(@gallery, :images) do %>
    <%= render partial: "galleries/image", collection: @images %>
 <% end %>
 <% if @pagy.next.present? %>

@@ -7,4 +7,6 @@ class Image < ApplicationRecord
   
   validates :file, presence: true
   validates :position, uniqueness: {scope: :gallery}
+  
+  scope :sorted,->  { order(position: :asc) }
 end

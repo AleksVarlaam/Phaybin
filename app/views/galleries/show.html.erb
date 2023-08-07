@@ -14,7 +14,7 @@
     <%= tag.span @gallery.meta_desc, itemprop: "description", class: "sr-only"%>
 </div>
 <!-- Images list -->
-<%= tag.div id: :images,  data: { controller: admin_signed_in? ? 'sortable' : ''},
+<%= tag.div id: dom_id(@gallery, :images),  data: { controller: admin_signed_in? ? 'sortable' : ''},
     class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6" do %>
     <%= render partial: "galleries/image", collection: @images %>
 <% end %>

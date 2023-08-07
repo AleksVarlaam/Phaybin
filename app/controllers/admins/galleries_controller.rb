@@ -11,7 +11,7 @@ module Admins
     end
 
     def show
-      @images = @gallery.images.where.not(id: nil)
+      @images = @gallery.images.where.not(id: nil).sorted
       @image = @gallery.images.new
     end
 
@@ -30,7 +30,7 @@ module Admins
     end
 
     def index
-      @galleries = Gallery.sortable.decorate
+      @galleries = Gallery.sorted.decorate
     end
 
     def edit; end

@@ -13,12 +13,12 @@ class GalleriesController < ApplicationController
         'ru' => root_url(locale: :ru)
       }
     )
-    @galleries = Gallery.sortable.decorate
+    @galleries = Gallery.sorted.decorate
   end
 
   def show
     @gallery = Gallery.find(params[:id]).decorate
-    @images = @gallery.images
+    @images = @gallery.images.sorted
     @pagy, @images = pagy_countless(@images, items: 5)
 
     respond_to do |format|

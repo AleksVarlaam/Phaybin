@@ -2,6 +2,7 @@
 
 class ImagesController < ApplicationController
   before_action :authenticate_admin!, except: :show
+  before_action :set_image, except: :reorder
   before_action :set_gallery_and_images
 
   def show
@@ -21,14 +22,12 @@ class ImagesController < ApplicationController
   end
   
   def update
-    @image = Image.find(params[:id])
-  
     respond_to do |format|
       if @image.update(images_params)
         format.turbo_stream do
-          flash[:success] =
+          flash[:success] = 
             t('flash.success.updated', model: "#{@gallery.model_name.human} #{@gallery.title.downcase}")
-            redirect_to admins_gallery_path(@gallery)
+          redirect_to admins_gallery_path(@gallery, anchor: helpers.dom_id(@image))
         end
       else
         format.html {redirect_to admins_gallery_path(@gallery), status: :unprocessable_entity }
@@ -37,12 +36,10 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    @image = Image.find(params[:id])
     respond_to do |format|
       if @image.destroy
-        format.html do
-          flash[:success] = t('flash.success.destroyed', model: t('global.image'))
-          redirect_to request.referer
+        format.turbo_stream do
+          flash.now[:success] = t('flash.success.destroyed', model: t('global.image'))
         end
       else
         format.html do
@@ -58,9 +55,13 @@ class ImagesController < ApplicationController
   def images_params
     params.require(:image).permit( :gallery_id, :file, :position )
   end
+  
+  def set_image
+    @image = Image.find(params[:id])
+  end
 
   def set_gallery_and_images
     @gallery = Gallery.find(params[:gallery_id]).decorate
-    @images = @gallery.images
+    @images = @gallery.images.sorted
   end
 end
