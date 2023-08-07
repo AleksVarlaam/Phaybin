@@ -15,7 +15,7 @@ en:
             women:  "Welcome to the gallery of the category «Women» - a collection of beautiful photos dedicated to women’s beauty and elegance. Here you will find exquisite portraits, model shots, fashion photos and much more, reflecting the tenderness and grace of the female image."
             magazine:    "Welcome to the gallery of the category «Magazines» - a collection of photos dedicated to the world of fashion and style. Here you will find my works, opbolized in fashion magazines around the world."
             book:   "One of my works became the cover of the book «Clinical Case» of the famous writer, professor and director Graham Macre Burnet. This novel entered the top 50 Romans by ELLE, was advertised by renowned magazines around the world and became a real bestseller in which my work became an integral part."
-            else:   "Welcome to «%{category.capitalize». Here you can see all my works of this category."
+            else:   "Welcome to the gallery category «%{category}». Here you can see all my works of this category."
         reviews:
             title:  "Reviews from my customers | Photographer | Israel"
             desc:   "Here you can leave your own feedback and read reviews from my customers."

@@ -28,7 +28,7 @@ class GalleriesController < ApplicationController
     
     set_meta_tags(
       title: [t('meta.gallery.title', category: @gallery.title.capitalize)],
-      description: meta_desc(@gallery),
+      description: @gallery.meta_desc,
       alternate: {
         'x-default' => root_url(locale: nil),
         'en' => root_url(locale: :en),
@@ -37,17 +37,5 @@ class GalleriesController < ApplicationController
         'ru' => root_url(locale: :ru)
       }
     )
-  end
-  
-  private 
-  
-  def meta_desc(gallery)
-    case gallery.en.downcase
-    when 'men'      then t('meta.gallery.men')
-    when 'women'    then t('meta.gallery.women')
-    when 'magazine' then t('meta.gallery.magazine')
-    when 'book'     then t('meta.gallery.book')
-    else t('meta.gallery.else', category: gallery.title.downcase)
-    end
   end
 end

@@ -1,6 +1,6 @@
 <%= turbo_stream.append "images" do %>
    <%= render partial: "galleries/image", collection: @images %>
- <% end %>
+<% end %>
 <% if @pagy.next.present? %>
   <%= turbo_stream.replace "pagination" do %>
     <%= turbo_frame_tag "pagination", src: gallery_path(@gallery, page: @pagy.next, format: :turbo_stream), loading: :lazy %>

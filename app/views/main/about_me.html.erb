@@ -33,8 +33,11 @@
 					</div>
 				</div>
 			</div>
-			<div aria-hidden="true" class="mt-10 lg:mt-0">
-                <%= image_tag(asset_path('background/phaybin-about-bg.webp'), alt: "Photograther - Natalie Rabinovych",
+			<div aria-hidden="true" class="mt-10 lg:mt-0" itemscope itemtype="http://schema.org/ImageObject">
+                <%= tag.span "Photograther - Natalie Rabinovych", itemprop: "name", class: "sr-only"%>
+                <%= image_tag(asset_path('background/phaybin-about-bg.webp'), 
+                    itemprop: "contentUrl",
+                    alt: "Photograther - Natalie Rabinovych",
                     class: "mx-auto lg:max-w-md rounded-lg shadow-lg dark:bg-gray-500")%>
 			</div>
 		</div>
@@ -64,8 +67,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-					<%= image_tag(asset_path('background/bg-about-achievements.jpg'), alt: "Phaybin's achievements, VOGUE",
+				<div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1" itemscope itemtype="http://schema.org/ImageObject">
+                    <%= tag.span "Phaybin's achievements, VOGUE", itemprop: "name", class: "sr-only"%>
+					<%= image_tag(asset_path('background/bg-about-achievements.jpg'), 
+                        itemprop: "contentUrl",
+                        alt: "Phaybin's achievements, VOGUE",
                         class: "mx-auto lg:max-w-md rounded-lg shadow-lg dark:bg-gray-500")%>
 				</div>
 			</div>

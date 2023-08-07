@@ -1,16 +1,21 @@
 <% currently_at "#{@gallery.model_name.human} #{@gallery.title.downcase}" %>
 <% provide :page_title, "#{@gallery.model_name.human} #{@gallery.title.downcase}" %>
 
-<div class="flex items-center justify-center mb-3 sm:my-6 pb-3 space-x-3 rtl:space-x-reverse">
+<div class="flex items-center justify-center mb-3 sm:my-6 pb-3 space-x-3 rtl:space-x-reverse" 
+    itemscope itemtype="http://schema.org/ImageGallery">
     <!-- Back -->
     <%= link_to (heroicon I18n.locale == :he ? "arrow-uturn-right" : "arrow-uturn-left", 
         class: "w-6 h-6 dark:text-gray-400 hover:dark:text-gray-300"), galleries_path,
         title: "Back", data: {turbo_frame: '_top'} %>
     <!-- Title -->
-    <%= tag.h1 @gallery.title, 
+    <%= tag.h1 @gallery.title, itemprop: "name",
         class: " text-center text-3xl text-gray-700 dark:text-gray-300" %>
+    <!-- Description -->
+    <%= tag.span @gallery.meta_desc, itemprop: "description", class: "sr-only"%>
 </div>
 <!-- Images list -->
 <%= tag.div id: :images,  data: { controller: admin_signed_in? ? 'sortable' : ''},
-    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6"%>
+    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6" do %>
+    <%= render partial: "galleries/image", collection: @images %>
+<% end %>
 <%= turbo_frame_tag "pagination", src: gallery_path(@gallery, format: :turbo_stream), loading: :lazy %>

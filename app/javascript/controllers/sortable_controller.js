@@ -32,7 +32,7 @@ export default class extends Controller {
         const galleryId = e.from.id.split('_').pop()
         
         const path = e.from.id.includes("images") 
-            ? "/galleries/" + galleryId + "/images/reorder" 
+            ? "/portfolio/" + galleryId + "/images/reorder" 
             : "/admins/galleries/reorder"
         return path
     }
