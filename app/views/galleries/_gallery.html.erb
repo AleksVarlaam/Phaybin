@@ -1,7 +1,8 @@
 <%= turbo_frame_tag gallery do %>
     <%= link_to gallery_path(gallery), data: {turbo_frame: '_top'}, title: gallery.title do %>
-        <div class="flex items-end overflow-hidden bg-cover rounded-lg h-[30rem] max-h-screen text-gray-800 dark:text-gray-300 hover:dark:text-white lg:transition-all lg:duration-300 lg:cursor-pointer lg:filter lg:grayscale lg:hover:grayscale-0" 
-            style="background-image:url('<%= gallery.cover %>')">
+        <div class="flex items-end overflow-hidden bg-cover rounded-lg h-[30rem] max-h-screen text-gray-800 dark:text-gray-300 hover:dark:text-white lg:transition-all lg:duration-300 lg:cursor-pointer lg:filter lg:grayscale lg:hover:grayscale-0 reveal" 
+            style="background-image:url('<%= gallery.cover %>')"
+            data-scroll-reveal-target="item" data-delay="350ms">
             <div class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-900/60">
                 <% if current_page?(root_url) || current_page?(request.base_url)%>
                     <%= tag.h3 gallery.title, class: "text-2xl font-semibold" %>

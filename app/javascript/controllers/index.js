@@ -13,3 +13,6 @@ eagerLoadControllersFrom("controllers", application)
 // ScrollTo
 import ScrollTo from 'stimulus-scroll-to'
 application.register('scroll-to', ScrollTo)
+// Scroll reveal
+import ScrollReveal from 'stimulus-scroll-reveal'
+application.register('scroll-reveal', ScrollReveal)

@@ -2,15 +2,16 @@
 <% provide :page_title, t('pages.reviews') %>
 
 <section class="mb-8 dark:bg-black dark:text-gray-100">
-	<div class="container flex flex-col items-center mx-auto  md:px-12">
+	<div class="container flex flex-col items-center mx-auto md:px-12 reveal"
+        data-scroll-reveal-target="item">
 		<%= tag.h1 t('review.title'), class: "p-4 text-4xl font-semibold leadi text-center" %>
 	</div>
-	<div class="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10"
-        id="reviews">
+	<div class="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10 reveal"
+        id="reviews"  data-scroll-reveal-target="item" data-delay="250ms">
 		<%= render @reviews%>
 	</div>
     
-    <div class="container px-6 mx-auto">
+    <div class="container px-6 mx-auto reveal" data-scroll-reveal-target="item" data-delay="350ms">
         <div class="flex justify-center space-y-3 flex-col mt-6">
             <%= render 'form'%>
         </div>

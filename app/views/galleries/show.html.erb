@@ -15,7 +15,8 @@
 </div>
 <!-- Images list -->
 <%= tag.div id: dom_id(@gallery, :images),  data: { controller: admin_signed_in? ? 'sortable' : ''},
-    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6" do %>
+    class: "container px-4 sm:px-0 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 mb-6 reveal",
+    data: {"scroll-reveal-target": "item", delay: "250ms"} do %>
     <%= render partial: "galleries/image", collection: @images %>
 <% end %>
 <%= turbo_frame_tag "pagination", src: gallery_path(@gallery, format: :turbo_stream), loading: :lazy %>
